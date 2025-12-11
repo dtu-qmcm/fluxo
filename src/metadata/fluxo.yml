@@ -1,28 +1,28 @@
-# PURL configuration for http://purl.obolibrary.org/obo/fluxo
+# PURL configuration for http://purl.obolibrary.org/obo/mfao
 
-idspace: FLUXO
-base_url: /obo/fluxo
+idspace: MFAO
+base_url: /obo/mfao
 
 products:
-- fluxo.owl: https://raw.githubusercontent.com/dtu-qmcm/fluxomics_ontology/main/fluxo.owl
-- fluxo.obo: https://raw.githubusercontent.com/dtu-qmcm/fluxomics_ontology/main/fluxo.obo
+- mfao.owl: https://raw.githubusercontent.com/dtu-qmcm/mfa_ontology/main/mfao.owl
+- mfao.obo: https://raw.githubusercontent.com/dtu-qmcm/mfa_ontology/main/mfao.obo
 
 term_browser: ontobee
 example_terms:
-- FLUXO_0000000
+- MFAO_0000000
 
 entries:
 
 - prefix: /releases/
-  replacement: https://raw.githubusercontent.com/dtu-qmcm/fluxomics_ontology/v
+  replacement: https://raw.githubusercontent.com/dtu-qmcm/mfa_ontology/v
 
 - prefix: /tracker/
-  replacement: https://github.com/dtu-qmcm/fluxomics_ontology/issues
+  replacement: https://github.com/dtu-qmcm/mfa_ontology/issues
 
 - prefix: /about/
-  replacement: http://www.ontobee.org/ontology/FLUXO?iri=http://purl.obolibrary.org/obo/
+  replacement: http://www.ontobee.org/ontology/MFAO?iri=http://purl.obolibrary.org/obo/
 
 ## generic fall-through, serve direct from github by default
 - prefix: /
-  replacement: https://raw.githubusercontent.com/dtu-qmcm/fluxomics_ontology/main/
+  replacement: https://raw.githubusercontent.com/dtu-qmcm/mfa_ontology/main/
 

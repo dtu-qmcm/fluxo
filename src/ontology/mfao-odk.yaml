@@ -1,8 +1,8 @@
-id: fluxo
-title: "Fluxomics Ontology"
+id: mfao
+title: "Metabolic Flux Analysis Ontology"
 github_org: dtu-qmcm
 git_main_branch: main
-repo: fluxomics_ontology
+repo: mfa_ontology
 release_artefacts:
   - base
   - full

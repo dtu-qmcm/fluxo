@@ -1,10 +1,10 @@
 
-![Build Status](https://github.com/dtu-qmcm/fluxomics_ontology/actions/workflows/qc.yml/badge.svg)
-# Fluxomics Ontology
+![Build Status](https://github.com/dtu-qmcm/mfa_ontology/actions/workflows/qc.yml/badge.svg)
+# Metabolic Flux Analysis Ontology
 
 Description: None
 
-More information can be found at http://obofoundry.org/ontology/fluxo
+More information can be found at http://obofoundry.org/ontology/mfao
 
 ## Versions
 
@@ -12,17 +12,17 @@ More information can be found at http://obofoundry.org/ontology/fluxo
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/fluxo.owl
+http://purl.obolibrary.org/obo/mfao.owl
 
 (note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [src/ontology/fluxo-edit.owl](src/ontology/fluxo-edit.owl)
+Editors of this ontology should use the edit version, [src/ontology/mfao-edit.owl](src/ontology/mfao-edit.owl)
 
 ## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/dtu-qmcm/fluxomics_ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+Please use this GitHub repository's [Issue tracker](https://github.com/dtu-qmcm/mfa_ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Acknowledgements
 

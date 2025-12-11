@@ -1,18 +1,18 @@
 Metadata files for the OBO Library
 
- * [fluxo.yml](fluxo.yml)
-     * Determines how your purl.obolibrary.org/obo/fluxo/ redirects will be handled
+ * [mfao.yml](mfao.yml)
+     * Determines how your purl.obolibrary.org/obo/mfao/ redirects will be handled
      * Go here: https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config
      * Click [New File](https://github.com/OBOFoundry/purl.obolibrary.org/new/master/config)
-     * Paste in the contents of [fluxo.yml](fluxo.yml)
+     * Paste in the contents of [mfao.yml](mfao.yml)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*
- * [fluxo.md](fluxo.md)
+ * [mfao.md](mfao.md)
      * Determines how your metadata is shown on OBO Library, OLS and AberOWL
      * Go here: https://github.com/OBOFoundry/OBOFoundry.github.io/tree/master/ontology
      * Click [New File](https://github.com/OBOFoundry/OBOFoundry.github.io/new/master/ontology)
-     * Paste in the contents of [fluxo.md](fluxo.md)
+     * Paste in the contents of [mfao.md](mfao.md)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*

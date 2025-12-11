@@ -11,12 +11,12 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: idrange: <http://purl.obolibrary.org/obo/ro/idrange/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 
-Ontology: <http://purl.obolibrary.org/obo/fluxo/fluxo-idranges.owl>
+Ontology: <http://purl.obolibrary.org/obo/mfao/mfao-idranges.owl>
 
 
 Annotations: 
-    idsfor: "FLUXO",
-    idprefix: "http://purl.obolibrary.org/obo/FLUXO_",
+    idsfor: "MFAO",
+    idprefix: "http://purl.obolibrary.org/obo/MFAO_",
     iddigits: 7
 
 AnnotationProperty: idprefix:
