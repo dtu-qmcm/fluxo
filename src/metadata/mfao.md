@@ -34,7 +34,10 @@ dependencies:
 - id: sbo
 - id: obi
 - id: chebi
-
+- id: bfo
+- id: iao
+- id: ncbitaxon
+- id: uberon
 tracker: https://github.com/dtu-qmcm/mfa_ontology/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/

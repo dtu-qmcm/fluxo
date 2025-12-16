@@ -15,6 +15,11 @@ Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Metabolic Flux Analysis Ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
@@ -43,6 +48,25 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 # Class: <http://purl.obolibrary.org/obo/MFAO_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000000> "root node"@en)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000001> (flux)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000001> "Metabolic reaction rate of a biochemical reaction in a living biological system"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/MFAO_0000001> "metabolic reaction rate"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000001> "flux"@en)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> (extracellular flux)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> "Net rate at which substrates are taken up or excreted by living biological systems")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> "extracellular flux"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> <http://purl.obolibrary.org/obo/MFAO_0000001>)
+DisjointClasses(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> (intracellular flux)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> "Net rate at which a metabolic reaction proceeds in nominal direction within a living biological system")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> "intracellular flux"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> <http://purl.obolibrary.org/obo/MFAO_0000001>)
 
 
 )

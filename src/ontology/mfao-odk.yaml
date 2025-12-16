@@ -2,7 +2,7 @@ id: mfao
 title: "Metabolic Flux Analysis Ontology"
 github_org: dtu-qmcm
 git_main_branch: main
-repo: mfa_ontology
+repo: mfao
 release_artefacts:
   - base
   - full
@@ -13,8 +13,11 @@ export_formats:
   - obo
   - json
 import_group:
-  use_base_merging: TRUE
+  use_base_merging: FALSE
   products:
+    - id: iao
+    - id: bfo
+    - id: ro
     - id: msio
       mirror_from: https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl
       make_base: TRUE

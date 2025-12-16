@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                69cadf7902b0ab43645b0dd224410dc844517498aa8a3d4d0d266241f75e9cf8
+CONFIG_HASH=                9421f8b4bf9610e540abc12be03ff13bc44ff708f0826dcb441ffc74e9d89ebb
 
 
 # ----------------------------------------
@@ -188,9 +188,9 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  msio sbo obi chebi
+IMPORTS =  iao bfo ro msio sbo obi chebi
 
-IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
+IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 IMPORT_FILES = $(IMPORT_OWL_FILES)
 
@@ -403,22 +403,24 @@ ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 OMO:0002000
 
 ifeq ($(IMP),true)
 
-ALL_TERMS = $(foreach imp, $(IMPORTS), $(IMPORTDIR)/$(imp)_terms.txt)
-
-$(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
-				$(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) merge --input $< \
-		 extract $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
-		         --force true --copy-ontology-annotations false \
+## Default module type (slme)
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
+			   $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
+		         --force true --copy-ontology-annotations true \
 		         --individuals include \
 		         --method BOT \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
-		        $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
+		        --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
 		        --select complement --select annotation-properties \
 		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
+
+.PRECIOUS: $(IMPORTDIR)/%_import.owl
 
 endif # IMP=true
 
@@ -453,6 +455,30 @@ no-mirror-refresh-%:
 ifeq ($(MIR),true)
 
 
+## ONTOLOGY: iao
+.PHONY: mirror-iao
+.PRECIOUS: $(MIRRORDIR)/iao.owl
+mirror-iao: | $(TMPDIR)
+	curl -L $(OBOBASE)/iao.owl --create-dirs -o $(TMPDIR)/iao-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bfo
+.PHONY: mirror-bfo
+.PRECIOUS: $(MIRRORDIR)/bfo.owl
+mirror-bfo: | $(TMPDIR)
+	curl -L $(OBOBASE)/bfo.owl --create-dirs -o $(TMPDIR)/bfo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: msio
 .PHONY: mirror-msio
 .PRECIOUS: $(MIRRORDIR)/msio.owl
@@ -482,15 +508,6 @@ mirror-obi: | $(TMPDIR)
 mirror-chebi: | $(TMPDIR)
 	curl -L $(OBOBASE)/chebi.owl --create-dirs -o $(TMPDIR)/chebi-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) remove -i $(TMPDIR)/chebi-download.owl --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
-
-ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
-MERGE_MIRRORS = true
-
-ifeq ($(MERGE_MIRRORS),true)
-$(MIRRORDIR)/merged.owl: $(ALL_MIRRORS)
-	$(ROBOT) merge $(patsubst %, -i %, $^)  -o $@
-.PRECIOUS: $(MIRRORDIR)/merged.owl
-endif
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
