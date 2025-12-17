@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                3e37012d30d8f2b5b761ab78ca9b871fc6cb6adba14df8cb025098d88f1019ea
+CONFIG_HASH=                a549b67ed77bd9ba4a43816a3b94b2d84bcdf25603573e93048be3445994126e
 
 
 # ----------------------------------------
@@ -481,7 +481,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-msio
 .PRECIOUS: $(MIRRORDIR)/msio.owl
 mirror-msio: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://w3id.org/msio/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://purl.obolibrary.org/obo/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: sbo
@@ -504,7 +504,17 @@ mirror-obi: | $(TMPDIR)
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	curl -L $(OBOBASE)/chebi.owl --create-dirs -o $(TMPDIR)/chebi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/chebi-download.owl --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
+MERGE_MIRRORS = true
+
+ifeq ($(MERGE_MIRRORS),true)
+$(MIRRORDIR)/merged.owl: $(ALL_MIRRORS)
+	$(ROBOT) merge $(patsubst %, -i %, $^)  -o $@
+.PRECIOUS: $(MIRRORDIR)/merged.owl
+endif
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true
