@@ -13,11 +13,12 @@ export_formats:
   - obo
   - json
 import_group:
-  use_base_merging: FALSE
+  use_base_merging: TRUE
   products:
     - id: iao
     - id: bfo
     - id: ro
+      use_base: TRUE
     - id: msio
       mirror_from: https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl
       make_base: TRUE
