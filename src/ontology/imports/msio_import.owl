@@ -7,47 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mfao/imports/msio_import.owl>
-<http://purl.obolibrary.org/obo/mfao/releases/2025-10-21/imports/msio_import.owl>
-Annotation(owl:versionInfo "2025-10-21")
+<http://purl.obolibrary.org/obo/mfao/releases/2025-12-16/imports/msio_import.owl>
+Annotation(owl:versionInfo "2025-12-16")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000245>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/MSIO_0000068>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/MSIO_0000093>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/MSIO_0000097>))
-Declaration(NamedIndividual(<http://purl.obolibrary.org/obo/MSIO_0000098>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
-
-
-
-############################
-#   Named Individuals
-############################
-
-# Individual: <http://purl.obolibrary.org/obo/MSIO_0000068> (Biocrates AG)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MSIO_0000068> "Biocrates Life Sciences AG, a biotechnology company, develops and markets targeted metabolic phenotyping solutions that support the discovery and validation of biomarkers for complex multifactorial diseases in pre-clinical and clinical research. The company offers mass-spectrometry based reproducible and quantitative kits and services that analyze various endogenous metabolites; and tools for insight into pathways and metabolic signatures of diseases, such as cancer or neurodegenerative diseases. It also offers metabolic phenotyping, and biomarker discovery and development services."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MSIO_0000068> "Biocrates AG"@en)
-ClassAssertion(<http://purl.obolibrary.org/obo/OBI_0000245> <http://purl.obolibrary.org/obo/MSIO_0000068>)
-
-# Individual: <http://purl.obolibrary.org/obo/MSIO_0000093> (Agilent Technologies)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MSIO_0000093> "Agilent Technologies is an American public research, development and manufacturing company established in 1999 as a spin-off from Hewlett-Packard. The resulting IPO of Agilent stock was the largest in the history of Silicon Valley at the time.
-
-The company provides analytical instruments, software, services and consumables for the entire laboratory workflow."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MSIO_0000093> "Agilent Technologies"@en)
-ClassAssertion(<http://purl.obolibrary.org/obo/OBI_0000245> <http://purl.obolibrary.org/obo/MSIO_0000093>)
-
-# Individual: <http://purl.obolibrary.org/obo/MSIO_0000097> (Bruker AG)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MSIO_0000097> "Bruker Corporation is a manufacturer of scientific instruments for molecular and materials research, as well as for industrial and applied analysis. It is headquartered in Billerica, Massachusetts and is the publicly traded parent company of Bruker Scientific Instruments (Bruker AXS, Bruker BioSpin, Bruker Daltonics and Bruker Optics) and Bruker Energy & Supercon Technologies (BEST) divisions."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MSIO_0000097> "Bruker AG"@en)
-ClassAssertion(<http://purl.obolibrary.org/obo/OBI_0000245> <http://purl.obolibrary.org/obo/MSIO_0000097>)
-
-# Individual: <http://purl.obolibrary.org/obo/MSIO_0000098> (Thermo Fisher Scientific)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MSIO_0000098> "Thermo Fisher Scientific is an American multinational biotechnology product development company, created in 2006 by the merger of Thermo Electron and Fisher Scientific."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MSIO_0000098> "Thermo Fisher Scientific"@en)
-ClassAssertion(<http://purl.obolibrary.org/obo/OBI_0000245> <http://purl.obolibrary.org/obo/MSIO_0000098>)
 
 
 )

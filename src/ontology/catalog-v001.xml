@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
   <group id="odk-managed-catalog" prefer="public">
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/iao_import.owl" uri="imports/iao_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/bfo_import.owl" uri="imports/bfo_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/ro_import.owl" uri="imports/ro_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/msio_import.owl" uri="imports/msio_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/sbo_import.owl" uri="imports/sbo_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/obi_import.owl" uri="imports/obi_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/imports/chebi_import.owl" uri="imports/chebi_import.owl" />
+    <uri name="http://purl.obolibrary.org/obo/mfao/imports/merged_import.owl" uri="imports/merged_import.owl" />
   </group>
 </catalog>

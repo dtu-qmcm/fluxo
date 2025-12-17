@@ -16,8 +16,36 @@ Annotation(dcterms:title "Metabolic Flux Analysis Ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000009>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000012>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000013>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000014>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000016>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000017>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000021>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000022>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000029>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MFAO_0000031>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
 Declaration(AnnotationProperty(dcterms:description))
@@ -52,21 +80,168 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000000> "ro
 # Class: <http://purl.obolibrary.org/obo/MFAO_0000001> (flux)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000001> "Metabolic reaction rate of a biochemical reaction in a living biological system"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/MFAO_0000001> "metabolic flux"@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/MFAO_0000001> "metabolic reaction rate"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000001> "flux"@en)
 
-# Class: <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> (extracellular flux)
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000002> (extracellular flux)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> "Net rate at which substrates are taken up or excreted by living biological systems")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> "extracellular flux"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> <http://purl.obolibrary.org/obo/MFAO_0000001>)
-DisjointClasses(<http://purl.obolibrary.org/obo/MFAO_095fab11_c2f7_4793_bfff_fe790a927495> <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000002> "Net rate at which substrates are taken up or excreted by living biological systems")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000002> "extracellular flux"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000002> <http://purl.obolibrary.org/obo/MFAO_0000001>)
+DisjointClasses(<http://purl.obolibrary.org/obo/MFAO_0000002> <http://purl.obolibrary.org/obo/MFAO_0000003>)
 
-# Class: <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> (intracellular flux)
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000003> (intracellular flux)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> "Net rate at which a metabolic reaction proceeds in nominal direction within a living biological system")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> "intracellular flux"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/MFAO_6abd091d_e918_4eb5_866a_ee524a1e84c9> <http://purl.obolibrary.org/obo/MFAO_0000001>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000003> "Net rate at which a metabolic reaction proceeds in nominal direction within a living biological system")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000003> "intracellular flux"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000003> <http://purl.obolibrary.org/obo/MFAO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000004> (fluxome)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000004> "Entire set of fluxes (metabolic reaction rates) that proceed or can proceed of a living biological system"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000004> "fluxome"@en)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000005> (fluxomics)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000005> "Study of the fluxome"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000005> "fluxomics"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000005> <http://purl.obolibrary.org/obo/MFAO_0000004>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000006> (phenotype)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000006> "A directly observable biochemical characteristic of a living biological system"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000006> "phenotype"@en)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000007> (pathway)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000007> "A series of connected metabolic reactions within a living biological system which has one starting metabolite and one end product"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000007> "pathway"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000007> <http://purl.obolibrary.org/obo/MFAO_0000000>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000008> (metabolic network)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000008> "A set of reactions that describes metabolic processes within a cell, converting substrates into products, biomass, and other essential building blocks"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000008> "metabolic network"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000008> <http://purl.obolibrary.org/obo/MFAO_0000004>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000009> (metabolic reaction)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000009> "metabolic reaction"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000009> <http://purl.obolibrary.org/obo/MFAO_0000008>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000010> (reaction reversibility)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000010> "reaction reversibility"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000010> <http://purl.obolibrary.org/obo/MFAO_0000009>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000011> (unidirectional reaction)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000011> "unidirectional reaction"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000011> <http://purl.obolibrary.org/obo/MFAO_0000010>)
+DisjointClasses(<http://purl.obolibrary.org/obo/MFAO_0000011> <http://purl.obolibrary.org/obo/MFAO_0000012>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000012> (bidirectional reaction)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000012> "bidirectional reaction"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000012> <http://purl.obolibrary.org/obo/MFAO_0000010>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000013> (reaction direactionality)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000013> "reaction direactionality"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000013> <http://purl.obolibrary.org/obo/MFAO_0000009>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000014> (forward direction)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000014> "forward direction"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000014> <http://purl.obolibrary.org/obo/MFAO_0000013>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000015> (backward direction)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000015> "backward direction"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000015> <http://purl.obolibrary.org/obo/MFAO_0000013>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000016> (product)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000016> "product"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000016> <http://purl.obolibrary.org/obo/MFAO_0000009>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000017> (reactant)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/MFAO_0000017> "educt"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000017> "reactant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000017> <http://purl.obolibrary.org/obo/MFAO_0000009>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000018> (metabolite)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000018> "metabolite"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000018> <http://purl.obolibrary.org/obo/MFAO_0000008>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000019> (metabolite pool size)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000019> "metabolite pool size"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000019> <http://purl.obolibrary.org/obo/MFAO_0000018>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000020> (flux map)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MFAO_0000020> "Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000020> "flux map"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000020> <http://purl.obolibrary.org/obo/MFAO_0000004>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000021> (fluxotype)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000021> "fluxotype"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000021> <http://purl.obolibrary.org/obo/MFAO_0000004>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000022> (pathway)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000022> "pathway"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000022> <http://purl.obolibrary.org/obo/MFAO_0000006>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000023> (metabolic flux analysis)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000023> "metabolic flux analysis"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000023> <http://purl.obolibrary.org/obo/MFAO_0000000>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000024> (flux prediction method)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000024> "flux prediction method"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000024> <http://purl.obolibrary.org/obo/MFAO_0000023>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000025> (flux solution space)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000025> "flux solution space"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000025> <http://purl.obolibrary.org/obo/MFAO_0000023>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000026> (flux vector)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000026> "flux vector"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000026> <http://purl.obolibrary.org/obo/MFAO_0000023>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000027> (flux constraints)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000027> "flux constraints"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000027> <http://purl.obolibrary.org/obo/MFAO_0000023>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000028> (flux equality constraints)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000028> "flux equality constraints"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000028> <http://purl.obolibrary.org/obo/MFAO_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000029> (flux inequality constraints)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000029> "flux inequality constraints"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000029> <http://purl.obolibrary.org/obo/MFAO_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000030> (flux space sampling)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000030> "flux space sampling"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000030> <http://purl.obolibrary.org/obo/MFAO_0000023>)
+
+# Class: <http://purl.obolibrary.org/obo/MFAO_0000031> (metabolic pseudo-steady state)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MFAO_0000031> "metabolic pseudo-steady state"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/MFAO_0000031> <http://purl.obolibrary.org/obo/MFAO_0000023>)
 
 
 )

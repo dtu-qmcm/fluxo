@@ -1,2 +1,0 @@
-http://purl.obolibrary.org/obo/UBERON_0000465
-http://purl.obolibrary.org/obo/UBERON_0000477
