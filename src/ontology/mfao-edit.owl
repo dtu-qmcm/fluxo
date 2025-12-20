@@ -7,8 +7,6 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(Import(<http://purl.obolibrary.org/obo/mfao/imports/merged_import.owl>)
-
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
 Declaration(Class(obo:BFO_0000003))
