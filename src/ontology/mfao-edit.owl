@@ -1,478 +1,758 @@
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
-
-
-Declaration(Class(obo:BFO_0000001))
-Declaration(Class(obo:BFO_0000002))
-Declaration(Class(obo:BFO_0000003))
-Declaration(Class(obo:BFO_0000004))
-Declaration(Class(obo:BFO_0000006))
-Declaration(Class(obo:BFO_0000008))
-Declaration(Class(obo:BFO_0000009))
-Declaration(Class(obo:BFO_0000011))
-Declaration(Class(obo:BFO_0000015))
-Declaration(Class(obo:BFO_0000016))
-Declaration(Class(obo:BFO_0000017))
-Declaration(Class(obo:BFO_0000018))
-Declaration(Class(obo:BFO_0000019))
-Declaration(Class(obo:BFO_0000020))
-Declaration(Class(obo:BFO_0000023))
-Declaration(Class(obo:BFO_0000024))
-Declaration(Class(obo:BFO_0000026))
-Declaration(Class(obo:BFO_0000027))
-Declaration(Class(obo:BFO_0000028))
-Declaration(Class(obo:BFO_0000029))
-Declaration(Class(obo:BFO_0000030))
-Declaration(Class(obo:BFO_0000031))
-Declaration(Class(obo:BFO_0000034))
-Declaration(Class(obo:BFO_0000035))
-Declaration(Class(obo:BFO_0000038))
-Declaration(Class(obo:BFO_0000040))
-Declaration(Class(obo:BFO_0000140))
-Declaration(Class(obo:BFO_0000141))
-Declaration(Class(obo:BFO_0000142))
-Declaration(Class(obo:BFO_0000144))
-Declaration(Class(obo:BFO_0000145))
-Declaration(Class(obo:BFO_0000146))
-Declaration(Class(obo:BFO_0000147))
-Declaration(Class(obo:BFO_0000148))
-Declaration(Class(obo:BFO_0000182))
-Declaration(Class(obo:CHEBI_25212))
-Declaration(Class(obo:NCIT_C43366))
-Declaration(Class(obo:SBO_0000010))
-Declaration(Class(obo:SBO_0000011))
-Declaration(Class(obo:SBO_0000015))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000000>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000003>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000010>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000011>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000012>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000013>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000014>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000015>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000016>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000017>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000018>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000019>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000020>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000058>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000059>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000150>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000151>))
-Declaration(Class(<http://purl.obolibrary.org/obo/0000182>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/0000004>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/0000006>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/0000007>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/0000008>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/0000009>))
-Declaration(DataProperty(<http://purl.obolibrary.org/obo/0000005>))
-Declaration(DataProperty(<http://purl.obolibrary.org/obo/0000070>))
-Declaration(AnnotationProperty(obo:IAO_0000115))
-Declaration(AnnotationProperty(oboInOwl:hasBroadSynonym))
-Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
-
-############################
-#   Object Properties
-############################
-
-# Object Property: <http://purl.obolibrary.org/obo/0000004> (reaction bidirectionality)
-
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000004> "A characteristic of a biochemical reaction which proceeds simultaneously in forward and backward direction")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000004> "reaction bidirectionality")
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/0000004> <http://purl.obolibrary.org/obo/0000003>)
-
-# Object Property: <http://purl.obolibrary.org/obo/0000006> (has_flux)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000006> "has_flux")
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/0000006> <http://purl.obolibrary.org/obo/0000003>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/0000006> <http://purl.obolibrary.org/obo/0000150>)
-
-# Object Property: <http://purl.obolibrary.org/obo/0000007> (has_reactant)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000007> "has_reactant")
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/0000007> <http://purl.obolibrary.org/obo/0000003>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/0000007> obo:NCIT_C43366)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <Ontology/>
+    
 
-# Object Property: <http://purl.obolibrary.org/obo/0000008> (has_product)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000008> "has_product")
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/0000008> <http://purl.obolibrary.org/obo/0000003>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/0000008> obo:NCIT_C43366)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-# Object Property: <http://purl.obolibrary.org/obo/0000009> (has_nominal_direction)
+    
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000009> "has_nominal_direction")
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/0000009> <http://purl.obolibrary.org/obo/0000011>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/0000009> <http://purl.obolibrary.org/obo/0000012>)
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-############################
-#   Data Properties
-############################
+    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
 
-# Data Property: <http://purl.obolibrary.org/obo/0000004> (reaction bidirectionality)
 
-DataPropertyRange(<http://purl.obolibrary.org/obo/0000004> xsd:boolean)
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
 
-# Data Property: <http://purl.obolibrary.org/obo/0000005> (reaction reversibility)
+    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000005> "The property of metabolic reaction to proceed in forward and backward direction")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000005> "reaction bidirectionality")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/0000005> "property or class")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000005> "reaction reversibility")
-DataPropertyDomain(<http://purl.obolibrary.org/obo/0000005> <http://purl.obolibrary.org/obo/0000003>)
-DataPropertyRange(<http://purl.obolibrary.org/obo/0000005> xsd:boolean)
 
-# Data Property: <http://purl.obolibrary.org/obo/0000070> (metabolite pool size estimate)
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000070> "metabolite pool size estimate")
-DataPropertyDomain(<http://purl.obolibrary.org/obo/0000070> obo:CHEBI_25212)
-DataPropertyRange(<http://purl.obolibrary.org/obo/0000070> xsd:double)
+    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-############################
-#   Classes
-############################
+    
 
-# Class: obo:BFO_0000001 (entity)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000001 "entity")
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000004 -->
 
-# Class: obo:BFO_0000002 (continuant)
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000004">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <obo:IAO_0000115>A characteristic of a biochemical reaction which proceeds simultaneously in forward and backward direction</obo:IAO_0000115>
+        <rdfs:label>reaction bidirectionality</rdfs:label>
+    </ObjectProperty>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000002 "continuant")
-SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
 
-# Class: obo:BFO_0000003 (occurrent)
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000006 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000003 "occurrent")
-SubClassOf(obo:BFO_0000003 obo:BFO_0000001)
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000006">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <rdfs:range rdf:resource="http://w3id.org/msio/MSIO_0000150"/>
+        <rdfs:label>has_flux</rdfs:label>
+    </ObjectProperty>
+    
 
-# Class: obo:BFO_0000004 (independent continuant)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000004 "independent continuant")
-SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000007 -->
 
-# Class: obo:BFO_0000006 (spatial region)
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000007">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43366"/>
+        <rdfs:label>has_reactant</rdfs:label>
+    </ObjectProperty>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000006 "spatial region")
-SubClassOf(obo:BFO_0000006 obo:BFO_0000141)
 
-# Class: obo:BFO_0000008 (temporal region)
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000008 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000008 "temporal region")
-SubClassOf(obo:BFO_0000008 obo:BFO_0000003)
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000008">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43366"/>
+        <rdfs:label>has_product</rdfs:label>
+    </ObjectProperty>
+    
 
-# Class: obo:BFO_0000009 (two-dimensional spatial region)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000009 "two-dimensional spatial region")
-SubClassOf(obo:BFO_0000009 obo:BFO_0000006)
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000009 -->
 
-# Class: obo:BFO_0000011 (spatiotemporal region)
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000009">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000011"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000012"/>
+        <rdfs:label>has_nominal_direction</rdfs:label>
+    </ObjectProperty>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000011 "spatiotemporal region")
-SubClassOf(obo:BFO_0000011 obo:BFO_0000003)
 
-# Class: obo:BFO_0000015 (process)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000015 "process")
-SubClassOf(obo:BFO_0000015 obo:BFO_0000003)
+    
 
-# Class: obo:BFO_0000016 (disposition)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition")
-SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000005 -->
 
-# Class: obo:BFO_0000017 (realizable entity)
+    <DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/MFAO_0000005">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <obo:IAO_0000115>The property of metabolic reaction to proceed in forward and backward direction</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reaction bidirectionality</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property or class</rdfs:comment>
+        <rdfs:label>reaction reversibility</rdfs:label>
+    </DatatypeProperty>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000017 "realizable entity")
-SubClassOf(obo:BFO_0000017 obo:BFO_0000020)
 
-# Class: obo:BFO_0000018 (zero-dimensional spatial region)
+    <!-- http://w3id.org/msio/MSIO_0000070 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000018 "zero-dimensional spatial region")
-SubClassOf(obo:BFO_0000018 obo:BFO_0000006)
+    <DatatypeProperty rdf:about="http://w3id.org/msio/MSIO_0000070">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>metabolite pool size estimate</rdfs:label>
+    </DatatypeProperty>
+    
 
-# Class: obo:BFO_0000019 (quality)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000019 "quality")
-SubClassOf(obo:BFO_0000019 obo:BFO_0000020)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-# Class: obo:BFO_0000020 (specifically dependent continuant)
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000020 "specifically dependent continuant")
-SubClassOf(obo:BFO_0000020 obo:BFO_0000002)
 
-# Class: obo:BFO_0000023 (role)
+    <!-- http://biomodels.net/SBO/SBO_0000010 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000023 "role")
-SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
+    <Class rdf:about="http://biomodels.net/SBO/SBO_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+        <obo:IAO_0000115>Starting metabolite of a metabolic reaction</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>reagent</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>educt</oboInOwl:hasExactSynonym>
+        <rdfs:label>reactant</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000024 (fiat object part)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000024 "fiat object part")
-SubClassOf(obo:BFO_0000024 obo:BFO_0000040)
+    <!-- http://biomodels.net/SBO/SBO_0000011 -->
 
-# Class: obo:BFO_0000026 (one-dimensional spatial region)
+    <Class rdf:about="http://biomodels.net/SBO/SBO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+        <obo:IAO_0000115>Product metabolite of a metabolic reaction</obo:IAO_0000115>
+        <rdfs:label>product</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000026 "one-dimensional spatial region")
-SubClassOf(obo:BFO_0000026 obo:BFO_0000006)
 
-# Class: obo:BFO_0000027 (object aggregate)
+    <!-- http://biomodels.net/SBO/SBO_0000015 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000027 "object aggregate")
-SubClassOf(obo:BFO_0000027 obo:BFO_0000040)
+    <Class rdf:about="http://biomodels.net/SBO/SBO_0000015">
+        <rdfs:subClassOf rdf:resource="http://biomodels.net/SBO/SBO_0000010"/>
+        <rdfs:label>substrate</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000028 (three-dimensional spatial region)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000028 "three-dimensional spatial region")
-SubClassOf(obo:BFO_0000028 obo:BFO_0000006)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
 
-# Class: obo:BFO_0000029 (site)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
+        <rdfs:label>entity</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000029 "site")
-SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
 
-# Class: obo:BFO_0000030 (object)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000030 "object")
-SubClassOf(obo:BFO_0000030 obo:BFO_0000040)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label>continuant</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000031 (generically dependent continuant)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000031 "generically dependent continuant")
-SubClassOf(obo:BFO_0000031 obo:BFO_0000002)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
 
-# Class: obo:BFO_0000034 (function)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label>occurrent</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000034 "function")
-SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
 
-# Class: obo:BFO_0000035 (process boundary)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000035 "process boundary")
-SubClassOf(obo:BFO_0000035 obo:BFO_0000003)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>independent continuant</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000038 (one-dimensional temporal region)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000038 "one-dimensional temporal region")
-SubClassOf(obo:BFO_0000038 obo:BFO_0000008)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
 
-# Class: obo:BFO_0000040 (material entity)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:label>spatial region</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity")
-SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
 
-# Class: obo:BFO_0000140 (continuant fiat boundary)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000140 "continuant fiat boundary")
-SubClassOf(obo:BFO_0000140 obo:BFO_0000141)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label>temporal region</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000141 (immaterial entity)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000141 "immaterial entity")
-SubClassOf(obo:BFO_0000141 obo:BFO_0000004)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
 
-# Class: obo:BFO_0000142 (one-dimensional continuant fiat boundary)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:label>two-dimensional spatial region</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000142 "one-dimensional continuant fiat boundary")
-SubClassOf(obo:BFO_0000142 obo:BFO_0000140)
 
-# Class: obo:BFO_0000144 (process profile)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000011 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000144 "process profile")
-SubClassOf(obo:BFO_0000144 obo:BFO_0000015)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label>spatiotemporal region</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000145 (relational quality)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000145 "relational quality")
-SubClassOf(obo:BFO_0000145 obo:BFO_0000019)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
 
-# Class: obo:BFO_0000146 (two-dimensional continuant fiat boundary)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label>process</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000146 "two-dimensional continuant fiat boundary")
-SubClassOf(obo:BFO_0000146 obo:BFO_0000140)
 
-# Class: obo:BFO_0000147 (zero-dimensional continuant fiat boundary)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
-AnnotationAssertion(rdfs:label obo:BFO_0000147 "zero-dimensional continuant fiat boundary")
-SubClassOf(obo:BFO_0000147 obo:BFO_0000140)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label>disposition</rdfs:label>
+    </Class>
+    
 
-# Class: obo:BFO_0000148 (zero-dimensional temporal region)
 
-AnnotationAssertion(rdfs:label obo:BFO_0000148 "zero-dimensional temporal region")
-SubClassOf(obo:BFO_0000148 obo:BFO_0000008)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
 
-# Class: obo:BFO_0000182 (history)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label>realizable entity</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label obo:BFO_0000182 "history")
-SubClassOf(obo:BFO_0000182 obo:BFO_0000015)
 
-# Class: obo:CHEBI_25212 (metabolite)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000018 -->
 
-AnnotationAssertion(rdfs:label obo:CHEBI_25212 "metabolite")
-SubClassOf(obo:CHEBI_25212 obo:NCIT_C43366)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:label>zero-dimensional spatial region</rdfs:label>
+    </Class>
+    
 
-# Class: obo:NCIT_C43366 (compound)
 
-AnnotationAssertion(rdfs:label obo:NCIT_C43366 "compound")
-SubClassOf(obo:NCIT_C43366 obo:BFO_0000004)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
-# Class: obo:SBO_0000010 (reactant)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label>quality</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 obo:SBO_0000010 "Starting metabolite of a metabolic reaction")
-AnnotationAssertion(oboInOwl:hasBroadSynonym obo:SBO_0000010 "reagent")
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:SBO_0000010 "educt")
-AnnotationAssertion(rdfs:label obo:SBO_0000010 "reactant")
-SubClassOf(obo:SBO_0000010 obo:CHEBI_25212)
 
-# Class: obo:SBO_0000011 (product)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
 
-AnnotationAssertion(obo:IAO_0000115 obo:SBO_0000011 "Product metabolite of a metabolic reaction")
-AnnotationAssertion(rdfs:label obo:SBO_0000011 "product")
-SubClassOf(obo:SBO_0000011 obo:CHEBI_25212)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>specifically dependent continuant</rdfs:label>
+    </Class>
+    
 
-# Class: obo:SBO_0000015 (substrate)
 
-AnnotationAssertion(rdfs:label obo:SBO_0000015 "substrate")
-SubClassOf(obo:SBO_0000015 obo:SBO_0000010)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000000> (fluxome)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label>role</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000000> "The complete set of metabolic fluxes (reaction rates) in a biological system at a given point in time.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000000> "fluxome")
-SubClassOf(<http://purl.obolibrary.org/obo/0000000> obo:BFO_0000141)
 
-# Class: <http://purl.obolibrary.org/obo/0000001> (fluxomics)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000024 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000001> "Experimental approaches to determine the rates of metabolic reactions - the metabolic fluxes - within a biological entity.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000001> "fluxomics")
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>fiat object part</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000002> (Phenotype)
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000002> "A directly observable biochemical characteristic of a living biological system")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000002> "Phenotype")
+    <!-- http://purl.obolibrary.org/obo/BFO_0000026 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000003> (metabolic reaction)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:label>one-dimensional spatial region</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000003> "a biochemical reaction within a living organism and is part of the metabolism.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000003> "metabolic reaction")
-SubClassOf(<http://purl.obolibrary.org/obo/0000003> obo:BFO_0000015)
 
-# Class: <http://purl.obolibrary.org/obo/0000010> (unidirectional reaction)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000010> "A metabolic reaction that solely operates in a single direction, from educts to products")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000010> "irreversible reaction")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/0000010> "property or class")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000010> "unidirectional reaction")
-EquivalentClasses(<http://purl.obolibrary.org/obo/0000010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/0000003> DataHasValue(<http://purl.obolibrary.org/obo/0000005> "false"^^xsd:boolean)))
-SubClassOf(<http://purl.obolibrary.org/obo/0000010> <http://purl.obolibrary.org/obo/0000003>)
-DisjointClasses(<http://purl.obolibrary.org/obo/0000010> <http://purl.obolibrary.org/obo/0000011>)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>object aggregate</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000011> (bidirectional reaction)
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000011> "A metabolic reaction that operates simultaneously in forward and backward direction.")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000011> "reversible reaction")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/0000011> "property or class")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000011> "bidirectional reaction")
-EquivalentClasses(<http://purl.obolibrary.org/obo/0000011> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/0000003> DataHasValue(<http://purl.obolibrary.org/obo/0000005> "true"^^xsd:boolean)))
-SubClassOf(<http://purl.obolibrary.org/obo/0000011> <http://purl.obolibrary.org/obo/0000003>)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000012> (reaction direction)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:label>three-dimensional spatial region</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000012> "A net path that a chemical system to reach or maintain a state of equilbrium")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000012> "reaction direction")
-SubClassOf(<http://purl.obolibrary.org/obo/0000012> obo:BFO_0000020)
 
-# Class: <http://purl.obolibrary.org/obo/0000013> (forward direction)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000013> "the reaction that proceeds from educts to products")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000013> "forward direction")
-SubClassOf(<http://purl.obolibrary.org/obo/0000013> <http://purl.obolibrary.org/obo/0000012>)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:label>site</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000014> (backward direction)
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000014> "the reaction that proceeds from products to educts")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000014> "reverse direction")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000014> "backward direction")
-SubClassOf(<http://purl.obolibrary.org/obo/0000014> <http://purl.obolibrary.org/obo/0000012>)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000015> (equilibrium)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>object</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000015> "the reaction that the rate of the forward reaction equals the rate of the backward reaction")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000015> "equilibrium")
-SubClassOf(<http://purl.obolibrary.org/obo/0000015> <http://purl.obolibrary.org/obo/0000012>)
 
-# Class: <http://purl.obolibrary.org/obo/0000016> (flux map)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000016> "Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000016> "flux map")
-SubClassOf(<http://purl.obolibrary.org/obo/0000016> obo:BFO_0000031)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>generically dependent continuant</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000017> (fluxotype)
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000017> "the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000017> "fluxotype")
-SubClassOf(<http://purl.obolibrary.org/obo/0000017> obo:BFO_0000031)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000018> (Stoichiometry-based fluxomics method)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label>function</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000018> "Set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000018> "Stoichiometry-based fluxomics method")
-SubClassOf(<http://purl.obolibrary.org/obo/0000018> <http://purl.obolibrary.org/obo/0000182>)
 
-# Class: <http://purl.obolibrary.org/obo/0000019> (Constraint-based fluxomics method)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000019> "Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000019> "Constraint-based fluxomics method")
-SubClassOf(<http://purl.obolibrary.org/obo/0000019> <http://purl.obolibrary.org/obo/0000018>)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label>process boundary</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000020> (intracellular flux)
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000020> "Net rate at which a metabolic reaction proceeds in nominal direction within a living biological system")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000020> "intracellular flux")
-SubClassOf(<http://purl.obolibrary.org/obo/0000020> <http://purl.obolibrary.org/obo/0000150>)
-DisjointClasses(<http://purl.obolibrary.org/obo/0000020> <http://purl.obolibrary.org/obo/0000151>)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000058> (metabolic network)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:label>one-dimensional temporal region</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000058> "a set of interconnected pathways of biochemical reactions within living cells ")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000058> "network")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000058> "metabolic network")
-SubClassOf(<http://purl.obolibrary.org/obo/0000058> obo:BFO_0000031)
 
-# Class: <http://purl.obolibrary.org/obo/0000059> (metabolic pathway)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
-AnnotationAssertion(obo:IAO_0000115 <http://purl.obolibrary.org/obo/0000059> "a series of connected biochemical reactions catalyzed by enzymes")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000059> "pathway")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/0000059> "metabolic network")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000059> "metabolic pathway")
-SubClassOf(<http://purl.obolibrary.org/obo/0000059> obo:BFO_0000031)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:label>material entity</rdfs:label>
+    </Class>
+    
 
-# Class: <http://purl.obolibrary.org/obo/0000150> (metabolic flux)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000150> "flux")
-AnnotationAssertion(oboInOwl:hasExactSynonym <http://purl.obolibrary.org/obo/0000150> "metabolic reaction rate")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/0000150> "fluxome")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000150> "metabolic flux")
-SubClassOf(<http://purl.obolibrary.org/obo/0000150> obo:BFO_0000144)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
 
-# Class: <http://purl.obolibrary.org/obo/0000151> (extracellular flux)
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:label>continuant fiat boundary</rdfs:label>
+    </Class>
+    
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000151> "extracellular flux")
-SubClassOf(<http://purl.obolibrary.org/obo/0000151> <http://purl.obolibrary.org/obo/0000150>)
 
-# Class: <http://purl.obolibrary.org/obo/0000182> (fluxomics investigation)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/0000182> "fluxomics investigation")
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:label>immaterial entity</rdfs:label>
+    </Class>
+    
 
 
-)
+    <!-- http://purl.obolibrary.org/obo/BFO_0000142 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <rdfs:label>one-dimensional continuant fiat boundary</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000144 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label>process profile</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000145 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label>relational quality</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000146 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000146">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <rdfs:label>two-dimensional continuant fiat boundary</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000147 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        <rdfs:label>zero-dimensional continuant fiat boundary</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000148 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:label>zero-dimensional temporal region</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000182 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label>history</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25212 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43366"/>
+        <rdfs:label>metabolite</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000000 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <obo:IAO_0000115>The complete set of metabolic fluxes (reaction rates) in a biological system at a given point in time.</obo:IAO_0000115>
+        <rdfs:label>fluxome</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000001 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000001">
+        <obo:IAO_0000115>Experimental approaches to determine the rates of metabolic reactions - the metabolic fluxes - within a biological entity.</obo:IAO_0000115>
+        <rdfs:label>fluxomics</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000002 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000002">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/msio/MSIO_0000150"/>
+        <disjointWith rdf:resource="http://w3id.org/msio/MSIO_0000151"/>
+        <obo:IAO_0000115>Net rate at which a metabolic reaction proceeds in nominal direction within a living biological system</obo:IAO_0000115>
+        <rdfs:label>intracellular flux</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000003 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000115>a biochemical reaction within a living organism and is part of the metabolism.</obo:IAO_0000115>
+        <rdfs:label>metabolic reaction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000010 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000010">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000005"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000011"/>
+        <obo:IAO_0000115>A metabolic reaction that solely operates in a single direction, from educts to products</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>irreversible reaction</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property or class</rdfs:comment>
+        <rdfs:label>unidirectional reaction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000011 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000011">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000005"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000003"/>
+        <obo:IAO_0000115>A metabolic reaction that operates simultaneously in forward and backward direction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reversible reaction</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property or class</rdfs:comment>
+        <rdfs:label>bidirectional reaction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000012 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <obo:IAO_0000115>A net path that a chemical system to reach or maintain a state of equilbrium</obo:IAO_0000115>
+        <rdfs:label>reaction direction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000013 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000012"/>
+        <obo:IAO_0000115>the reaction that proceeds from educts to products</obo:IAO_0000115>
+        <rdfs:label>forward direction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000014 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000012"/>
+        <obo:IAO_0000115>the reaction that proceeds from products to educts</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reverse direction</oboInOwl:hasExactSynonym>
+        <rdfs:label>backward direction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000015 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000012"/>
+        <obo:IAO_0000115>the reaction that the rate of the forward reaction equals the rate of the backward reaction</obo:IAO_0000115>
+        <rdfs:label>equilibrium</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000016 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality.</obo:IAO_0000115>
+        <rdfs:label>flux map</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000017 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.</obo:IAO_0000115>
+        <rdfs:label>fluxotype</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000018 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000018">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/msio/MSIO_0000182"/>
+        <obo:IAO_0000115>Set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry</obo:IAO_0000115>
+        <rdfs:label>stoichiometry-based fluxomics method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000019 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000018"/>
+        <obo:IAO_0000115>Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives</obo:IAO_0000115>
+        <rdfs:label>constraint-based fluxomics method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000020 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000020">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/msio/MSIO_0000182"/>
+        <obo:IAO_0000115>A methodology that determines metabolic fluxes within a cell based on empirical data.</obo:IAO_0000115>
+        <rdfs:label>flux measurement method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MFAO_0000021 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/MFAO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MFAO_0000020"/>
+        <obo:IAO_0000115>Set of approaches that quantitatively estimate/infer metabolic fluxes using a metabolic reaction model, experimental data and computation</obo:IAO_0000115>
+        <rdfs:label>metabolic flux analysis method</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C43366 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C43366">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>compound</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://w3id.org/msio/MSIO_0000058 -->
+
+    <Class rdf:about="http://w3id.org/msio/MSIO_0000058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>a set of interconnected pathways of biochemical reactions within living cells </obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>network</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolic network</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://w3id.org/msio/MSIO_0000059 -->
+
+    <Class rdf:about="http://w3id.org/msio/MSIO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>a series of connected biochemical reactions catalyzed by enzymes</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>pathway</oboInOwl:hasExactSynonym>
+        <rdfs:comment>metabolic network</rdfs:comment>
+        <rdfs:label>metabolic pathway</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://w3id.org/msio/MSIO_0000150 -->
+
+    <Class rdf:about="http://w3id.org/msio/MSIO_0000150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <obo:IAO_0000115>Rate of metabolite flow through a biochemical reaction</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>metabolic reaction rate</oboInOwl:hasExactSynonym>
+        <rdfs:comment>fluxome</rdfs:comment>
+        <rdfs:label>metabolic flux</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://w3id.org/msio/MSIO_0000151 -->
+
+    <Class rdf:about="http://w3id.org/msio/MSIO_0000151">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/msio/MSIO_0000150"/>
+        <rdfs:label>extracellular flux</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://w3id.org/msio/MSIO_0000182 -->
+
+    <Class rdf:about="http://w3id.org/msio/MSIO_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label>fluxomics investigation</rdfs:label>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

@@ -50,8 +50,8 @@ MFAO:0000006	has_flux		object property	metabolic reaction	metabolic flux
 MFAO:0000007	has_reactant		object property	metabolic reaction	compound								
 MFAO:0000008	has_product		object property	metabolic reaction	compound								
 MFAO:0000009	has_nominal_direction		object property	bidirectional reaction	reaction direction								
-MFAO:0000010	unidirectional reaction	A metabolic reaction that solely operates in a single direction, from educts to products				metabolic reaction	metabolic reaction' and ('reaction reversibility' value false)	bidirectional reaction		irreversible reaction			property or class
-MFAO:0000011	bidirectional reaction	A metabolic reaction that operates simultaneously in forward and backward direction.				metabolic reaction	metabolic reaction' and ('reaction reversibility' value true)	unidirectional reaction		reversible reaction			property or class
+MFAO:0000010	unidirectional reaction	A metabolic reaction that solely operates in a single direction, from educts to products				metabolic reaction	'metabolic reaction' and ('reaction reversibility' value false)	bidirectional reaction		irreversible reaction			property or class
+MFAO:0000011	bidirectional reaction	A metabolic reaction that operates simultaneously in forward and backward direction.				metabolic reaction	'metabolic reaction' and ('reaction reversibility' value true)	unidirectional reaction		reversible reaction			property or class
 MFAO:0000012	reaction direction	A net path that a chemical system to reach or maintain a state of equilbrium				specifically dependent continuant							
 MFAO:0000013	forward direction	the reaction that proceeds from educts to products				reaction direction							
 MFAO:0000014	backward direction	the reaction that proceeds from products to educts				reaction direction				reverse direction			
@@ -65,6 +65,6 @@ MSIO:0000070	metabolite pool size estimate		data property	metabolite	xsd:double
 MFAO:0000016	flux map	Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality.				generically dependent continuant							
 MFAO:0000017	fluxotype	the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.				generically dependent continuant							
 MFAO:0000018	stoichiometry-based fluxomics method	Set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry				fluxomics investigation							
-MFAO:0000019	constraint-based fluxomics method	Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives				Stoichiometry-based fluxomics method							
+MFAO:0000019	constraint-based fluxomics method	Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives				stoichiometry-based fluxomics method							
 MFAO:0000020	flux measurement method	A methodology that determines metabolic fluxes within a cell based on empirical data.				fluxomics investigation							
 MFAO:0000021	metabolic flux analysis method	Set of approaches that quantitatively estimate/infer metabolic fluxes using a metabolic reaction model, experimental data and computation				flux measurement method							
