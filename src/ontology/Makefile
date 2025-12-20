@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a549b67ed77bd9ba4a43816a3b94b2d84bcdf25603573e93048be3445994126e
+CONFIG_HASH=                c0270562227f51133159b74c3718e1bd4c06182a8ef0224e693a54aa82c65c56
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao bfo ro msio sbo obi chebi
+IMPORTS =  iao bfo omo ro msio sbo obi chebi
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -469,6 +469,14 @@ mirror-bfo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
 
 
+## ONTOLOGY: omo
+.PHONY: mirror-omo
+.PRECIOUS: $(MIRRORDIR)/omo.owl
+mirror-omo: | $(TMPDIR)
+	curl -L $(OBOBASE)/omo.owl --create-dirs -o $(TMPDIR)/omo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/omo-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: ro
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
@@ -481,7 +489,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-msio
 .PRECIOUS: $(MIRRORDIR)/msio.owl
 mirror-msio: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://purl.obolibrary.org/obo/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://w3id.org/msio/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: sbo
@@ -504,17 +512,7 @@ mirror-obi: | $(TMPDIR)
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	curl -L $(OBOBASE)/chebi.owl --create-dirs -o $(TMPDIR)/chebi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/chebi-download.owl --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
-
-ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
-MERGE_MIRRORS = true
-
-ifeq ($(MERGE_MIRRORS),true)
-$(MIRRORDIR)/merged.owl: $(ALL_MIRRORS)
-	$(ROBOT) merge $(patsubst %, -i %, $^)  -o $@
-.PRECIOUS: $(MIRRORDIR)/merged.owl
-endif
+	$(ROBOT) remove -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true

@@ -17,6 +17,7 @@ import_group:
   products:
     - id: iao
     - id: bfo
+    - id: omo
     - id: ro
       use_base: TRUE
     - id: msio

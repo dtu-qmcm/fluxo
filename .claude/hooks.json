@@ -1,0 +1,56 @@
+{
+  "hooks": [
+    {
+      "name": "validate-owl-after-edit",
+      "description": "Run basic OWL syntax validation after editing ontology files",
+      "event": "tool:after",
+      "tool": "Edit",
+      "filePattern": "**/*.owl",
+      "command": "cd src/ontology && robot validate --input \"{{file_path}}\" --output /dev/null 2>&1 || echo 'Warning: OWL validation found issues. Run /validate for details.'",
+      "blocking": false
+    },
+    {
+      "name": "check-owl-syntax-after-write",
+      "description": "Validate OWL syntax when writing new ontology files",
+      "event": "tool:after",
+      "tool": "Write",
+      "filePattern": "**/*.owl",
+      "command": "cd src/ontology && robot validate --input \"{{file_path}}\" --output /dev/null 2>&1 || echo 'Warning: OWL file may have syntax issues.'",
+      "blocking": false
+    },
+    {
+      "name": "remind-to-test",
+      "description": "Remind to run tests after significant ontology edits",
+      "event": "tool:after",
+      "tool": "Edit",
+      "filePattern": "**/mfao-edit.owl",
+      "command": "echo '\n💡 Tip: Consider running /validate or /quick-test to check your changes.'",
+      "blocking": false
+    },
+    {
+      "name": "check-id-format",
+      "description": "Check for proper ID format in ontology edits",
+      "event": "tool:after",
+      "tool": "Edit",
+      "filePattern": "**/*.owl",
+      "command": "if grep -q 'rdf:about=\"[^#]*#[^_]*_[0-9]\\+\"' \"{{file_path}}\"; then echo '✓ IDs appear well-formed'; else echo '⚠ Check ID formats (should be PREFIX_#######)'; fi",
+      "blocking": false
+    },
+    {
+      "name": "backup-before-imports-refresh",
+      "description": "Create backup before refreshing imports",
+      "event": "command:before",
+      "command": "/refresh-imports",
+      "command": "cd src/ontology && cp -r imports imports.backup.$(date +%Y%m%d_%H%M%S) && echo '✓ Backup created in imports.backup.*'",
+      "blocking": false
+    },
+    {
+      "name": "check-git-status",
+      "description": "Check git status before major operations",
+      "event": "command:before",
+      "command": "/build",
+      "command": "git status --short src/ontology/ | head -10 || true",
+      "blocking": false
+    }
+  ]
+}
