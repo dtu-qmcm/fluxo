@@ -120,7 +120,7 @@ if [ x$ODK_DEBUG = xyes ]; then
 fi
 rm -f tmp/debug.log
 
-VOLUME_BIND=$PWD/../../:/work$ODK_SSH_BIND
+VOLUME_BIND=$PWD/../..:/work$ODK_SSH_BIND
 WORK_DIR=/work/src/ontology
 
 # Support for OAK cache sharing

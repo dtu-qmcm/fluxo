@@ -12,12 +12,16 @@ export_formats:
   - owl
   - obo
   - json
+components:
+  products:
+    - filename: 
+    - reference:
+    
 import_group:
   use_base_merging: TRUE
   products:
     - id: iao
     - id: bfo
-    - id: omo
     - id: ro
       use_base: TRUE
     - id: msio
@@ -26,6 +30,8 @@ import_group:
       base_iris:
         - http://w3id.org/msio/MSIO_
     - id: sbo
+      make_base: TRUE
+    - id: edam
       make_base: TRUE
     - id: obi
       make_base: TRUE
