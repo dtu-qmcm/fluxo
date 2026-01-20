@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a549b67ed77bd9ba4a43816a3b94b2d84bcdf25603573e93048be3445994126e
+CONFIG_HASH=                4c2e9c2043104a472b4822f60ebdab1812b31069c91efefdeb86146163369655
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 
+OTHER_SRC =                 $(COMPONENTSDIR)/definitions.owl $(COMPONENTSDIR)/bfo.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao bfo ro msio sbo obi chebi
+IMPORTS =  iao ro msio sbo obi chebi
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -447,6 +447,46 @@ no-mirror-refresh-%:
 		IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl
 
 # ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+ifeq ($(COMP),true)
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-definitions.owl \
+		--assume-new=$(TMPDIR)/stamp-component-bfo.owl \
+		COMP=true IMP=false MIR=true PAT=true all_components
+
+.PHONY: no-mirror-recreate-components
+no-mirror-recreate-components:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-definitions.owl \
+		--assume-new=$(TMPDIR)/stamp-component-bfo.owl \
+		COMP=true IMP=false MIR=false PAT=true all_components
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-$*.owl \
+		COMP=true IMP=false MIR=true PAT=true $(COMPONENTSDIR)/$*.owl
+
+.PHONY: no-mirror-recreate-%
+no-mirror-recreate-%:
+	$(MAKE) --assume-new=$(TMPDIR)/stamp-component-$*.owl \
+		COMP=true IMP=false MIR=false PAT=true $(COMPONENTSDIR)/$*.owl
+
+$(COMPONENTSDIR)/%.owl: $(TMPDIR)/stamp-component-%.owl | $(COMPONENTSDIR)
+	test -f $@ || touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%.owl
+
+$(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
+	touch $@
+.PRECIOUS: $(TMPDIR)/stamp-component-%.owl
+
+endif # COMP=true
+# ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
 
@@ -461,14 +501,6 @@ mirror-iao: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/iao-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: bfo
-.PHONY: mirror-bfo
-.PRECIOUS: $(MIRRORDIR)/bfo.owl
-mirror-bfo: | $(TMPDIR)
-	curl -L $(OBOBASE)/bfo.owl --create-dirs -o $(TMPDIR)/bfo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/bfo-download.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: ro
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
@@ -481,7 +513,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-msio
 .PRECIOUS: $(MIRRORDIR)/msio.owl
 mirror-msio: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://purl.obolibrary.org/obo/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl --base-iri http://w3id.org/msio/MSIO_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: sbo
@@ -504,17 +536,7 @@ mirror-obi: | $(TMPDIR)
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	curl -L $(OBOBASE)/chebi.owl --create-dirs -o $(TMPDIR)/chebi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/chebi-download.owl --base-iri http://purl.obolibrary.org/obo/CHEBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
-
-ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
-MERGE_MIRRORS = true
-
-ifeq ($(MERGE_MIRRORS),true)
-$(MIRRORDIR)/merged.owl: $(ALL_MIRRORS)
-	$(ROBOT) merge $(patsubst %, -i %, $^)  -o $@
-.PRECIOUS: $(MIRRORDIR)/merged.owl
-endif
+	$(ROBOT) remove -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true

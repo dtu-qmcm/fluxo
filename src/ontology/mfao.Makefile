@@ -4,18 +4,27 @@
 ## changes here rather than in the main Makefile
 
 # ----------------------------------------
-# Merged imports
+# Components
 # ----------------------------------------
 
-# Create a merged imports file combining all import modules
-$(IMPORTDIR)/merged_import.owl: $(IMPORT_OWL_FILES) | $(IMPORTDIR)
-	$(ROBOT) merge $(foreach imp,$(IMPORT_OWL_FILES),-i $(imp)) \
-		annotate --ontology-iri $(ONTBASE)/imports/merged_import.owl \
-		--output $@
+#definitions
 
-.PHONY: merged-imports
-merged-imports: $(IMPORTDIR)/merged_import.owl
-	@echo "Merged imports created at $(IMPORTDIR)/merged_import.owl"
+SHEET_ID=1N0s8d8TfpN8tR8MJStfLZaXDp5UVZIcDoUTgCpIURsI
+TAB=1735560573
 
+$(TMPDIR)/definitions.tsv:
+	curl -L "https://docs.google.com/spreadsheets/d/$(SHEET_ID)/export?format=tsv&gid=$(TAB)" -o $(TMPDIR)/definitions.tsv
 
+$(COMPONENTSDIR)/definitions.owl: $(TMPDIR)/definitions.tsv $(TMPDIR)/stamp-component-definitions.owl
+	$(ROBOT) template  \
+		 --input $(SRC) \
+		 --template $(TMPDIR)/definitions.tsv \
+		 $(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/definitions.owl
 
+#bfo
+
+$(COMPONENTSDIR)/bfo.owl: $(TMPDIR)/stamp-component-bfo.owl | $(COMPONENTSDIR)
+	$(ROBOT) annotate --input-iri http://purl.obolibrary.org/obo/bfo.owl --ontology-iri $(ONTBASE)/$@ -o $@
+
+.PRECIOUS: $(COMPONENTSDIR)/bfo.owl

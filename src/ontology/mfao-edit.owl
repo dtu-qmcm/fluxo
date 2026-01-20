@@ -6,9 +6,12 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(MFAO:=<http://purl.obolibrary.org/obo/MFAO_/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mfao.owl>
+Import(<http://purl.obolibrary.org/obo/mfao/components/bfo.owl>)
+Import(<http://purl.obolibrary.org/obo/mfao/components/definitions.owl>)
 Import(<http://purl.obolibrary.org/obo/mfao/imports/merged_import.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
