@@ -10,7 +10,7 @@
 #definitions
 
 SHEET_ID=1N0s8d8TfpN8tR8MJStfLZaXDp5UVZIcDoUTgCpIURsI
-TAB=1735560573
+TAB=195485419
 
 $(COMPONENTSDIR)/definitions.owl: $(TMPDIR)/stamp-component-definitions.owl $(SRC)
 		curl -L "https://docs.google.com/spreadsheets/d/$(SHEET_ID)/export?format=tsv&gid=$(TAB)" -o $(TMPDIR)/definitions.tsv
