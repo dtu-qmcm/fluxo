@@ -21,19 +21,28 @@ import_group:
   products:
     - id: iao
     - id: ro
-      use_base: TRUE
     - id: msio
       mirror_from: https://raw.githubusercontent.com/ISA-tools/MSIO/refs/heads/master/releases/1.0/MSIO-merged-reasoned.owl
       make_base: TRUE
       base_iris:
         - http://w3id.org/msio/MSIO_
     - id: sbo
-      make_base: TRUE
     - id: obi
-      make_base: TRUE
     - id: chebi
       mirror_from: https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl
+    - id: edam
+      mirror_from: https://raw.githubusercontent.com/edamontology/edamontology/refs/heads/main/releases/EDAM.owl
       make_base: TRUE
+      base_iris:
+        - http://edamontology.org/EDAM_
+    - id: chmo
+    - id: stato
+    - id: uo
+    - id: nmrcv
+      mirror_from: http://nmrml.org/cv/v1.1.0/nmrCV.owl
+      make_base: TRUE
+      base_iris:
+        - http://nmrML.org/nmrCV#
 robot_java_args: "-Xmx8G"
 robot_report:
   use_labels: TRUE

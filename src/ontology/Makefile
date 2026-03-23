@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4c2e9c2043104a472b4822f60ebdab1812b31069c91efefdeb86146163369655
+CONFIG_HASH=                4136cde0b4e52ab2c61e324ed0205c0d0809c65dd463bc4783556d6e09cfe4bc
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  iao ro msio sbo obi chebi
+IMPORTS =  iao ro msio sbo obi chebi edam chmo stato uo nmrcv
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -505,7 +505,7 @@ mirror-iao: | $(TMPDIR)
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
 mirror-ro: | $(TMPDIR)
-	curl -L $(OBOBASE)/ro/ro-base.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/ro.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -521,7 +521,7 @@ mirror-msio: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/sbo.owl
 mirror-sbo: | $(TMPDIR)
 	curl -L $(OBOBASE)/sbo.owl --create-dirs -o $(TMPDIR)/sbo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/sbo-download.owl --base-iri http://purl.obolibrary.org/obo/SBO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -i $(TMPDIR)/sbo-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: obi
@@ -529,14 +529,52 @@ mirror-sbo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
 	curl -L $(OBOBASE)/obi.owl --create-dirs -o $(TMPDIR)/obi-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/obi-download.owl --base-iri http://purl.obolibrary.org/obo/OBI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -i $(TMPDIR)/obi-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: chebi
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/refs/heads/main/chebi_slim.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: edam
+.PHONY: mirror-edam
+.PRECIOUS: $(MIRRORDIR)/edam.owl
+mirror-edam: | $(TMPDIR)
+	$(ROBOT) remove -I https://raw.githubusercontent.com/edamontology/edamontology/refs/heads/main/releases/EDAM.owl --base-iri http://edamontology.org/EDAM_  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: chmo
+.PHONY: mirror-chmo
+.PRECIOUS: $(MIRRORDIR)/chmo.owl
+mirror-chmo: | $(TMPDIR)
+	curl -L $(OBOBASE)/chmo.owl --create-dirs -o $(TMPDIR)/chmo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/chmo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: stato
+.PHONY: mirror-stato
+.PRECIOUS: $(MIRRORDIR)/stato.owl
+mirror-stato: | $(TMPDIR)
+	curl -L $(OBOBASE)/stato.owl --create-dirs -o $(TMPDIR)/stato-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/stato-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: uo
+.PHONY: mirror-uo
+.PRECIOUS: $(MIRRORDIR)/uo.owl
+mirror-uo: | $(TMPDIR)
+	curl -L $(OBOBASE)/uo.owl --create-dirs -o $(TMPDIR)/uo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/uo-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: nmrcv
+.PHONY: mirror-nmrcv
+.PRECIOUS: $(MIRRORDIR)/nmrcv.owl
+mirror-nmrcv: | $(TMPDIR)
+	$(ROBOT) remove -I http://nmrml.org/cv/v1.1.0/nmrCV.owl --base-iri http://nmrML.org/nmrCV#  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true
