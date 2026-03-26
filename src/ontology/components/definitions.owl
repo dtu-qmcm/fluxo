@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/mfao/components/definitions.owl>
-<http://purl.obolibrary.org/obo/mfao/releases/2026-03-25/components/definitions.owl>
-Annotation(owl:versionInfo "2026-03-25")
+<http://purl.obolibrary.org/obo/mfao/releases/2026-03-26/components/definitions.owl>
+Annotation(owl:versionInfo "2026-03-26")
 
 Declaration(Class(<http://edamontology.org/data_1086>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000008>))
@@ -236,15 +236,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000214>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000215>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000216>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000217>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000218>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000219>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000220>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000221>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000222>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000223>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000224>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000225>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000226>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000227>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000228>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000229>))
@@ -254,8 +250,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000232>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000233>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000234>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000235>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000236>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000237>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000238>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000239>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FLUXO_0000240>))
@@ -1099,11 +1093,11 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000126> "metabolism")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000126> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000127> (metabolic network model)
+# Class: <http://purl.obolibrary.org/obo/FLUXO_0000127> (metabolic network)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/FLUXO_0000127> "a set of interconnected pathways of metabolic reactions within a biological entity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/FLUXO_0000127> "network")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000127> "metabolic network model")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000127> "metabolic network")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000127> <http://purl.obolibrary.org/obo/FLUXO_0000125>)
 
 # Class: <http://purl.obolibrary.org/obo/FLUXO_0000128> (transport reaction)
@@ -1468,12 +1462,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000182> "strain")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000182> <http://purl.obolibrary.org/obo/BFO_0000040>)
 
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000183> (processed material entity)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000183> "http://purl.obolibrary.org/obo/COB_0000026")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000183> "processed material entity")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000183> <http://purl.obolibrary.org/obo/BFO_0000040>)
-
 # Class: <http://purl.obolibrary.org/obo/FLUXO_0000184> (culture medium)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000184> "http://purl.obolibrary.org/obo/OBI_0000079")
@@ -1678,12 +1666,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000217> "matrix")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000217> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000218> (datum label)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000218> "http://purl.obolibrary.org/obo/IAO_0000009")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000218> "datum label")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000218> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
 # Class: <http://purl.obolibrary.org/obo/FLUXO_0000219> (rate unit)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000219> "http://purl.obolibrary.org/obo/UO_0000280")
@@ -1714,24 +1696,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000222> <http://purl.obolibrar
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000223> "http://biomodels.net/SBO/SBO_0000064")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000223> "mathematical expression")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000223> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000224> (information content entity)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000224> "http://purl.obolibrary.org/obo/IAO_0000030")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000224> "information content entity")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000224> <http://purl.obolibrary.org/obo/BFO_0000031>)
-
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000225> (measurement datum)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000225> "http://purl.obolibrary.org/obo/IAO_0000109")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000225> "measurement datum")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000225> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000226> (data item)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000226> "http://purl.obolibrary.org/obo/IAO_0000027")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000226> "data item")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000226> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/FLUXO_0000227> (data file)
 
@@ -1786,18 +1750,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000234> <http://purl.obolibrar
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000235> "http://edamontology.org/format_2585")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000235> "SBML")
 SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000235> <http://purl.obolibrary.org/obo/FLUXO_0000229>)
-
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000236> (data format specification)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000236> "http://purl.obolibrary.org/obo/IAO_0000098")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000236> "data format specification")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000236> <http://purl.obolibrary.org/obo/IAO_0000030>)
-
-# Class: <http://purl.obolibrary.org/obo/FLUXO_0000237> (identifier)
-
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/FLUXO_0000237> "http://purl.obolibrary.org/obo/IAO_0020000")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FLUXO_0000237> "identifier")
-SubClassOf(<http://purl.obolibrary.org/obo/FLUXO_0000237> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 # Class: <http://purl.obolibrary.org/obo/FLUXO_0000238> (compound identifier)
 
