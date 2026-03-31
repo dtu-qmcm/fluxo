@@ -1,42 +1,2811 @@
-Prefix(:=<http://purl.obolibrary.org/obo/mfao.owl#>)
-Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(dcterms:=<http://purl.org/dc/terms/>)
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/mfao/components/definitions.owl#"
+     xml:base="http://purl.obolibrary.org/obo/mfao/components/definitions.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/mfao/components/definitions.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/mfao/releases/2026-03-26/components/definitions.owl"/>
+        <owl:versionInfo>2026-03-26</owl:versionInfo>
+    </owl:Ontology>
+    
 
 
-Ontology(<http://purl.obolibrary.org/obo/mfao.owl>
-Import(<http://purl.obolibrary.org/obo/mfao/components/bfo.owl>)
-Import(<http://purl.obolibrary.org/obo/mfao/components/definitions.owl>)
-Import(<http://purl.obolibrary.org/obo/mfao/imports/merged_import.owl>)
-Annotation(dcterms:description "None")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
-Annotation(dcterms:title "Metabolic Flux Analysis Ontology")
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-############################
-#   Annotation Properties
-############################
-
-# Annotation Property: dcterms:description (description)
-
-AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
-AnnotationAssertion(rdfs:label dcterms:license "license")
-
-# Annotation Property: dcterms:title (title)
-
-AnnotationAssertion(rdfs:label dcterms:title "title")
+    
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-)
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000028"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/COB_0000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000026"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/COB_0000082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000082"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <obo:IAO_0000115>The complete set of metabolic fluxes (reaction rates) in a biological system at a given point in time.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>fluxomics</oboInOwl:hasBroadSynonym>
+        <rdfs:label>fluxome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>the data that contains files to determine the rates of metabolic reactions. It generally includes the model of metabolic networks and experimental data</obo:IAO_0000115>
+        <rdfs:label>fluxomics data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000124"/>
+        <obo:IAO_0000115>The metabolic flux of a metabolic reaction that occurs within a metabolic network model</obo:IAO_0000115>
+        <rdfs:label>internal flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>The metabolic flux of a transport reaction</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>transport rate</oboInOwl:hasExactSynonym>
+        <rdfs:label>transport flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000166"/>
+        <obo:IAO_0000115>biochemical reaction within a biological entity that is part of the metabolism.</obo:IAO_0000115>
+        <rdfs:label>metabolic reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>A characteristic of a biochemical reaction which may proceed simultaneously in forward and backward direction</obo:IAO_0000115>
+        <rdfs:label>reaction bidirectionality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>The property of metabolic reaction to proceed in forward and backward direction</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reaction bidirectionality</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property could be 0 or 1 (True or False)</rdfs:comment>
+        <rdfs:label>reaction reversibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000009"/>
+        <obo:IAO_0000115>A metabolic reaction that solely operates in a single direction, it can be forward or backward direction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>irreversible reaction</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property or class</rdfs:comment>
+        <rdfs:label>unidirectional reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <obo:IAO_0000115>A metabolic reaction that may operate simultaneously in forward and backward direction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reversible reaction</oboInOwl:hasExactSynonym>
+        <rdfs:comment>property or class</rdfs:comment>
+        <rdfs:label>bidirectional reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>the direction of the reaction operates</obo:IAO_0000115>
+        <rdfs:label>reaction direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <obo:IAO_0000115>the reaction that proceeds from substrates to products</obo:IAO_0000115>
+        <rdfs:label>forward reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <obo:IAO_0000115>the reaction that proceeds from products to substrates</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reverse direction</oboInOwl:hasExactSynonym>
+        <rdfs:label>backward reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000010"/>
+        <obo:IAO_0000115>the reaction that the rate of the forward reaction equals the rate of the backward reaction</obo:IAO_0000115>
+        <rdfs:label>equilibrium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000172"/>
+        <obo:IAO_0000115>metabolites which are only consumed, typically the substrate(s)</obo:IAO_0000115>
+        <rdfs:label>source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000172"/>
+        <obo:IAO_0000115>metabolites which are only produced, typically the by-product(s)</obo:IAO_0000115>
+        <rdfs:label>sink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality.</obo:IAO_0000115>
+        <rdfs:label>flux map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux state</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>metabolic flux phenotype</oboInOwl:hasExactSynonym>
+        <rdfs:label>fluxotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000162"/>
+        <obo:IAO_0000115>Set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry</obo:IAO_0000115>
+        <rdfs:label>stoichiometry-based fluxomics method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000018"/>
+        <obo:IAO_0000115>Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives</obo:IAO_0000115>
+        <rdfs:label>constraint-based fluxomics method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000162"/>
+        <obo:IAO_0000115>A methodology that determines metabolic fluxes within a cell based on empirical data.</obo:IAO_0000115>
+        <rdfs:label>flux measurement method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000020"/>
+        <obo:IAO_0000115>Set of approaches that quantitatively estimate/infer metabolic fluxes using a metabolic reaction model, experimental data and computation</obo:IAO_0000115>
+        <rdfs:label>metabolic flux analysis method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>Set of all possible flux vectors that are consistent with reaction stoichiometries and a set of flux constraints at metabolic steady state</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux polytope</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>flux solution space</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>flux space</oboInOwl:hasExactSynonym>
+        <rdfs:label>steady state flux solution space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>List of the rates of all chemical reactions in a biological network</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux distribution</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>flux state</oboInOwl:hasExactSynonym>
+        <rdfs:label>flux vector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000057"/>
+        <obo:IAO_0000115>a mathematical representation of a cellular metabolic network that relies on the conservation of mass rather than enzyme kinetics to predict metabolic behavior.</obo:IAO_0000115>
+        <rdfs:label>stoichiometric reaction model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>A rate at which a specific reaction proceeds in the forward direction.</obo:IAO_0000115>
+        <rdfs:comment>non-negative</rdfs:comment>
+        <rdfs:label>forward flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>A rate at which a specific reaction proceeds in the backward direction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>reverse flux</oboInOwl:hasExactSynonym>
+        <rdfs:comment>non-negative</rdfs:comment>
+        <rdfs:label>backward flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>Difference between the forward and backward flux for a metabolic reaction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>net rate</oboInOwl:hasExactSynonym>
+        <rdfs:label>net flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>The minimum of the forward and backward fluxes of a metabolic reaction.</obo:IAO_0000115>
+        <rdfs:comment>non-negative; This is different from exchange flux in flux balance analysis (make note in ontology)</rdfs:comment>
+        <rdfs:label>exchange flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>Relative proportion of metabolic flow directed into a specific pathway at a divergence point compared to the total flow or an alternative route at that same junction.</obo:IAO_0000115>
+        <rdfs:label>flux ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>The number of free/independent fluxes that can be varied independently within the network, which is determined by the null space of the stoichiometric matrix. The dimension of this null space gives the number of fluxes needed to define all other fluxes.</obo:IAO_0000115>
+        <rdfs:label>degrees of freedom in stoichiometry matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000170"/>
+        <obo:IAO_0000115>One of several species (or molecular entities) that have the same atomic composition (molecular formula) but different line formulae or different stereochemical formulae and hence different physical and/or chemical properties.</obo:IAO_0000115>
+        <rdfs:label>isomer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>The specific distribution of istopic atom in a metabolite pools at specific time</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>metabolite labeling pattern</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopic labeling state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000115>The assumption that the rate of change of an intracellular metabolite concentration is considered negligible, which holds when the metabolic flux through the metabolite pools is much larger than the change in their pool sizes over time</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Metabolic Pseudo-Steady State</oboInOwl:hasExactSynonym>
+        <rdfs:label>pseudo-steady state assumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000177"/>
+        <obo:IAO_0000115>An idealistic state in which both metabolic fluxes and intracellular metabolite pool sizes are approximately constant over time.</obo:IAO_0000115>
+        <rdfs:label>metabolic steady state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000115>The dynamic phase of an isotopic labeling experiment where metabolite labeling patterns are not yet constant.</obo:IAO_0000115>
+        <rdfs:label>isotopic transient state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000177"/>
+        <obo:IAO_0000115>A state when the distribution of a stable isotope label within a biological system has become and remains constant over time.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>isotopic steady state</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopic steady state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <obo:IAO_0000115>A stochastic process for characterizing the range of possible/feasible metabolic flux vectors.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux state sampling</oboInOwl:hasExactSynonym>
+        <rdfs:label>flux space sampling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <obo:IAO_0000115>A technique that determines the possible fluxes of the metabolic reactions in a network</obo:IAO_0000115>
+        <rdfs:label>fluxomics method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000038"/>
+        <obo:IAO_0000115>A method that predicts physiological phenotypes allowed by the underlying metabolic model, typically enforced by a metabolic goal (e.g., maximize growth rate).</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>FBA</oboInOwl:hasExactSynonym>
+        <rdfs:label>flux balance analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000038"/>
+        <obo:IAO_0000115>A quantitative strategy based on a metabolic network and experimental data to determine intracellular reaction rates (fluxes) with the highest possible accuracy.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>MFA</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000040"/>
+        <obo:IAO_0000115>A set of methods used to measure the rates of intracellular metabolic reactions in living cells using data from isotope labeling experiments</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>I-MFA</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotope-based metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000041"/>
+        <obo:IAO_0000115>A method for estimating metabolic fluxes by tracking from the distribution of 13C isotopes in metabolites.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>13C-MFA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>13C-based metabolic flux analysis</oboInOwl:hasExactSynonym>
+        <rdfs:label>13C metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000041"/>
+        <obo:IAO_0000115>Isotope-based metabolic flux analysis technique, assuming isotopic steady state and metabolic steady state</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>IST-MFA</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopically stationary metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000045"/>
+        <obo:IAO_0000115>Isotope-based metabolic flux analysis technique, assuming isotopic transient state and metabolic steady state</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>INST-13C-MFA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>INST-MFA</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Isotopic Non-Stationary MFA</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopically non-stationary metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000041"/>
+        <obo:IAO_0000115>Isotope-based metabolic flux analysis technique, assuming both isotopic and metabolic dynamic state</obo:IAO_0000115>
+        <rdfs:label>dynamic Isotope-based metabolic flux analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000178"/>
+        <obo:IAO_0000115>Approaches to increase the information content of an isotope labeling experiment</obo:IAO_0000115>
+        <rdfs:label>isotope labeling experiment design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000046"/>
+        <obo:IAO_0000115>Computational approaches to targeted improvement of the information gain of an isotope labeling experiment</obo:IAO_0000115>
+        <rdfs:label>optimal isotope labeling experimental design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000046"/>
+        <obo:IAO_0000115>Strategic choice of isotopic tracer (molecule, labeling position, isotope) based on target pathway thermodynamics and atom transitions.</obo:IAO_0000115>
+        <rdfs:label>tracer selection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000162"/>
+        <obo:IAO_0000115>An experiment where biological entities are fed stable isotopic tracers (like 13C) which are then distributed throughout the metabolic network via metabolic activity.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>ILE</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>SIL</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>SILE</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>Stable-isotope labeling experiment</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>fluxomics stable isotope labeling experiment</oboInOwl:hasExactSynonym>
+        <rdfs:label>fluxomics isotope labeling experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000049"/>
+        <obo:IAO_0000115>Multiple experiments where different isotopic tracers with distinct labeling patterns or tracer mixtures are supplied to resolve overlapping metabolic routes</obo:IAO_0000115>
+        <rdfs:label>parallel labeling experiments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000049"/>
+        <obo:IAO_0000115>One labeling experiment where a single tracer or tracer mixture is supplied</obo:IAO_0000115>
+        <rdfs:label>single labeling experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000170"/>
+        <obo:IAO_0000115>A charged dissociation product of a molecule generated during mass spectrometry, providing specific positional labeling information.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Daughter ion</oboInOwl:hasExactSynonym>
+        <rdfs:label>fragment ion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000170"/>
+        <obo:IAO_0000115>The ion selected for fragmentation in tandem mass spectrometry (MS/MS).</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Parent ion</oboInOwl:hasExactSynonym>
+        <rdfs:label>precursor ion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000143"/>
+        <obo:IAO_0000115>A measurement of the relative abundance of different isotopomers in both a parent molecule and its fragments, obtained through tandem mass spectrometry (MS/MS)</obo:IAO_0000115>
+        <rdfs:label>tandem isotopologue distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The percentage of molecules in a given metabolite pool that contain one or more isotopic labels from a tracer.</obo:IAO_0000115>
+        <rdfs:label>fractional enrichment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <obo:IAO_0000115>The time where a sample is taken from the biological experiment for analysis.</obo:IAO_0000115>
+        <rdfs:label>measurement time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>The computational representation of biochemical reactions within a cell, which includes their molecules, stoichiometries, directionalities, and in MFA, constraints and atom transitions.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>metabolic model</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolic network model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <obo:IAO_0000115>A physically or functionally distinct space (e.g., Cytosol, Mitochondria, Metabolon)</obo:IAO_0000115>
+        <rdfs:label>compartment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000198"/>
+        <obo:IAO_0000115>The stoichiometric representation of cellular macromolecules (e.g. Protein, DNA, RNA, Lipids).</obo:IAO_0000115>
+        <rdfs:label>biomass composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000198"/>
+        <obo:IAO_0000115>A set of one or several metabolites</obo:IAO_0000115>
+        <rdfs:label>metabolite pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000198"/>
+        <obo:IAO_0000115>a metabolic pool in the metabolic network that does not have any biological counterpart and is purely introduced for modeling reason</obo:IAO_0000115>
+        <rdfs:label>pseudo metabolite pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>An amount of molecular entity available to a particular metabolic process.</obo:IAO_0000115>
+        <rdfs:label>metabolite pool size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <obo:IAO_0000115>A set of chemical reactions that is part of the metabolic network model</obo:IAO_0000115>
+        <rdfs:label>reaction pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>A property of molecules where certain atoms are chemically indistinguishable, making a unique atom numbering impossible.</obo:IAO_0000115>
+        <rdfs:label>symmetry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <obo:IAO_0000115>a reaction in the metabolic network that does not have any biological counterpart and is purely introduced for modeling reason.</obo:IAO_0000115>
+        <rdfs:label>pseudo reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000065"/>
+        <obo:IAO_0000115>A simplified reaction that merge multiple chemical reactions into a single reaction for modeling reason.</obo:IAO_0000115>
+        <rdfs:label>lumped reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000065"/>
+        <obo:IAO_0000115>An abstract reaction that represents consumption of metabolites for cellular growth in a metabolic model</obo:IAO_0000115>
+        <rdfs:label>biomass reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>The limits on metabolic flux value on reactions</obo:IAO_0000115>
+        <rdfs:label>linear flux constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A unique position to atoms in a molecule to track its position within the molecule.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>atom address</oboInOwl:hasExactSynonym>
+        <rdfs:comment>https://www.inchi-trust.org/download/104/InChI_TechMan.pdf</rdfs:comment>
+        <rdfs:label>atom identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The precise mapping of how each relevant atom in a substrate is rearranged to form the product metabolites during a reaction. It usually excludes hydrogens.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>atom transition</oboInOwl:hasExactSynonym>
+        <rdfs:label>atom mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <obo:IAO_0000115>Set of atom maps for all reactions making up a metabolic network model</obo:IAO_0000115>
+        <rdfs:label>atom transition network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <obo:IAO_0000115>The annotation types for atom transition.</obo:IAO_0000115>
+        <rdfs:label>atom transition annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000072"/>
+        <obo:IAO_0000115>An annotation that uses a-z and A-Z to represent the order of the tracked atoms in a molecule</obo:IAO_0000115>
+        <rdfs:label>letter annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000072"/>
+        <obo:IAO_0000115>An annotation that uses FluxML definition to track atom mapping in a reaction</obo:IAO_0000115>
+        <rdfs:label>fluxml annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000072"/>
+        <obo:IAO_0000115>An annotation that uses InChI specification to track atoms in a reaction</obo:IAO_0000115>
+        <rdfs:label>InChI annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000072"/>
+        <obo:IAO_0000115>An annotation that uses SMILE specification to track atoms in a reaction</obo:IAO_0000115>
+        <rdfs:label>SMILE annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000155"/>
+        <obo:IAO_0000115>An atom mapping that represents the complementary atom transition in a reaction that involves symmetric compound.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>scrambling</oboInOwl:hasExactSynonym>
+        <rdfs:label>symmetric atom transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000026"/>
+        <obo:IAO_0000115>A blend of differentially labeled substrate isotopomers (e.g., % [1-¹³C]glucose + % [U-¹³C]glucose) administered in an ILE</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>commercial isotopically labelled molecular entity mixture</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>tracer mixture</oboInOwl:hasExactSynonym>
+        <rdfs:label>labelled source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>The characteristics of the isotopic tracer</obo:IAO_0000115>
+        <rdfs:label>isotopic tracer property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>The purity of the isotopic tracer specified in the label input</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>isotopic purity</oboInOwl:hasExactSynonym>
+        <rdfs:label>label input isotopic purity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>The price of the isotopic tracer molecular entity</obo:IAO_0000115>
+        <rdfs:label>tracer cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>The rate of biomass formation</obo:IAO_0000115>
+        <rdfs:label>growth rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000083"/>
+        <obo:IAO_0000115>the biomass increase per unit of existing biomass per unit of time</obo:IAO_0000115>
+        <rdfs:label>specific growth rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000115>Efficiency of substrate conversion into product/biomass (mass or molar basis).</obo:IAO_0000115>
+        <rdfs:label>yield</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000207"/>
+        <obo:IAO_0000115>A measure used in flux estimation, specifically the variance-weighted sum of squares residuals, which is minimized to quantify fluxes. It serves as a key indicator of goodness-ofreflect the certainty with which metabolic fluxes were determined.</obo:IAO_0000115>
+        <rdfs:label>weighted sum of squared residuals</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <obo:IAO_0000115>The procedure used to obtain labeling data from a given metabolic models and presumed fluxes/metabolite concentrations.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>forward simulation</oboInOwl:hasExactSynonym>
+        <rdfs:label>labeling simulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000214"/>
+        <obo:IAO_0000115>Statistical methods that quantifies fluxes including their uncertainties.</obo:IAO_0000115>
+        <rdfs:label>flux estimation method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>A mathematical model, usually represented as a matrix, to describe how to compute a labeling measurement based on the simulated labeling state space</obo:IAO_0000115>
+        <rdfs:label>measurement model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>Measurement value of a measured quantity as obtained by a forward simulation of the metabolic network model</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>simulated measurement</oboInOwl:hasBroadSynonym>
+        <rdfs:label>simulated MID measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>mathematical model to calculate the measurement standard deviation of a simulated measurement</obo:IAO_0000115>
+        <rdfs:label>error model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000217"/>
+        <obo:IAO_0000115>A mathematical matrix used to remove the contribution of naturally occurring heavy isotopes (e.g., 13C, 15N, 18O) from raw mass spectrometry data</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Deconvolution matrix</oboInOwl:hasExactSynonym>
+        <rdfs:label>correction matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>measurement corresponding to the linear combination of two or more metabolites</obo:IAO_0000115>
+        <rdfs:label>lumped measurements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000160"/>
+        <obo:IAO_0000115>A parameter in a statistical model that is not of primary interest but must be included to correctly define the model and analyze the parameters that are of interest</obo:IAO_0000115>
+        <rdfs:label>nuisance parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000094"/>
+        <obo:IAO_0000115>parameter to model residual naturally labeled tracer in an input pool</obo:IAO_0000115>
+        <rdfs:label>D-parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000096 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000094"/>
+        <obo:IAO_0000115>parameter to account for residual naturally labeled fractions in a measurement group</obo:IAO_0000115>
+        <rdfs:label>G-parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000097 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000223"/>
+        <obo:IAO_0000115>a criterion value for a proposed experimental design</obo:IAO_0000115>
+        <rdfs:label>experimental design criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000098">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <obo:IAO_0000115>FluxML is a universal modeling language for metabolic flux analysis designed with the aim of providing a standard document format for creating, validating and reliable exchanging of arbitrary metabolic models across different simulation tools.</obo:IAO_0000115>
+        <rdfs:label>FluxML</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000099 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:label>FluxML specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:label>FTBL specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:label>MTF specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000102 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000010"/>
+        <rdfs:label>fluxomics software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000102"/>
+        <oboInOwl:hasExactSynonym>MFA Software</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolic flux analysis software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://invivometabolism.org/tca.html</rdfs:comment>
+        <rdfs:label>tcaCALC &amp; SIM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://www.13cflux.net/13cflux/index.html</rdfs:comment>
+        <rdfs:label>13CFLUX</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://x3cflux.readthedocs.io/en/latest/</rdfs:comment>
+        <rdfs:label>13CFLUXv3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://influx-si.readthedocs.io/en/latest/intro.html#influx-s</rdfs:comment>
+        <rdfs:label>influx_s</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://influx-si.readthedocs.io/en/latest/index.html</rdfs:comment>
+        <rdfs:label>influx_si</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:label>INCA2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://en.metabolic-engineering.jp/page/software/openmebius</rdfs:comment>
+        <rdfs:label>Open Mebius</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://github.com/fumiomatsuda/mfapy</rdfs:comment>
+        <rdfs:label>mfapy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://sourceforge.net/projects/openflux2/</rdfs:comment>
+        <rdfs:label>OpenFLUX2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://gitlab.com/scilab/forge/sysmetab/</rdfs:comment>
+        <rdfs:label>sysmetab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://tang.eece.wustl.edu/ToolDevelopment.html</rdfs:comment>
+        <rdfs:label>WUFlux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://sourceforge.net/projects/fluxpyt</rdfs:comment>
+        <rdfs:label>FluxPyt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://doi.org/10.3389/fmicb.2019.00922</rdfs:comment>
+        <rdfs:label>EMUlator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://github.com/Chaowu88/freeflux</rdfs:comment>
+        <rdfs:label>freeflux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://doi.org/10.1371/journal.pcbi.1009831</rdfs:comment>
+        <rdfs:label>eiFlux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000119">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://github.com/zhzhd82/CeCaFLUX</rdfs:comment>
+        <rdfs:label>CeCaFlux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000120">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <rdfs:comment>https://github.com/JBEI/bayflux</rdfs:comment>
+        <rdfs:label>BayFlux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000121">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:label>Freeflux specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000098"/>
+        <rdfs:label>INCA specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A data item which represents the speed of a chemical reaction turning reactive species into product species of event (i.e the number of such conversions) occuring over a time interval</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reaction rate</oboInOwl:hasExactSynonym>
+        <rdfs:comment>it is commonly refer to flux in MFA, even though formally it is a rate. The actual definition of metabolic flux is the amount of metabolite which is converted per time unit. It is calculated as the reaction rate times stoichiometric coefficient, often normalized to a specific quantity (e.g. cell dry weight or volume of a compartment)</rdfs:comment>
+        <rdfs:label>metabolic flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000123"/>
+        <obo:IAO_0000115>The metabolic flux of a metabolic reaction that occurs across metabolic network model boundaries</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>boundary flux</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>external rate</oboInOwl:hasExactSynonym>
+        <rdfs:comment>In the FBA field, the exchange flux means the external flux.</rdfs:comment>
+        <rdfs:label>external flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>a model representation of metabolism</obo:IAO_0000115>
+        <rdfs:label>metabolic model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>The chemical compounds of a biological entity are connected by metabolic reactions which convert one compound into another.</obo:IAO_0000115>
+        <rdfs:label>metabolism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000125"/>
+        <obo:IAO_0000115>a set of interconnected pathways of metabolic reactions within a biological entity</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>network</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolic network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000128">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <obo:IAO_0000115>The transfer of a metabolite or metabolites between two compartments</obo:IAO_0000115>
+        <rdfs:label>transport reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000129">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An imaginary construct of a molecular entity that exist purely for modeling reasons (e.g. biomass)</obo:IAO_0000115>
+        <rdfs:label>pseudomolecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000130">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000028"/>
+        <obo:IAO_0000115>The minimum of the forward and backward fluxes of a metabolic reaction, calculated by convention as a/(1+a), where a is the exchange flux.</obo:IAO_0000115>
+        <rdfs:label>relative exchange flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000174"/>
+        <obo:IAO_0000115>A molecular entity that differs only in isotopic composition by a single element (e.g. 13C-1-glucose and 13C-2-glucose). In MS, this is the output of the natural isotope abundance correction.</obo:IAO_0000115>
+        <rdfs:label>tracer isotopologue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>The chemical element(s) that is labelled for the fluxomics investigation (e.g. Carbon in a 13C labelled molecular entity)</obo:IAO_0000115>
+        <rdfs:label>tracer element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>Total number of heavy particles (protons and neutrons jointly called nucleons) in the atomic nucleus. Also called nucleon number. Symbol m in mass spectrometry.</obo:IAO_0000115>
+        <rdfs:label>mass number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000171"/>
+        <obo:IAO_0000115>A molecular entity with isotopic tracer at specific atom number(s).</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>isotopically labelled molecule</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopically labelled molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000134"/>
+        <obo:IAO_0000115>commercial version of the isotopically labelled molecular entity (e.g. the purchased [1-¹³C]glucose with purity of 99 atom % 13C)</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>commercially labelled molecule</oboInOwl:hasExactSynonym>
+        <rdfs:label>commercial isotopically labelled molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000136">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>the input of the labelled source for the metabolic network model</obo:IAO_0000115>
+        <rdfs:label>label input</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000137">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>The atom number of the isotopic tracer in the isotopically labelled molecular entity</obo:IAO_0000115>
+        <rdfs:label>tracer position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000138 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000138">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>Proportion of isotopically labelled molecular entity in a labelled source</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>tracer enrichment</oboInOwl:hasExactSynonym>
+        <rdfs:label>tracer propotion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000139 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000139">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000079"/>
+        <obo:IAO_0000115>The purity of the isotopic tracer in the commercial isotopically labelled molecular entity</obo:IAO_0000115>
+        <rdfs:label>isotopic purity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label>mean enrichment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>An information entity that contains details necessary to describe isotope or isotopologue information for isotopic labeling experiment</obo:IAO_0000115>
+        <rdfs:label>isotopic information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The data item that describes the isotopic content of the molecule</obo:IAO_0000115>
+        <rdfs:label>isotopic composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>Relative abundances of molecule isotopologues</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>MDV</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>MID</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>isotopologue distribution</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>isotopologue fractional abundance</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>mass ditribution vector</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopologue distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The abundance of isotopomers relative to the abundance of the complete set or subset of isotopic species</obo:IAO_0000115>
+        <rdfs:label>isotopomer distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The abundance of cumomer relative to the abundance of the complete set or subset of isotopic species</obo:IAO_0000115>
+        <rdfs:label>cumomer distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000146">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>The representation of isotopic state of a metabolite</obo:IAO_0000115>
+        <rdfs:label>Isotopic State-space Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000115>The space of all isotopic forms of a metabolite</obo:IAO_0000115>
+        <rdfs:label>Isotopic State-space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000146"/>
+        <obo:IAO_0000115>A state-space representation that models positional labeling by a binary number (0: non-labeled, 1: labeled).</obo:IAO_0000115>
+        <rdfs:label>Isotopomer Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000149 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000149">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000146"/>
+        <obo:IAO_0000115>A state-space representation that models positional labeling by a state (0: unlabeled, 1: labeled or x: either labeled or unlabeled).</obo:IAO_0000115>
+        <rdfs:label>Cumomer Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000150 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000146"/>
+        <obo:IAO_0000115>A state-space representation that models the mass differences due to labeling of a compound fragement. The fragment is defined by a binary number (position is/is not part of the fragment).</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>EMU</oboInOwl:hasExactSynonym>
+        <rdfs:label>Elementary Metabolite Unit Representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000151 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000151">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:label>amount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000152 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000152">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000068"/>
+        <obo:IAO_0000115>Fixed value for linear combination of fluxes</obo:IAO_0000115>
+        <rdfs:label>flux equality constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000068"/>
+        <obo:IAO_0000115>Upper or lower bound of linear combinations of fluxes</obo:IAO_0000115>
+        <rdfs:label>flux inequality constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A set of all atom identifiers considered for a molecule.</obo:IAO_0000115>
+        <rdfs:label>atom map</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The precise bijection of how each relevant atom identifier in a substrate is rearranged to form the product during a reaction.</obo:IAO_0000115>
+        <rdfs:label>atom transition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000156">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000207"/>
+        <obo:IAO_0000115>A measure of the inherent variability of repeated observation measurements of a quantity including quantities evaluated by statistical methods and by other means.</obo:IAO_0000115>
+        <rdfs:label>measurement uncertainty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000216"/>
+        <obo:IAO_0000115>The method that is used to quantify the flux uncertainty estimate</obo:IAO_0000115>
+        <rdfs:label>flux uncertainty quantification method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000158 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000158">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000207"/>
+        <obo:IAO_0000115>The statistic that quantify the uncertainty of the flux solution</obo:IAO_0000115>
+        <rdfs:label>flux uncertainty estimate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000159 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The parameters including flux vector and other parameters (e.g. metabolite pool sizes and model parameters) that best explains experimental data</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>flux distribution</oboInOwl:hasExactSynonym>
+        <rdfs:label>flux solution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000160 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000160">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>The set of all parameters that are necessary to run labeling simulation.</obo:IAO_0000115>
+        <rdfs:label>model parameters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000161">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000094"/>
+        <obo:IAO_0000115>parameter to scale measurements of a measurement group to better fit simulated measurements</obo:IAO_0000115>
+        <rdfs:label>groupscale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000162 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000162">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <obo:IAO_0000115>fluxomics is a kind of investigation which aims at quantifying the fluxes of molecules in biological entities.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000182</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>fluxomics</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fluxomics study</oboInOwl:hasExactSynonym>
+        <rdfs:label>fluxomics investigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000163 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000163">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000124"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000153</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>uptake rate</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolite uptake flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000164">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000124"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000152</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>secretion rate</oboInOwl:hasExactSynonym>
+        <rdfs:label>metabolite excretion flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000165">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000057"/>
+        <obo:IAO_0000115>a model representation of a series of connected metabolic reactions</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000059</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>pathway</oboInOwl:hasExactSynonym>
+        <rdfs:comment>metabolic network</rdfs:comment>
+        <rdfs:label>metabolic pathway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000001</oboInOwl:hasDbXref>
+        <rdfs:label>chemical reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000167">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000172"/>
+        <obo:IAO_0000115>Starting metabolite of a metabolic reaction</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>reagent</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000010</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>educt</oboInOwl:hasExactSynonym>
+        <rdfs:label>reactant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000168">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000167"/>
+        <obo:IAO_0000115>Molecule or pseudo molecule which is on the left side of the reaction equation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000015</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>educt</oboInOwl:hasExactSynonym>
+        <rdfs:label>substrate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000169 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000169">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000172"/>
+        <obo:IAO_0000115>Molecule or pseudo molecule which is on the right side of the reaction equation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000011</oboInOwl:hasDbXref>
+        <rdfs:label>product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000170 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000170">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHEBI_25367</oboInOwl:hasDbXref>
+        <rdfs:label>molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000171 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000171">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHEBI_23367</oboInOwl:hasDbXref>
+        <rdfs:label>molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000172 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000172">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000170"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHEBI_25212</oboInOwl:hasDbXref>
+        <rdfs:label>metabolite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000173">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000217"/>
+        <obo:IAO_0000115>The mathematical representation of a metabolic network, with rows representing metabolites and columns representing reactions. Each value indicates the stoichiometric coefficients, metabolites that are consumed are negative values and produced are positive values.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000079</oboInOwl:hasDbXref>
+        <rdfs:label>stoichiometry matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000031"/>
+        <obo:IAO_0000115>A molecular entity that differs only in isotopic composition (number of isotopic substitutions)</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000034</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>isotopologues</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopologue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000174"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000034</owl:annotatedTarget>
+        <obo:IAO_0000119>https://goldbook.iupac.org/terms/view/I03351</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000175 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000175">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000031"/>
+        <obo:IAO_0000115>Isomers having the same number of each isotopic atom but differing in their positions. The term is a contraction of &apos;isotopic isomer&apos;.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000036</oboInOwl:hasDbXref>
+        <rdfs:label>isotopomer</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000175"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000036</owl:annotatedTarget>
+        <obo:IAO_0000119>https://goldbook.iupac.org/terms/view/I03352</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000026"/>
+        <obo:IAO_0000115>A isotope of the tracer element that is used in fluxomics investigation. (e.g. 13C in a 13C labelled molecular entity)</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000031</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>tracer</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopic tracer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000177 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000177">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C151966</oboInOwl:hasDbXref>
+        <rdfs:label>steady state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/topic_3678</oboInOwl:hasDbXref>
+        <rdfs:label>Experimental design and studies</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000179 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000179">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000049"/>
+        <obo:IAO_0000115>An experiment in which isotopically labelled compounds are supplied to a biological system until the ratio of marked to unmarked molecules stabilizes at a constant level.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000185</oboInOwl:hasDbXref>
+        <rdfs:label>isotopically steady state labeling experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000180">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000049"/>
+        <obo:IAO_0000115>An experiment measures the rate at which isotopically labelled compounds are incorporated into cellular metabolites over time, specifically before the system reaches a stable isotopic equilibrium.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000053</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>isotopically instationary labeling experiment</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>isotopically unstationary labeling experiment</oboInOwl:hasExactSynonym>
+        <rdfs:label>isotopically non-stationary labeling experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000181">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://purl.uniprot.org/core/organism</oboInOwl:hasDbXref>
+        <rdfs:label>organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000182 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://purl.uniprot.org/core/strain</oboInOwl:hasDbXref>
+        <rdfs:label>strain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000026"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0000079</oboInOwl:hasDbXref>
+        <rdfs:label>culture medium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000185 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000185">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000026"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/COB_0001300</oboInOwl:hasDbXref>
+        <rdfs:label>device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000185"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0000049</oboInOwl:hasDbXref>
+        <rdfs:label>mass spectrometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000185"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0000566</oboInOwl:hasDbXref>
+        <rdfs:label>NMR instrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000188 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000188">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/topic_3172</oboInOwl:hasDbXref>
+        <rdfs:label>metabolomics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000189 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000189">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/topic_0121</oboInOwl:hasDbXref>
+        <rdfs:label>proteomics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000470</oboInOwl:hasDbXref>
+        <rdfs:label>mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000191">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000190"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000524</oboInOwl:hasDbXref>
+        <rdfs:label>liquid chromatography-mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000190"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000497</oboInOwl:hasDbXref>
+        <rdfs:label>gas chromatography-mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000190"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000575</oboInOwl:hasDbXref>
+        <rdfs:label>tandem mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000194 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000194">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000190"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000506</oboInOwl:hasDbXref>
+        <rdfs:label>isotope ratio mass spectrometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0000082"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/CHMO_0000591</oboInOwl:hasDbXref>
+        <rdfs:label>nuclear magnetic resonance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000196">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000130</oboInOwl:hasDbXref>
+        <rdfs:label>Isotope Natural Abundance Correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000197">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000704</oboInOwl:hasDbXref>
+        <rdfs:label>concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000000</oboInOwl:hasDbXref>
+        <rdfs:label>systems biology representation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_0846</oboInOwl:hasDbXref>
+        <rdfs:label>chemical formula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_0845</oboInOwl:hasDbXref>
+        <rdfs:label>molecular charge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000628</oboInOwl:hasDbXref>
+        <rdfs:label>demand reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000627</oboInOwl:hasDbXref>
+        <rdfs:label>exchange reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000005"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000632</oboInOwl:hasDbXref>
+        <rdfs:label>sink reaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000204 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000204">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/NCIT_C18110</oboInOwl:hasDbXref>
+        <rdfs:label>reaction stoichiometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000205 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000205">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000060</oboInOwl:hasDbXref>
+        <rdfs:label>stoichiometric coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000206 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000153"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000625</oboInOwl:hasDbXref>
+        <rdfs:label>flux bound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000207 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000039</oboInOwl:hasDbXref>
+        <rdfs:label>statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000207"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000237</oboInOwl:hasDbXref>
+        <rdfs:label>standard deviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000209 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000209">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000207"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000196</oboInOwl:hasDbXref>
+        <rdfs:label>confidence interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000211 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000211">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0000673</oboInOwl:hasDbXref>
+        <rdfs:label>statistical test hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000211"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000191</oboInOwl:hasDbXref>
+        <rdfs:label>goodness of fit statistical test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000213 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000213">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000211"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0200200</oboInOwl:hasDbXref>
+        <rdfs:label>chi-square test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000214">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000119</oboInOwl:hasDbXref>
+        <rdfs:label>model parameter estimation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000548</oboInOwl:hasDbXref>
+        <rdfs:label>sampling distribution estimation by bootstrapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000107</oboInOwl:hasDbXref>
+        <rdfs:label>statistical model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/STATO_0000642</oboInOwl:hasDbXref>
+        <rdfs:label>matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/UO_0000280</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>flux unit</oboInOwl:hasExactSynonym>
+        <rdfs:label>rate unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000220">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/UO_0000006</oboInOwl:hasDbXref>
+        <rdfs:label>substance unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/UO_0000003</oboInOwl:hasDbXref>
+        <rdfs:label>time unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000009"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/UO_0000051</oboInOwl:hasDbXref>
+        <rdfs:label>concentration unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000223 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000223">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://biomodels.net/SBO/SBO_0000064</oboInOwl:hasDbXref>
+        <rdfs:label>mathematical expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000227">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://nmrML.org/nmrCV#NMR:1400267</oboInOwl:hasDbXref>
+        <rdfs:label>data file</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000228">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://nmrML.org/nmrCV#NMR:1000011</oboInOwl:hasDbXref>
+        <rdfs:label>data file attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000228"/>
+        <oboInOwl:hasDbXref>http://nmrML.org/nmrCV#NMR:1001459</oboInOwl:hasDbXref>
+        <rdfs:label>data file format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000230 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000230">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_3752</oboInOwl:hasDbXref>
+        <rdfs:label>CSV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000231">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_3626</oboInOwl:hasDbXref>
+        <rdfs:label>MAT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_3475</oboInOwl:hasDbXref>
+        <rdfs:label>TSV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000233 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000233">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_3620</oboInOwl:hasDbXref>
+        <rdfs:label>xlsx</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_3464</oboInOwl:hasDbXref>
+        <rdfs:label>JSON</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000229"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_2585</oboInOwl:hasDbXref>
+        <rdfs:label>SBML</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000238">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_1086</oboInOwl:hasDbXref>
+        <rdfs:label>compound identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000238"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_1197</oboInOwl:hasDbXref>
+        <rdfs:label>InChI</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000239"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://edamontology.org/format_1197</owl:annotatedTarget>
+        <obo:IAO_0000119>https://pmc.ncbi.nlm.nih.gov/articles/PMC4486400/</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000238"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/format_1196</oboInOwl:hasDbXref>
+        <rdfs:label>SMILES</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <oboInOwl:hasDbXref>http://nmrML.org/nmrCV#NMR:1000353</oboInOwl:hasDbXref>
+        <rdfs:label>software attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000243">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000242"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/IAO_0000129</oboInOwl:hasDbXref>
+        <rdfs:label>version number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000042</oboInOwl:hasDbXref>
+        <rdfs:comment>https://www.13cflux.net/13cflux2/index.html</rdfs:comment>
+        <rdfs:label>13CFLUX2</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000244"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000042</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1093/bioinformatics/bts646</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000044</oboInOwl:hasDbXref>
+        <rdfs:comment>https://imsb.ethz.ch/research/zamboni/resources/fiatflux.html</rdfs:comment>
+        <rdfs:label>FiatFlux</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000245"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000044</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1186/1471-2105-6-209</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000057</oboInOwl:hasDbXref>
+        <rdfs:comment>https://github.com/zamboni-lab/sumoflux</rdfs:comment>
+        <rdfs:label>SUMOFLUX</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000246"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000057</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1371/journal.pcbi.1005109</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000247 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000051</oboInOwl:hasDbXref>
+        <rdfs:comment>https://tlo.mit.edu/industry-entrepreneurs/available-technologies/metran-software-13c-metabolic-flux-analysis</rdfs:comment>
+        <rdfs:label>metran</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000247"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000051</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1074/jbc.M706494200</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000035</oboInOwl:hasDbXref>
+        <rdfs:comment>https://openflux.sourceforge.net/</rdfs:comment>
+        <rdfs:label>OpenFLUX</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000248"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000035</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1186/1475-2859-8-25</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000047</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Isotopomer Network Compartmental Analysis</oboInOwl:hasExactSynonym>
+        <rdfs:comment>https://mfa.vueinnovations.com/</rdfs:comment>
+        <rdfs:label>INCA</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000249"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://purl.obolibrary.org/obo/MSIO_0000047</owl:annotatedTarget>
+        <obo:IAO_0000119>https://doi.org/10.1093/bioinformatics/btu015</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000250 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000048</oboInOwl:hasDbXref>
+        <rdfs:comment>https://github.com/phnmnl/container-iso2flux</rdfs:comment>
+        <rdfs:label>iso2flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000049</oboInOwl:hasDbXref>
+        <rdfs:comment>https://bio.tools/Isodyn</rdfs:comment>
+        <rdfs:label>isodyn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000103"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/MSIO_0000050</oboInOwl:hasDbXref>
+        <rdfs:comment>https://isodesign.readthedocs.io/en/latest/</rdfs:comment>
+        <rdfs:label>IsoDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://xmlns.com/foaf/0.1/Person</oboInOwl:hasDbXref>
+        <rdfs:label>person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_2118</oboInOwl:hasDbXref>
+        <rdfs:label>person identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000255 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000255">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000254"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_1692</oboInOwl:hasDbXref>
+        <rdfs:label>person name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000254"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_4022</oboInOwl:hasDbXref>
+        <rdfs:label>ORCID Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FLUXO_0000254"/>
+        <oboInOwl:hasDbXref>http://edamontology.org/data_1691</oboInOwl:hasDbXref>
+        <rdfs:label>Email address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLUXO_0000258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLUXO_0000258">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/OBI_0000245</oboInOwl:hasDbXref>
+        <rdfs:label>organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000098"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0020000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200000"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
