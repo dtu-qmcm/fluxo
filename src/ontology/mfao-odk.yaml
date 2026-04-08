@@ -14,7 +14,6 @@ export_formats:
   - json
 components:
   products:
-      - filename: definitions.owl
       - filename: bfo.owl
 import_group:
   use_base_merging: TRUE

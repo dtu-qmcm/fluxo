@@ -2,7 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
   <group id="odk-managed-catalog" prefer="public">
     <uri name="http://purl.obolibrary.org/obo/mfao/imports/merged_import.owl" uri="imports/merged_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo/mfao/components/definitions.owl" uri="components/definitions.owl" />
     <uri name="http://purl.obolibrary.org/obo/mfao/components/bfo.owl" uri="components/bfo.owl" />
   </group>
 </catalog>
