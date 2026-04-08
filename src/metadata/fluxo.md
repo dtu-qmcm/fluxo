@@ -3,10 +3,10 @@ layout: ontology_detail
 id: fluxo
 title: Metabolic Flux Analysis Ontology
 jobs:
-  - id: https://travis-ci.org/dtu-qmcm/mfa_ontology
+  - id: https://travis-ci.org/dtu-qmcm/fluxo
     type: travis-ci
 build:
-  checkout: git clone https://github.com/dtu-qmcm/mfa_ontology.git
+  checkout: git clone https://github.com/dtu-qmcm/fluxo.git
   system: git
   path: "."
 contact:
@@ -15,7 +15,7 @@ contact:
   github: 
 description: Metabolic Flux Analysis Ontology is an ontology...
 domain: stuff
-homepage: https://github.com/dtu-qmcm/mfa_ontology
+homepage: https://github.com/dtu-qmcm/fluxo
 products:
   - id: fluxo.owl
     name: "Metabolic Flux Analysis Ontology main release in OWL format"
@@ -30,15 +30,9 @@ products:
   - id: fluxo/fluxo-base.json
     name: "Metabolic Flux Analysis Ontology additional release in OBOJSon format"
 dependencies:
-- id: msio
-- id: sbo
-- id: obi
-- id: chebi
-- id: bfo
 - id: iao
-- id: ncbitaxon
-- id: uberon
-tracker: https://github.com/dtu-qmcm/mfa_ontology/issues
+- id: cob
+tracker: https://github.com/dtu-qmcm/fluxo/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/
   label: CC-BY

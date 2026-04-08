@@ -4,7 +4,7 @@
 
 Description: None
 
-More information can be found at http://obofoundry.org/ontology/mfao
+More information can be found at http://obofoundry.org/ontology/fluxo
 
 ## Versions
 
@@ -12,13 +12,13 @@ More information can be found at http://obofoundry.org/ontology/mfao
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/mfao.owl
+http://purl.obolibrary.org/obo/fluxo.owl
 
 (note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [src/ontology/mfao-edit.owl](src/ontology/mfao-edit.owl)
+Editors of this ontology should use the edit version, [src/ontology/fluxo-edit.owl](src/ontology/fluxo-edit.owl)
 
 ## Contact
 
