@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/fluxo/components/definitions.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/fluxo/fluxo-edit.owl#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -8,8 +8,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/fluxo/components/definitions.owl>
-<http://purl.obolibrary.org/obo/fluxo/releases/2026-03-26/components/definitions.owl>
+Ontology(<http://purl.obolibrary.org/obo/fluxo/fluxo-edit.owl>
+<http://purl.obolibrary.org/obo/fluxo/releases/2026-03-26/fluxo-edit.owl>
 Import(<http://purl.obolibrary.org/obo/fluxo/components/bfo.owl>)
 Import(<http://purl.obolibrary.org/obo/fluxo/imports/merged_import.owl>)
 Annotation(owl:versionInfo "2026-03-26")

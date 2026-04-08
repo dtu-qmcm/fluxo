@@ -7,8 +7,6 @@
 # Components
 # ----------------------------------------
 
-#definitions
-
 #bfo
 
 $(COMPONENTSDIR)/bfo.owl: $(TMPDIR)/stamp-component-bfo.owl | $(COMPONENTSDIR)
