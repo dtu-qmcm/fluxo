@@ -1,0 +1,1881 @@
+Prefix(:=<http://purl.obolibrary.org/obo/fluxo/fluxo-edit.owl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(fluxo:=<http://purl.obolibrary.org/obo/fluxo/>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/fluxo/fluxo-edit.owl>
+<http://purl.obolibrary.org/obo/fluxo/releases/2026-04-08/fluxo-edit.owl>
+Import(<http://purl.obolibrary.org/obo/fluxo/components/bfo.owl>)
+Import(<http://purl.obolibrary.org/obo/fluxo/imports/merged_import.owl>)
+Annotation(dc:description "Metabolic Flux Analysis Ontology is an ontology that provides a structured framework for representing concepts, relationships, and data related to metabolic flux analysis.")
+Annotation(dc:title "Metabolic Flux Analysis Ontology")
+Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
+Annotation(owl:versionInfo "2026-04-08")
+
+Declaration(Class(obo:BFO_0000008))
+Declaration(Class(obo:BFO_0000015))
+Declaration(Class(obo:BFO_0000019))
+Declaration(Class(obo:BFO_0000027))
+Declaration(Class(obo:BFO_0000028))
+Declaration(Class(obo:BFO_0000031))
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:BFO_0000141))
+Declaration(Class(obo:COB_0000026))
+Declaration(Class(obo:COB_0000082))
+Declaration(Class(obo:FLUXO_0000001))
+Declaration(Class(obo:FLUXO_0000002))
+Declaration(Class(obo:FLUXO_0000003))
+Declaration(Class(obo:FLUXO_0000004))
+Declaration(Class(obo:FLUXO_0000005))
+Declaration(Class(obo:FLUXO_0000006))
+Declaration(Class(obo:FLUXO_0000007))
+Declaration(Class(obo:FLUXO_0000008))
+Declaration(Class(obo:FLUXO_0000009))
+Declaration(Class(obo:FLUXO_0000010))
+Declaration(Class(obo:FLUXO_0000011))
+Declaration(Class(obo:FLUXO_0000012))
+Declaration(Class(obo:FLUXO_0000013))
+Declaration(Class(obo:FLUXO_0000014))
+Declaration(Class(obo:FLUXO_0000015))
+Declaration(Class(obo:FLUXO_0000016))
+Declaration(Class(obo:FLUXO_0000017))
+Declaration(Class(obo:FLUXO_0000018))
+Declaration(Class(obo:FLUXO_0000019))
+Declaration(Class(obo:FLUXO_0000020))
+Declaration(Class(obo:FLUXO_0000021))
+Declaration(Class(obo:FLUXO_0000022))
+Declaration(Class(obo:FLUXO_0000023))
+Declaration(Class(obo:FLUXO_0000024))
+Declaration(Class(obo:FLUXO_0000025))
+Declaration(Class(obo:FLUXO_0000026))
+Declaration(Class(obo:FLUXO_0000027))
+Declaration(Class(obo:FLUXO_0000028))
+Declaration(Class(obo:FLUXO_0000029))
+Declaration(Class(obo:FLUXO_0000030))
+Declaration(Class(obo:FLUXO_0000031))
+Declaration(Class(obo:FLUXO_0000032))
+Declaration(Class(obo:FLUXO_0000033))
+Declaration(Class(obo:FLUXO_0000034))
+Declaration(Class(obo:FLUXO_0000035))
+Declaration(Class(obo:FLUXO_0000036))
+Declaration(Class(obo:FLUXO_0000037))
+Declaration(Class(obo:FLUXO_0000038))
+Declaration(Class(obo:FLUXO_0000039))
+Declaration(Class(obo:FLUXO_0000040))
+Declaration(Class(obo:FLUXO_0000041))
+Declaration(Class(obo:FLUXO_0000042))
+Declaration(Class(obo:FLUXO_0000043))
+Declaration(Class(obo:FLUXO_0000044))
+Declaration(Class(obo:FLUXO_0000045))
+Declaration(Class(obo:FLUXO_0000046))
+Declaration(Class(obo:FLUXO_0000047))
+Declaration(Class(obo:FLUXO_0000048))
+Declaration(Class(obo:FLUXO_0000049))
+Declaration(Class(obo:FLUXO_0000050))
+Declaration(Class(obo:FLUXO_0000051))
+Declaration(Class(obo:FLUXO_0000052))
+Declaration(Class(obo:FLUXO_0000053))
+Declaration(Class(obo:FLUXO_0000054))
+Declaration(Class(obo:FLUXO_0000055))
+Declaration(Class(obo:FLUXO_0000056))
+Declaration(Class(obo:FLUXO_0000057))
+Declaration(Class(obo:FLUXO_0000058))
+Declaration(Class(obo:FLUXO_0000059))
+Declaration(Class(obo:FLUXO_0000060))
+Declaration(Class(obo:FLUXO_0000061))
+Declaration(Class(obo:FLUXO_0000062))
+Declaration(Class(obo:FLUXO_0000063))
+Declaration(Class(obo:FLUXO_0000064))
+Declaration(Class(obo:FLUXO_0000065))
+Declaration(Class(obo:FLUXO_0000066))
+Declaration(Class(obo:FLUXO_0000067))
+Declaration(Class(obo:FLUXO_0000068))
+Declaration(Class(obo:FLUXO_0000069))
+Declaration(Class(obo:FLUXO_0000070))
+Declaration(Class(obo:FLUXO_0000071))
+Declaration(Class(obo:FLUXO_0000072))
+Declaration(Class(obo:FLUXO_0000073))
+Declaration(Class(obo:FLUXO_0000074))
+Declaration(Class(obo:FLUXO_0000075))
+Declaration(Class(obo:FLUXO_0000076))
+Declaration(Class(obo:FLUXO_0000077))
+Declaration(Class(obo:FLUXO_0000078))
+Declaration(Class(obo:FLUXO_0000079))
+Declaration(Class(obo:FLUXO_0000080))
+Declaration(Class(obo:FLUXO_0000081))
+Declaration(Class(obo:FLUXO_0000083))
+Declaration(Class(obo:FLUXO_0000084))
+Declaration(Class(obo:FLUXO_0000085))
+Declaration(Class(obo:FLUXO_0000086))
+Declaration(Class(obo:FLUXO_0000087))
+Declaration(Class(obo:FLUXO_0000088))
+Declaration(Class(obo:FLUXO_0000089))
+Declaration(Class(obo:FLUXO_0000090))
+Declaration(Class(obo:FLUXO_0000091))
+Declaration(Class(obo:FLUXO_0000092))
+Declaration(Class(obo:FLUXO_0000093))
+Declaration(Class(obo:FLUXO_0000094))
+Declaration(Class(obo:FLUXO_0000095))
+Declaration(Class(obo:FLUXO_0000096))
+Declaration(Class(obo:FLUXO_0000097))
+Declaration(Class(obo:FLUXO_0000098))
+Declaration(Class(obo:FLUXO_0000099))
+Declaration(Class(obo:FLUXO_0000100))
+Declaration(Class(obo:FLUXO_0000101))
+Declaration(Class(obo:FLUXO_0000102))
+Declaration(Class(obo:FLUXO_0000103))
+Declaration(Class(obo:FLUXO_0000104))
+Declaration(Class(obo:FLUXO_0000105))
+Declaration(Class(obo:FLUXO_0000106))
+Declaration(Class(obo:FLUXO_0000107))
+Declaration(Class(obo:FLUXO_0000108))
+Declaration(Class(obo:FLUXO_0000109))
+Declaration(Class(obo:FLUXO_0000110))
+Declaration(Class(obo:FLUXO_0000111))
+Declaration(Class(obo:FLUXO_0000112))
+Declaration(Class(obo:FLUXO_0000113))
+Declaration(Class(obo:FLUXO_0000114))
+Declaration(Class(obo:FLUXO_0000115))
+Declaration(Class(obo:FLUXO_0000116))
+Declaration(Class(obo:FLUXO_0000117))
+Declaration(Class(obo:FLUXO_0000118))
+Declaration(Class(obo:FLUXO_0000119))
+Declaration(Class(obo:FLUXO_0000120))
+Declaration(Class(obo:FLUXO_0000121))
+Declaration(Class(obo:FLUXO_0000122))
+Declaration(Class(obo:FLUXO_0000123))
+Declaration(Class(obo:FLUXO_0000124))
+Declaration(Class(obo:FLUXO_0000125))
+Declaration(Class(obo:FLUXO_0000126))
+Declaration(Class(obo:FLUXO_0000127))
+Declaration(Class(obo:FLUXO_0000128))
+Declaration(Class(obo:FLUXO_0000129))
+Declaration(Class(obo:FLUXO_0000130))
+Declaration(Class(obo:FLUXO_0000131))
+Declaration(Class(obo:FLUXO_0000132))
+Declaration(Class(obo:FLUXO_0000133))
+Declaration(Class(obo:FLUXO_0000134))
+Declaration(Class(obo:FLUXO_0000135))
+Declaration(Class(obo:FLUXO_0000136))
+Declaration(Class(obo:FLUXO_0000137))
+Declaration(Class(obo:FLUXO_0000138))
+Declaration(Class(obo:FLUXO_0000139))
+Declaration(Class(obo:FLUXO_0000140))
+Declaration(Class(obo:FLUXO_0000141))
+Declaration(Class(obo:FLUXO_0000142))
+Declaration(Class(obo:FLUXO_0000143))
+Declaration(Class(obo:FLUXO_0000144))
+Declaration(Class(obo:FLUXO_0000145))
+Declaration(Class(obo:FLUXO_0000146))
+Declaration(Class(obo:FLUXO_0000147))
+Declaration(Class(obo:FLUXO_0000148))
+Declaration(Class(obo:FLUXO_0000149))
+Declaration(Class(obo:FLUXO_0000150))
+Declaration(Class(obo:FLUXO_0000151))
+Declaration(Class(obo:FLUXO_0000152))
+Declaration(Class(obo:FLUXO_0000153))
+Declaration(Class(obo:FLUXO_0000154))
+Declaration(Class(obo:FLUXO_0000155))
+Declaration(Class(obo:FLUXO_0000156))
+Declaration(Class(obo:FLUXO_0000157))
+Declaration(Class(obo:FLUXO_0000158))
+Declaration(Class(obo:FLUXO_0000159))
+Declaration(Class(obo:FLUXO_0000160))
+Declaration(Class(obo:FLUXO_0000161))
+Declaration(Class(obo:FLUXO_0000162))
+Declaration(Class(obo:FLUXO_0000163))
+Declaration(Class(obo:FLUXO_0000164))
+Declaration(Class(obo:FLUXO_0000165))
+Declaration(Class(obo:FLUXO_0000166))
+Declaration(Class(obo:FLUXO_0000167))
+Declaration(Class(obo:FLUXO_0000168))
+Declaration(Class(obo:FLUXO_0000169))
+Declaration(Class(obo:FLUXO_0000170))
+Declaration(Class(obo:FLUXO_0000171))
+Declaration(Class(obo:FLUXO_0000172))
+Declaration(Class(obo:FLUXO_0000173))
+Declaration(Class(obo:FLUXO_0000174))
+Declaration(Class(obo:FLUXO_0000175))
+Declaration(Class(obo:FLUXO_0000176))
+Declaration(Class(obo:FLUXO_0000177))
+Declaration(Class(obo:FLUXO_0000178))
+Declaration(Class(obo:FLUXO_0000179))
+Declaration(Class(obo:FLUXO_0000180))
+Declaration(Class(obo:FLUXO_0000181))
+Declaration(Class(obo:FLUXO_0000182))
+Declaration(Class(obo:FLUXO_0000184))
+Declaration(Class(obo:FLUXO_0000185))
+Declaration(Class(obo:FLUXO_0000186))
+Declaration(Class(obo:FLUXO_0000187))
+Declaration(Class(obo:FLUXO_0000188))
+Declaration(Class(obo:FLUXO_0000189))
+Declaration(Class(obo:FLUXO_0000190))
+Declaration(Class(obo:FLUXO_0000191))
+Declaration(Class(obo:FLUXO_0000192))
+Declaration(Class(obo:FLUXO_0000193))
+Declaration(Class(obo:FLUXO_0000194))
+Declaration(Class(obo:FLUXO_0000195))
+Declaration(Class(obo:FLUXO_0000196))
+Declaration(Class(obo:FLUXO_0000197))
+Declaration(Class(obo:FLUXO_0000198))
+Declaration(Class(obo:FLUXO_0000199))
+Declaration(Class(obo:FLUXO_0000200))
+Declaration(Class(obo:FLUXO_0000201))
+Declaration(Class(obo:FLUXO_0000202))
+Declaration(Class(obo:FLUXO_0000203))
+Declaration(Class(obo:FLUXO_0000204))
+Declaration(Class(obo:FLUXO_0000205))
+Declaration(Class(obo:FLUXO_0000206))
+Declaration(Class(obo:FLUXO_0000207))
+Declaration(Class(obo:FLUXO_0000208))
+Declaration(Class(obo:FLUXO_0000209))
+Declaration(Class(obo:FLUXO_0000211))
+Declaration(Class(obo:FLUXO_0000212))
+Declaration(Class(obo:FLUXO_0000213))
+Declaration(Class(obo:FLUXO_0000214))
+Declaration(Class(obo:FLUXO_0000215))
+Declaration(Class(obo:FLUXO_0000216))
+Declaration(Class(obo:FLUXO_0000217))
+Declaration(Class(obo:FLUXO_0000219))
+Declaration(Class(obo:FLUXO_0000220))
+Declaration(Class(obo:FLUXO_0000221))
+Declaration(Class(obo:FLUXO_0000222))
+Declaration(Class(obo:FLUXO_0000223))
+Declaration(Class(obo:FLUXO_0000227))
+Declaration(Class(obo:FLUXO_0000228))
+Declaration(Class(obo:FLUXO_0000229))
+Declaration(Class(obo:FLUXO_0000230))
+Declaration(Class(obo:FLUXO_0000231))
+Declaration(Class(obo:FLUXO_0000232))
+Declaration(Class(obo:FLUXO_0000233))
+Declaration(Class(obo:FLUXO_0000234))
+Declaration(Class(obo:FLUXO_0000235))
+Declaration(Class(obo:FLUXO_0000238))
+Declaration(Class(obo:FLUXO_0000239))
+Declaration(Class(obo:FLUXO_0000240))
+Declaration(Class(obo:FLUXO_0000242))
+Declaration(Class(obo:FLUXO_0000243))
+Declaration(Class(obo:FLUXO_0000244))
+Declaration(Class(obo:FLUXO_0000245))
+Declaration(Class(obo:FLUXO_0000246))
+Declaration(Class(obo:FLUXO_0000247))
+Declaration(Class(obo:FLUXO_0000248))
+Declaration(Class(obo:FLUXO_0000249))
+Declaration(Class(obo:FLUXO_0000250))
+Declaration(Class(obo:FLUXO_0000251))
+Declaration(Class(obo:FLUXO_0000252))
+Declaration(Class(obo:FLUXO_0000253))
+Declaration(Class(obo:FLUXO_0000254))
+Declaration(Class(obo:FLUXO_0000255))
+Declaration(Class(obo:FLUXO_0000256))
+Declaration(Class(obo:FLUXO_0000257))
+Declaration(Class(obo:FLUXO_0000258))
+Declaration(Class(obo:IAO_0000009))
+Declaration(Class(obo:IAO_0000010))
+Declaration(Class(obo:IAO_0000027))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000098))
+Declaration(Class(obo:IAO_0000109))
+Declaration(Class(obo:IAO_0020000))
+Declaration(Class(obo:OBI_0200000))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0000119))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(oboInOwl:hasBroadSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:FLUXO_0000001 (fluxome)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000001 "The complete set of metabolic fluxes (reaction rates) in a biological system at a given point in time.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000001 "fluxomics")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000001 "fluxome")
+SubClassOf(obo:FLUXO_0000001 obo:BFO_0000141)
+
+# Class: obo:FLUXO_0000002 (fluxomics data)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000002 "The data that contains files to determine the rates of metabolic reactions. It generally includes the model of metabolic networks and experimental data")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000002 "fluxomics data")
+SubClassOf(obo:FLUXO_0000002 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000003 (internal flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000003 "The metabolic flux of a metabolic reaction that occurs within a metabolic network model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000003 "internal flux")
+SubClassOf(obo:FLUXO_0000003 obo:FLUXO_0000123)
+DisjointClasses(obo:FLUXO_0000003 obo:FLUXO_0000124)
+
+# Class: obo:FLUXO_0000004 (transport flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000004 "The metabolic flux of a transport reaction")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000004 "transport rate")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000004 "transport flux")
+SubClassOf(obo:FLUXO_0000004 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000005 (metabolic reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000005 "The biochemical reaction within a biological entity that is part of the metabolism.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000005 "metabolic reaction")
+SubClassOf(obo:FLUXO_0000005 obo:FLUXO_0000166)
+
+# Class: obo:FLUXO_0000006 (reaction bidirectionality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000006 "A characteristic of a biochemical reaction which may proceed simultaneously in forward and backward direction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000006 "reaction bidirectionality")
+SubClassOf(obo:FLUXO_0000006 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000007 (reaction reversibility)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000007 "The property of metabolic reaction to proceed in forward and backward direction")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000007 "property could be 0 or 1 (True or False)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000007 "reaction reversibility")
+SubClassOf(obo:FLUXO_0000007 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000008 (unidirectional reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000008 "A metabolic reaction that solely operates in a single direction, it can be forward or backward direction.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000008 "irreversible reaction")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000008 "property or class")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000008 "unidirectional reaction")
+SubClassOf(obo:FLUXO_0000008 obo:FLUXO_0000005)
+DisjointClasses(obo:FLUXO_0000008 obo:FLUXO_0000009)
+
+# Class: obo:FLUXO_0000009 (bidirectional reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000009 "A metabolic reaction that may operate simultaneously in forward and backward direction.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000009 "reversible reaction")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000009 "property or class")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000009 "bidirectional reaction")
+SubClassOf(obo:FLUXO_0000009 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000010 (reaction direction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000010 "The direction of the reaction operates")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000010 "reaction direction")
+SubClassOf(obo:FLUXO_0000010 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000011 (forward reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000011 "The reaction that proceeds from substrates to products")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000011 "forward reaction")
+SubClassOf(obo:FLUXO_0000011 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000012 (backward reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000012 "The reaction that proceeds from products to substrates")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000012 "reverse direction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000012 "backward reaction")
+SubClassOf(obo:FLUXO_0000012 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000013 (equilibrium)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000013 "The reaction that the rate of the forward reaction equals the rate of the backward reaction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000013 "equilibrium")
+SubClassOf(obo:FLUXO_0000013 obo:FLUXO_0000010)
+
+# Class: obo:FLUXO_0000014 (source)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000014 "The metabolites which are only consumed, typically the substrate(s)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000014 "source")
+SubClassOf(obo:FLUXO_0000014 obo:FLUXO_0000172)
+
+# Class: obo:FLUXO_0000015 (sink)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000015 "The metabolites which are only produced, typically the by-product(s)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000015 "sink")
+SubClassOf(obo:FLUXO_0000015 obo:FLUXO_0000172)
+
+# Class: obo:FLUXO_0000016 (flux map)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000016 "Quantitative visualization of reaction fluxes within a metabolic network, typically scaled by flux magnitude and annotated with directionality.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000016 "flux map")
+SubClassOf(obo:FLUXO_0000016 obo:BFO_0000031)
+
+# Class: obo:FLUXO_0000017 (fluxotype)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000017 "The specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "flux state")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "metabolic flux phenotype")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000017 "fluxotype")
+SubClassOf(obo:FLUXO_0000017 obo:BFO_0000031)
+
+# Class: obo:FLUXO_0000018 (stoichiometry-based fluxomics method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000018 "Set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000018 "stoichiometry-based fluxomics method")
+SubClassOf(obo:FLUXO_0000018 obo:FLUXO_0000162)
+
+# Class: obo:FLUXO_0000019 (constraint-based fluxomics method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000019 "Set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000019 "constraint-based fluxomics method")
+SubClassOf(obo:FLUXO_0000019 obo:FLUXO_0000018)
+
+# Class: obo:FLUXO_0000020 (flux measurement method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000020 "A methodology that determines metabolic fluxes within a cell based on empirical data.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000020 "flux measurement method")
+SubClassOf(obo:FLUXO_0000020 obo:FLUXO_0000162)
+
+# Class: obo:FLUXO_0000021 (metabolic flux analysis method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000021 "Set of approaches that quantitatively estimate/infer metabolic fluxes using a metabolic reaction model, experimental data and computation")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000021 "metabolic flux analysis method")
+SubClassOf(obo:FLUXO_0000021 obo:FLUXO_0000020)
+
+# Class: obo:FLUXO_0000022 (steady state flux solution space)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000022 "Set of all possible flux vectors that are consistent with reaction stoichiometries and a set of flux constraints at metabolic steady state")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000022 "flux polytope")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000022 "flux solution space")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000022 "flux space")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000022 "steady state flux solution space")
+SubClassOf(obo:FLUXO_0000022 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000023 (flux vector)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000023 "List of the rates of all chemical reactions in a biological network")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000023 "flux distribution")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000023 "flux vector")
+SubClassOf(obo:FLUXO_0000023 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000024 (stoichiometric reaction model)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000024 "A mathematical representation of a cellular metabolic network that relies on the conservation of mass rather than enzyme kinetics to predict metabolic behavior.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000024 "stoichiometric reaction model")
+SubClassOf(obo:FLUXO_0000024 obo:FLUXO_0000057)
+
+# Class: obo:FLUXO_0000025 (forward flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000025 "A rate at which a specific reaction proceeds in the forward direction.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000025 "non-negative")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000025 "forward flux")
+SubClassOf(obo:FLUXO_0000025 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000026 (backward flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000026 "A rate at which a specific reaction proceeds in the backward direction.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000026 "reverse flux")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000026 "non-negative")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000026 "backward flux")
+SubClassOf(obo:FLUXO_0000026 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000027 (net flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000027 "Difference between the forward and backward flux for a metabolic reaction.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000027 "net rate")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000027 "net flux")
+SubClassOf(obo:FLUXO_0000027 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000028 (exchange flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000028 "The minimum of the forward and backward fluxes of a metabolic reaction.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000028 "non-negative; This is different from exchange flux in flux balance analysis (make note in ontology)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000028 "exchange flux")
+SubClassOf(obo:FLUXO_0000028 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000029 (flux ratio)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000029 "Relative proportion of metabolic flow directed into a specific pathway at a divergence point compared to the total flow or an alternative route at that same junction.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000029 "flux ratio")
+SubClassOf(obo:FLUXO_0000029 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000030 (degrees of freedom in stoichiometry matrix)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000030 "The number of free/independent fluxes that can be varied independently within the network, which is determined by the null space of the stoichiometric matrix. The dimension of this null space gives the number of fluxes needed to define all other fluxes.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000030 "degrees of freedom in stoichiometry matrix")
+SubClassOf(obo:FLUXO_0000030 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000031 (isomer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000031 "One of several species (or molecular entities) that have the same atomic composition (molecular formula) but different line formulae or different stereochemical formulae and hence different physical and/or chemical properties.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000031 "isomer")
+SubClassOf(obo:FLUXO_0000031 obo:FLUXO_0000170)
+
+# Class: obo:FLUXO_0000032 (isotopic labeling state)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000032 "The specific distribution of istopic atom in a metabolite pools at specific time")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000032 "metabolite labeling pattern")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000032 "isotopic labeling state")
+SubClassOf(obo:FLUXO_0000032 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000033 (pseudo-steady state assumption)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000033 "The assumption that the rate of change of an intracellular metabolite concentration is considered negligible, which holds when the metabolic flux through the metabolite pools is much larger than the change in their pool sizes over time")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000033 "Metabolic Pseudo-Steady State")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000033 "pseudo-steady state assumption")
+SubClassOf(obo:FLUXO_0000033 obo:BFO_0000031)
+
+# Class: obo:FLUXO_0000034 (metabolic steady state)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000034 "An idealistic state in which both metabolic fluxes and intracellular metabolite pool sizes are approximately constant over time.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000034 "metabolic steady state")
+SubClassOf(obo:FLUXO_0000034 obo:FLUXO_0000177)
+
+# Class: obo:FLUXO_0000035 (isotopic transient state)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000035 "The dynamic phase of an isotopic labeling experiment where metabolite labeling patterns are not yet constant.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000035 "isotopic transient state")
+SubClassOf(obo:FLUXO_0000035 obo:BFO_0000015)
+
+# Class: obo:FLUXO_0000036 (isotopic steady state)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000036 "A state when the distribution of a stable isotope label within a biological system has become and remains constant over time.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000036 "isotopic steady state")
+SubClassOf(obo:FLUXO_0000036 obo:FLUXO_0000177)
+
+# Class: obo:FLUXO_0000037 (flux space sampling)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000037 "A stochastic process for characterizing the range of possible/feasible metabolic flux vectors.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000037 "flux state sampling")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000037 "flux space sampling")
+SubClassOf(obo:FLUXO_0000037 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000038 (fluxomics method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000038 "A technique that determines the possible fluxes of the metabolic reactions in a network")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000038 "fluxomics method")
+SubClassOf(obo:FLUXO_0000038 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000039 (flux balance analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000039 "A method that predicts physiological phenotypes allowed by the underlying metabolic model, typically enforced by a metabolic goal (e.g., maximize growth rate).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000039 "FBA")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000039 "flux balance analysis")
+SubClassOf(obo:FLUXO_0000039 obo:FLUXO_0000038)
+
+# Class: obo:FLUXO_0000040 (metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000040 "A quantitative strategy based on a metabolic network and experimental data to determine intracellular reaction rates (fluxes) with the highest possible accuracy.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000040 "MFA")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000040 "metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000040 obo:FLUXO_0000038)
+
+# Class: obo:FLUXO_0000041 (isotope-based metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000041 "A set of methods used to measure the rates of intracellular metabolic reactions in living cells using data from isotope labeling experiments")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000041 "I-MFA")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000041 "isotope-based metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000041 obo:FLUXO_0000040)
+
+# Class: obo:FLUXO_0000042 (13C metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000042 "A method for estimating metabolic fluxes by tracking from the distribution of 13C isotopes in metabolites.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000042 "13C-MFA")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000042 "13C-based metabolic flux analysis")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000042 "13C metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000042 obo:FLUXO_0000041)
+
+# Class: obo:FLUXO_0000043 (isotopically stationary metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000043 "Isotope-based metabolic flux analysis technique, assuming isotopic steady state and metabolic steady state")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000043 "IST-MFA")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000043 "isotopically stationary metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000043 obo:FLUXO_0000041)
+
+# Class: obo:FLUXO_0000044 (isotopically non-stationary metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000044 "Isotope-based metabolic flux analysis technique, assuming isotopic transient state and metabolic steady state")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "INST-13C-MFA")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "INST-MFA")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "Isotopic Non-Stationary MFA")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000044 "isotopically non-stationary metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000044 obo:FLUXO_0000045)
+
+# Class: obo:FLUXO_0000045 (dynamic Isotope-based metabolic flux analysis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000045 "Isotope-based metabolic flux analysis technique, assuming both isotopic and metabolic dynamic state")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000045 "dynamic Isotope-based metabolic flux analysis")
+SubClassOf(obo:FLUXO_0000045 obo:FLUXO_0000041)
+
+# Class: obo:FLUXO_0000046 (isotope labeling experiment design)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000046 "Approaches to increase the information content of an isotope labeling experiment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000046 "isotope labeling experiment design")
+SubClassOf(obo:FLUXO_0000046 obo:FLUXO_0000178)
+
+# Class: obo:FLUXO_0000047 (optimal isotope labeling experimental design)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000047 "Computational approaches to targeted improvement of the information gain of an isotope labeling experiment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000047 "optimal isotope labeling experimental design")
+SubClassOf(obo:FLUXO_0000047 obo:FLUXO_0000046)
+
+# Class: obo:FLUXO_0000048 (tracer selection)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000048 "Strategic choice of isotopic tracer (molecule, labeling position, isotope) based on target pathway thermodynamics and atom transitions.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000048 "tracer selection")
+SubClassOf(obo:FLUXO_0000048 obo:FLUXO_0000046)
+
+# Class: obo:FLUXO_0000049 (fluxomics isotope labeling experiment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000049 "An experiment where biological entities are fed stable isotopic tracers (like 13C) which are then distributed throughout the metabolic network via metabolic activity.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "ILE")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "SIL")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "SILE")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "Stable-isotope labeling experiment")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000049 "fluxomics stable isotope labeling experiment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000049 "fluxomics isotope labeling experiment")
+SubClassOf(obo:FLUXO_0000049 obo:FLUXO_0000162)
+
+# Class: obo:FLUXO_0000050 (parallel labeling experiments)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000050 "Multiple experiments where different isotopic tracers with distinct labeling patterns or tracer mixtures are supplied to resolve overlapping metabolic routes")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000050 "parallel labeling experiments")
+SubClassOf(obo:FLUXO_0000050 obo:FLUXO_0000049)
+
+# Class: obo:FLUXO_0000051 (single labeling experiment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000051 "One labeling experiment where a single tracer or tracer mixture is supplied")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000051 "single labeling experiment")
+SubClassOf(obo:FLUXO_0000051 obo:FLUXO_0000049)
+
+# Class: obo:FLUXO_0000052 (fragment ion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000052 "A charged dissociation product of a molecule generated during mass spectrometry, providing specific positional labeling information.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000052 "Daughter ion")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000052 "fragment ion")
+SubClassOf(obo:FLUXO_0000052 obo:FLUXO_0000170)
+
+# Class: obo:FLUXO_0000053 (precursor ion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000053 "The ion selected for fragmentation in tandem mass spectrometry (MS/MS).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000053 "Parent ion")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000053 "precursor ion")
+SubClassOf(obo:FLUXO_0000053 obo:FLUXO_0000170)
+
+# Class: obo:FLUXO_0000054 (tandem isotopologue distribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000054 "A measurement of the relative abundance of different isotopomers in both a parent molecule and its fragments, obtained through tandem mass spectrometry (MS/MS)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000054 "tandem isotopologue distribution")
+SubClassOf(obo:FLUXO_0000054 obo:FLUXO_0000143)
+
+# Class: obo:FLUXO_0000055 (fractional enrichment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000055 "The percentage of molecules in a given metabolite pool that contain one or more isotopic labels from a tracer.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000055 "fractional enrichment")
+SubClassOf(obo:FLUXO_0000055 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000056 (measurement time)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000056 "The time where a sample is taken from the biological experiment for analysis.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000056 "measurement time")
+SubClassOf(obo:FLUXO_0000056 obo:BFO_0000008)
+
+# Class: obo:FLUXO_0000057 (metabolic network model)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000057 "The computational representation of biochemical reactions within a cell, which includes their molecules, stoichiometries, directionalities, and in MFA, constraints and atom transitions.")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000057 "metabolic model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000057 "metabolic network model")
+SubClassOf(obo:FLUXO_0000057 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000058 (compartment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000058 "A physically or functionally distinct space (e.g., Cytosol, Mitochondria, Metabolon)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000058 "compartment")
+SubClassOf(obo:FLUXO_0000058 obo:BFO_0000028)
+
+# Class: obo:FLUXO_0000059 (biomass composition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000059 "The stoichiometric representation of cellular macromolecules (e.g. Protein, DNA, RNA, Lipids).")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000059 "biomass composition")
+SubClassOf(obo:FLUXO_0000059 obo:FLUXO_0000198)
+
+# Class: obo:FLUXO_0000060 (metabolite pool)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000060 "A set of one or several metabolites")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000060 "metabolite pool")
+SubClassOf(obo:FLUXO_0000060 obo:FLUXO_0000198)
+
+# Class: obo:FLUXO_0000061 (pseudo metabolite pool)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000061 "A metabolic pool in the metabolic network that does not have any biological counterpart and is purely introduced for modeling reason")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000061 "pseudo metabolite pool")
+SubClassOf(obo:FLUXO_0000061 obo:FLUXO_0000198)
+
+# Class: obo:FLUXO_0000062 (metabolite pool size)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000062 "An amount of molecular entity available to a particular metabolic process.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000062 "metabolite pool size")
+SubClassOf(obo:FLUXO_0000062 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000063 (reaction pool)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000063 "A set of chemical reactions that is part of the metabolic network model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000063 "reaction pool")
+SubClassOf(obo:FLUXO_0000063 obo:BFO_0000027)
+
+# Class: obo:FLUXO_0000064 (symmetry)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000064 "A property of molecules where certain atoms are chemically indistinguishable, making a unique atom numbering impossible.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000064 "symmetry")
+SubClassOf(obo:FLUXO_0000064 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000065 (pseudo reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000065 "A reaction in the metabolic network that does not have any biological counterpart and is purely introduced for modeling reason.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000065 "pseudo reaction")
+SubClassOf(obo:FLUXO_0000065 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000066 (lumped reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000066 "A simplified reaction that merge multiple chemical reactions into a single reaction for modeling reason.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000066 "lumped reaction")
+SubClassOf(obo:FLUXO_0000066 obo:FLUXO_0000065)
+
+# Class: obo:FLUXO_0000067 (biomass reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000067 "An abstract reaction that represents consumption of metabolites for cellular growth in a metabolic model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000067 "biomass reaction")
+SubClassOf(obo:FLUXO_0000067 obo:FLUXO_0000065)
+
+# Class: obo:FLUXO_0000068 (linear flux constraint)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000068 "The limits on metabolic flux value on reactions")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000068 "linear flux constraint")
+SubClassOf(obo:FLUXO_0000068 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000069 (atom identifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000069 "A unique position to atoms in a molecule to track its position within the molecule.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000069 "atom address")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000069 "https://www.inchi-trust.org/download/104/InChI_TechMan.pdf")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000069 "atom identifier")
+SubClassOf(obo:FLUXO_0000069 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000070 (atom mapping)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000070 "The precise mapping of how each relevant atom in a substrate is rearranged to form the product metabolites during a reaction. It usually excludes hydrogens.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000070 "atom mapping")
+SubClassOf(obo:FLUXO_0000070 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000071 (atom transition network)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000071 "Set of atom maps for all reactions making up a metabolic network model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000071 "atom transition network")
+SubClassOf(obo:FLUXO_0000071 obo:BFO_0000027)
+
+# Class: obo:FLUXO_0000072 (atom transition annotation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000072 "The annotation types for atom transition.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000072 "atom transition annotation")
+SubClassOf(obo:FLUXO_0000072 obo:IAO_0020000)
+
+# Class: obo:FLUXO_0000073 (letter annotation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000073 "An annotation that uses a-z and A-Z to represent the order of the tracked atoms in a molecule")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000073 "letter annotation")
+SubClassOf(obo:FLUXO_0000073 obo:FLUXO_0000072)
+
+# Class: obo:FLUXO_0000074 (fluxml annotation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000074 "An annotation that uses FluxML definition to track atom mapping in a reaction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000074 "fluxml annotation")
+SubClassOf(obo:FLUXO_0000074 obo:FLUXO_0000072)
+
+# Class: obo:FLUXO_0000075 (InChI annotation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000075 "An annotation that uses InChI specification to track atoms in a reaction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000075 "InChI annotation")
+SubClassOf(obo:FLUXO_0000075 obo:FLUXO_0000072)
+
+# Class: obo:FLUXO_0000076 (SMILE annotation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000076 "An annotation that uses SMILE specification to track atoms in a reaction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000076 "SMILE annotation")
+SubClassOf(obo:FLUXO_0000076 obo:FLUXO_0000072)
+
+# Class: obo:FLUXO_0000077 (symmetric atom transition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000077 "An atom mapping that represents the complementary atom transition in a reaction that involves symmetric compound.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000077 "scrambling")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000077 "symmetric atom transition")
+SubClassOf(obo:FLUXO_0000077 obo:FLUXO_0000155)
+
+# Class: obo:FLUXO_0000078 (labelled source)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000078 "A blend of differentially labeled substrate isotopomers (e.g., % [1-¹³C]glucose + % [U-¹³C]glucose) administered in an ILE")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000078 "commercial isotopically labelled molecular entity mixture")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000078 "tracer mixture")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000078 "labelled source")
+SubClassOf(obo:FLUXO_0000078 obo:COB_0000026)
+
+# Class: obo:FLUXO_0000079 (isotopic tracer property)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000079 "The characteristics of the isotopic tracer")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000079 "isotopic tracer property")
+SubClassOf(obo:FLUXO_0000079 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000080 (label input isotopic purity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000080 "The purity of the isotopic tracer specified in the label input")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000080 "label input isotopic purity")
+SubClassOf(obo:FLUXO_0000080 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000081 (tracer cost)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000081 "The price of the isotopic tracer molecular entity")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000081 "tracer cost")
+SubClassOf(obo:FLUXO_0000081 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000083 (growth rate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000083 "The rate of biomass formation")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000083 "growth rate")
+SubClassOf(obo:FLUXO_0000083 obo:IAO_0000109)
+
+# Class: obo:FLUXO_0000084 (specific growth rate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000084 "The biomass increase per unit of existing biomass per unit of time")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000084 "specific growth rate")
+SubClassOf(obo:FLUXO_0000084 obo:FLUXO_0000083)
+
+# Class: obo:FLUXO_0000085 (yield)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000085 "Efficiency of substrate conversion into product/biomass (mass or molar basis).")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000085 "yield")
+SubClassOf(obo:FLUXO_0000085 obo:IAO_0000109)
+
+# Class: obo:FLUXO_0000086 (weighted sum of squared residuals)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000086 "A measure used in flux estimation, specifically the variance-weighted sum of squares residuals, which is minimized to quantify fluxes. It serves as a key indicator of goodness-ofreflect the certainty with which metabolic fluxes were determined.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000086 "weighted sum of squared residuals")
+SubClassOf(obo:FLUXO_0000086 obo:FLUXO_0000207)
+
+# Class: obo:FLUXO_0000087 (labeling simulation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000087 "The procedure used to obtain labeling data from a given metabolic models and presumed fluxes/metabolite concentrations.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000087 "forward simulation")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000087 "labeling simulation")
+SubClassOf(obo:FLUXO_0000087 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000088 (flux estimation method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000088 "Statistical methods that quantifies fluxes including their uncertainties.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000088 "flux estimation method")
+SubClassOf(obo:FLUXO_0000088 obo:FLUXO_0000214)
+
+# Class: obo:FLUXO_0000089 (measurement model)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000089 "A mathematical model, usually represented as a matrix, to describe how to compute a labeling measurement based on the simulated labeling state space")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000089 "measurement model")
+SubClassOf(obo:FLUXO_0000089 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000090 (simulated MID measurement)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000090 "Measurement value of a measured quantity as obtained by a forward simulation of the metabolic network model")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000090 "simulated measurement")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000090 "simulated MID measurement")
+SubClassOf(obo:FLUXO_0000090 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000091 (error model)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000091 "A mathematical model to calculate the measurement standard deviation of a simulated measurement")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000091 "error model")
+SubClassOf(obo:FLUXO_0000091 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000092 (correction matrix)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000092 "A mathematical matrix used to remove the contribution of naturally occurring heavy isotopes (e.g., 13C, 15N, 18O) from raw mass spectrometry data")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000092 "Deconvolution matrix")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000092 "correction matrix")
+SubClassOf(obo:FLUXO_0000092 obo:FLUXO_0000217)
+
+# Class: obo:FLUXO_0000093 (lumped measurements)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000093 "The measurement corresponding to the linear combination of two or more metabolites")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000093 "lumped measurements")
+SubClassOf(obo:FLUXO_0000093 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000094 (nuisance parameter)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000094 "A parameter in a statistical model that is not of primary interest but must be included to correctly define the model and analyze the parameters that are of interest")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000094 "nuisance parameter")
+SubClassOf(obo:FLUXO_0000094 obo:FLUXO_0000160)
+
+# Class: obo:FLUXO_0000095 (D-parameter)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000095 "The parameter to model residual naturally labeled tracer in an input pool")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000095 "D-parameter")
+SubClassOf(obo:FLUXO_0000095 obo:FLUXO_0000094)
+
+# Class: obo:FLUXO_0000096 (G-parameter)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000096 "The parameter to account for residual naturally labeled fractions in a measurement group")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000096 "G-parameter")
+SubClassOf(obo:FLUXO_0000096 obo:FLUXO_0000094)
+
+# Class: obo:FLUXO_0000097 (experimental design criterion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000097 "A criterion value for a proposed experimental design")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000097 "experimental design criterion")
+SubClassOf(obo:FLUXO_0000097 obo:FLUXO_0000223)
+
+# Class: obo:FLUXO_0000098 (FluxML)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000098 "FluxML is a universal modeling language for metabolic flux analysis designed with the aim of providing a standard document format for creating, validating and reliable exchanging of arbitrary metabolic models across different simulation tools.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000098 "FluxML")
+SubClassOf(obo:FLUXO_0000098 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000099 (FluxML specification)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000099 "FluxML specification")
+SubClassOf(obo:FLUXO_0000099 obo:IAO_0000098)
+
+# Class: obo:FLUXO_0000100 (FTBL specification)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000100 "FTBL specification")
+SubClassOf(obo:FLUXO_0000100 obo:IAO_0000098)
+
+# Class: obo:FLUXO_0000101 (MTF specification)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000101 "MTF specification")
+SubClassOf(obo:FLUXO_0000101 obo:IAO_0000098)
+
+# Class: obo:FLUXO_0000102 (fluxomics software)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000102 "fluxomics software")
+SubClassOf(obo:FLUXO_0000102 obo:IAO_0000010)
+
+# Class: obo:FLUXO_0000103 (metabolic flux analysis software)
+
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000103 "MFA Software")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000103 "metabolic flux analysis software")
+SubClassOf(obo:FLUXO_0000103 obo:FLUXO_0000102)
+
+# Class: obo:FLUXO_0000104 (tcaCALC & SIM)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000104 "https://invivometabolism.org/tca.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000104 "tcaCALC & SIM")
+SubClassOf(obo:FLUXO_0000104 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000105 (13CFLUX)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000105 "https://www.13cflux.net/13cflux/index.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000105 "13CFLUX")
+SubClassOf(obo:FLUXO_0000105 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000106 (13CFLUXv3)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000106 "https://x3cflux.readthedocs.io/en/latest/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000106 "13CFLUXv3")
+SubClassOf(obo:FLUXO_0000106 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000107 (influx_s)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000107 "https://influx-si.readthedocs.io/en/latest/intro.html#influx-s")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000107 "influx_s")
+SubClassOf(obo:FLUXO_0000107 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000108 (influx_si)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000108 "https://influx-si.readthedocs.io/en/latest/index.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000108 "influx_si")
+SubClassOf(obo:FLUXO_0000108 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000109 (INCA2)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000109 "INCA2")
+SubClassOf(obo:FLUXO_0000109 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000110 (Open Mebius)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000110 "https://en.metabolic-engineering.jp/page/software/openmebius")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000110 "Open Mebius")
+SubClassOf(obo:FLUXO_0000110 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000111 (mfapy)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000111 "https://github.com/fumiomatsuda/mfapy")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000111 "mfapy")
+SubClassOf(obo:FLUXO_0000111 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000112 (OpenFLUX2)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000112 "https://sourceforge.net/projects/openflux2/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000112 "OpenFLUX2")
+SubClassOf(obo:FLUXO_0000112 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000113 (sysmetab)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000113 "https://gitlab.com/scilab/forge/sysmetab/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000113 "sysmetab")
+SubClassOf(obo:FLUXO_0000113 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000114 (WUFlux)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000114 "https://tang.eece.wustl.edu/ToolDevelopment.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000114 "WUFlux")
+SubClassOf(obo:FLUXO_0000114 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000115 (FluxPyt)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000115 "https://sourceforge.net/projects/fluxpyt")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000115 "FluxPyt")
+SubClassOf(obo:FLUXO_0000115 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000116 (EMUlator)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000116 "https://doi.org/10.3389/fmicb.2019.00922")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000116 "EMUlator")
+SubClassOf(obo:FLUXO_0000116 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000117 (freeflux)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000117 "https://github.com/Chaowu88/freeflux")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000117 "freeflux")
+SubClassOf(obo:FLUXO_0000117 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000118 (eiFlux)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000118 "https://doi.org/10.1371/journal.pcbi.1009831")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000118 "eiFlux")
+SubClassOf(obo:FLUXO_0000118 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000119 (CeCaFlux)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000119 "https://github.com/zhzhd82/CeCaFLUX")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000119 "CeCaFlux")
+SubClassOf(obo:FLUXO_0000119 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000120 (BayFlux)
+
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000120 "https://github.com/JBEI/bayflux")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000120 "BayFlux")
+SubClassOf(obo:FLUXO_0000120 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000121 (Freeflux specification)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000121 "Freeflux specification")
+SubClassOf(obo:FLUXO_0000121 obo:IAO_0000098)
+
+# Class: obo:FLUXO_0000122 (INCA specification)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000122 "INCA specification")
+SubClassOf(obo:FLUXO_0000122 obo:IAO_0000098)
+
+# Class: obo:FLUXO_0000123 (metabolic flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000123 "A data item which represents the speed of a chemical reaction turning reactive species into product species of event (i.e the number of such conversions) occuring over a time interval")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000123 "flux")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000123 "reaction rate")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000123 "it is commonly refer to flux in MFA, even though formally it is a rate. The actual definition of metabolic flux is the amount of metabolite which is converted per time unit. It is calculated as the reaction rate times stoichiometric coefficient, often normalized to a specific quantity (e.g. cell dry weight or volume of a compartment)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000123 "metabolic flux")
+SubClassOf(obo:FLUXO_0000123 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000124 (external flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000124 "The metabolic flux of a metabolic reaction that occurs across metabolic network model boundaries")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000124 "boundary flux")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000124 "external rate")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000124 "In the FBA field, the exchange flux means the external flux.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000124 "external flux")
+SubClassOf(obo:FLUXO_0000124 obo:FLUXO_0000123)
+
+# Class: obo:FLUXO_0000125 (metabolic model)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000125 "A model representation of metabolism")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000125 "metabolic model")
+SubClassOf(obo:FLUXO_0000125 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000126 (metabolism)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000126 "The chemical compounds of a biological entity are connected by metabolic reactions which convert one compound into another.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000126 "metabolism")
+SubClassOf(obo:FLUXO_0000126 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000127 (metabolic network)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000127 "A set of interconnected pathways of metabolic reactions within a biological entity")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000127 "network")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000127 "metabolic network")
+SubClassOf(obo:FLUXO_0000127 obo:FLUXO_0000125)
+
+# Class: obo:FLUXO_0000128 (transport reaction)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000128 "The transfer of a metabolite or metabolites between two compartments")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000128 "transport reaction")
+SubClassOf(obo:FLUXO_0000128 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000129 (pseudomolecule)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000129 "An imaginary construct of a molecular entity that exist purely for modeling reasons (e.g. biomass)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000129 "pseudomolecule")
+SubClassOf(obo:FLUXO_0000129 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000130 (relative exchange flux)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000130 "The minimum of the forward and backward fluxes of a metabolic reaction, calculated by convention as a/(1+a), where a is the exchange flux.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000130 "relative exchange flux")
+SubClassOf(obo:FLUXO_0000130 obo:FLUXO_0000028)
+
+# Class: obo:FLUXO_0000131 (tracer isotopologue)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000131 "A molecular entity that differs only in isotopic composition by a single element (e.g. 13C-1-glucose and 13C-2-glucose). In MS, this is the output of the natural isotope abundance correction.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000131 "tracer isotopologue")
+SubClassOf(obo:FLUXO_0000131 obo:FLUXO_0000174)
+
+# Class: obo:FLUXO_0000132 (tracer element)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000132 "The chemical element(s) that is labelled for the fluxomics investigation (e.g. Carbon in a 13C labelled molecular entity)")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000132 "tracer element")
+SubClassOf(obo:FLUXO_0000132 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000133 (mass number)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000133 "Total number of heavy particles (protons and neutrons jointly called nucleons) in the atomic nucleus. Also called nucleon number. Symbol m in mass spectrometry.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000133 "mass number")
+SubClassOf(obo:FLUXO_0000133 obo:BFO_0000019)
+
+# Class: obo:FLUXO_0000134 (isotopically labelled molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000134 "A molecular entity with isotopic tracer at specific atom number(s).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000134 "isotopically labelled molecule")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000134 "isotopically labelled molecular entity")
+SubClassOf(obo:FLUXO_0000134 obo:FLUXO_0000171)
+
+# Class: obo:FLUXO_0000135 (commercial isotopically labelled molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000135 "The commercial version of the isotopically labelled molecular entity (e.g. the purchased [1-¹³C]glucose with purity of 99 atom % 13C)")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000135 "commercially labelled molecule")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000135 "commercial isotopically labelled molecular entity")
+SubClassOf(obo:FLUXO_0000135 obo:FLUXO_0000134)
+
+# Class: obo:FLUXO_0000136 (label input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000136 "The input of the labelled source for the metabolic network model")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000136 "label input")
+SubClassOf(obo:FLUXO_0000136 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000137 (tracer position)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000137 "The atom number of the isotopic tracer in the isotopically labelled molecular entity")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000137 "tracer position")
+SubClassOf(obo:FLUXO_0000137 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000138 (tracer propotion)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000138 "Proportion of isotopically labelled molecular entity in a labelled source")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000138 "tracer enrichment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000138 "tracer propotion")
+SubClassOf(obo:FLUXO_0000138 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000139 (isotopic purity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000139 "The purity of the isotopic tracer in the commercial isotopically labelled molecular entity")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000139 "isotopic purity")
+SubClassOf(obo:FLUXO_0000139 obo:FLUXO_0000079)
+
+# Class: obo:FLUXO_0000140 (mean enrichment)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000140 "mean enrichment")
+SubClassOf(obo:FLUXO_0000140 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000141 (isotopic information)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000141 "An information entity that contains details necessary to describe isotope or isotopologue information for isotopic labeling experiment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000141 "isotopic information")
+SubClassOf(obo:FLUXO_0000141 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000142 (isotopic composition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000142 "The data item that describes the isotopic content of the molecule")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000142 "isotopic composition")
+SubClassOf(obo:FLUXO_0000142 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000143 (isotopologue distribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000143 "Relative abundances of molecule isotopologues")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000143 "MDV")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000143 "MID")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000143 "ID")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000143 "isotopologue fractional abundance")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000143 "mass ditribution vector")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000143 "isotopologue distribution")
+SubClassOf(obo:FLUXO_0000143 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000144 (isotopomer distribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000144 "The abundance of isotopomers relative to the abundance of the complete set or subset of isotopic species")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000144 "isotopomer distribution")
+SubClassOf(obo:FLUXO_0000144 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000145 (cumomer distribution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000145 "The abundance of cumomer relative to the abundance of the complete set or subset of isotopic species")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000145 "cumomer distribution")
+SubClassOf(obo:FLUXO_0000145 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000146 (Isotopic State-space Representation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000146 "The representation of isotopic state of a metabolite")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000146 "Isotopic State-space Representation")
+SubClassOf(obo:FLUXO_0000146 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000147 (Isotopic State-space)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000147 "The space of all isotopic forms of a metabolite")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000147 "Isotopic State-space")
+SubClassOf(obo:FLUXO_0000147 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000148 (Isotopomer Representation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000148 "A state-space representation that models positional labeling by a binary number (0: non-labeled, 1: labeled).")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000148 "Isotopomer Representation")
+SubClassOf(obo:FLUXO_0000148 obo:FLUXO_0000146)
+
+# Class: obo:FLUXO_0000149 (Cumomer Representation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000149 "A state-space representation that models positional labeling by a state (0: unlabeled, 1: labeled or x: either labeled or unlabeled).")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000149 "Cumomer Representation")
+SubClassOf(obo:FLUXO_0000149 obo:FLUXO_0000146)
+
+# Class: obo:FLUXO_0000150 (Elementary Metabolite Unit Representation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000150 "A state-space representation that models the mass differences due to labeling of a compound fragement. The fragment is defined by a binary number (position is/is not part of the fragment).")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000150 "EMU")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000150 "Elementary Metabolite Unit Representation")
+SubClassOf(obo:FLUXO_0000150 obo:FLUXO_0000146)
+
+# Class: obo:FLUXO_0000151 (amount)
+
+AnnotationAssertion(rdfs:label obo:FLUXO_0000151 "amount")
+SubClassOf(obo:FLUXO_0000151 obo:IAO_0000109)
+
+# Class: obo:FLUXO_0000152 (flux equality constraint)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000152 "Fixed value for linear combination of fluxes")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000152 "flux equality constraint")
+SubClassOf(obo:FLUXO_0000152 obo:FLUXO_0000068)
+
+# Class: obo:FLUXO_0000153 (flux inequality constraint)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000153 "Upper or lower bound of linear combinations of fluxes")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000153 "flux inequality constraint")
+SubClassOf(obo:FLUXO_0000153 obo:FLUXO_0000068)
+
+# Class: obo:FLUXO_0000154 (atom map)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000154 "A set of all atom identifiers considered for a molecule.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000154 "atom map")
+SubClassOf(obo:FLUXO_0000154 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000155 (atom transition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000155 "The precise bijection of how each relevant atom identifier in a substrate is rearranged to form the product during a reaction.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000155 "atom transition")
+SubClassOf(obo:FLUXO_0000155 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000156 (measurement uncertainty)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000156 "A measure of the inherent variability of repeated observation measurements of a quantity including quantities evaluated by statistical methods and by other means.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000156 "measurement uncertainty")
+SubClassOf(obo:FLUXO_0000156 obo:FLUXO_0000207)
+
+# Class: obo:FLUXO_0000157 (flux uncertainty quantification method)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000157 "The method that is used to quantify the flux uncertainty estimate")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000157 "flux uncertainty quantification method")
+SubClassOf(obo:FLUXO_0000157 obo:FLUXO_0000216)
+
+# Class: obo:FLUXO_0000158 (flux uncertainty estimate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000158 "The statistic that quantify the uncertainty of the flux solution")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000158 "flux uncertainty estimate")
+SubClassOf(obo:FLUXO_0000158 obo:FLUXO_0000207)
+
+# Class: obo:FLUXO_0000159 (flux solution)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000159 "The parameters including flux vector and other parameters (e.g. metabolite pool sizes and model parameters) that best explains experimental data")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000159 "flux solution")
+SubClassOf(obo:FLUXO_0000159 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000160 (model parameters)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000160 "The set of all parameters that are necessary to run labeling simulation.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000160 "model parameters")
+SubClassOf(obo:FLUXO_0000160 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000161 (groupscale)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000161 "The parameter to scale measurements of a measurement group to better fit simulated measurements")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000161 "groupscale")
+SubClassOf(obo:FLUXO_0000161 obo:FLUXO_0000094)
+
+# Class: obo:FLUXO_0000162 (fluxomics investigation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000162 "Fluxomics is a kind of investigation which aims at quantifying the fluxes of molecules in biological entities.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000162 "http://purl.obolibrary.org/obo/MSIO_0000182")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000162 "fluxomics")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000162 "fluxomics study")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000162 "fluxomics investigation")
+SubClassOf(obo:FLUXO_0000162 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000163 (metabolite uptake flux)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000163 "http://purl.obolibrary.org/obo/MSIO_0000153")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000163 "uptake rate")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000163 "metabolite uptake flux")
+SubClassOf(obo:FLUXO_0000163 obo:FLUXO_0000124)
+
+# Class: obo:FLUXO_0000164 (metabolite excretion flux)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000164 "http://purl.obolibrary.org/obo/MSIO_0000152")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000164 "secretion rate")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000164 "metabolite excretion flux")
+SubClassOf(obo:FLUXO_0000164 obo:FLUXO_0000124)
+
+# Class: obo:FLUXO_0000165 (metabolic pathway)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000165 "A model representation of a series of connected metabolic reactions")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000165 "http://purl.obolibrary.org/obo/MSIO_0000059")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000165 "pathway")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000165 "metabolic network")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000165 "metabolic pathway")
+SubClassOf(obo:FLUXO_0000165 obo:FLUXO_0000057)
+
+# Class: obo:FLUXO_0000166 (chemical reaction)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000166 "http://purl.obolibrary.org/obo/MSIO_0000001")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000166 "chemical reaction")
+SubClassOf(obo:FLUXO_0000166 obo:BFO_0000015)
+
+# Class: obo:FLUXO_0000167 (reactant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000167 "The starting metabolite of a metabolic reaction")
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000167 "reagent")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000167 "http://biomodels.net/SBO/SBO_0000010")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000167 "educt")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000167 "reactant")
+SubClassOf(obo:FLUXO_0000167 obo:FLUXO_0000172)
+
+# Class: obo:FLUXO_0000168 (substrate)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000168 "Molecule or pseudo molecule which is on the left side of the reaction equation.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000168 "http://biomodels.net/SBO/SBO_0000015")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000168 "substrate")
+SubClassOf(obo:FLUXO_0000168 obo:FLUXO_0000167)
+
+# Class: obo:FLUXO_0000169 (product)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000169 "Molecule or pseudo molecule which is on the right side of the reaction equation.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000169 "http://biomodels.net/SBO/SBO_0000011")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000169 "product")
+SubClassOf(obo:FLUXO_0000169 obo:FLUXO_0000172)
+
+# Class: obo:FLUXO_0000170 (molecule)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000170 "http://purl.obolibrary.org/obo/CHEBI_25367")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000170 "molecule")
+SubClassOf(obo:FLUXO_0000170 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000171 (molecular entity)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000171 "http://purl.obolibrary.org/obo/CHEBI_23367")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000171 "molecular entity")
+SubClassOf(obo:FLUXO_0000171 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000172 (metabolite)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000172 "http://purl.obolibrary.org/obo/CHEBI_25212")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000172 "metabolite")
+SubClassOf(obo:FLUXO_0000172 obo:FLUXO_0000170)
+
+# Class: obo:FLUXO_0000173 (stoichiometry matrix)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000173 "The mathematical representation of a metabolic network, with rows representing metabolites and columns representing reactions. Each value indicates the stoichiometric coefficients, metabolites that are consumed are negative values and produced are positive values.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000173 "http://purl.obolibrary.org/obo/MSIO_0000079")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000173 "stoichiometry matrix")
+SubClassOf(obo:FLUXO_0000173 obo:FLUXO_0000217)
+
+# Class: obo:FLUXO_0000174 (isotopologue)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000174 "A molecular entity that differs only in isotopic composition (number of isotopic substitutions)")
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://goldbook.iupac.org/terms/view/I03351") oboInOwl:hasDbXref obo:FLUXO_0000174 "http://purl.obolibrary.org/obo/MSIO_0000034")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000174 "isotopologues")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000174 "isotopologue")
+SubClassOf(obo:FLUXO_0000174 obo:FLUXO_0000031)
+
+# Class: obo:FLUXO_0000175 (isotopomer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000175 "Isomers having the same number of each isotopic atom but differing in their positions. The term is a contraction of 'isotopic isomer'.")
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://goldbook.iupac.org/terms/view/I03352") oboInOwl:hasDbXref obo:FLUXO_0000175 "http://purl.obolibrary.org/obo/MSIO_0000036")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000175 "isotopomer")
+SubClassOf(obo:FLUXO_0000175 obo:FLUXO_0000031)
+
+# Class: obo:FLUXO_0000176 (isotopic tracer)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000176 "A isotope of the tracer element that is used in fluxomics investigation. (e.g. 13C in a 13C labelled molecular entity)")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000176 "http://purl.obolibrary.org/obo/MSIO_0000031")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000176 "tracer")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000176 "isotopic tracer")
+SubClassOf(obo:FLUXO_0000176 obo:COB_0000026)
+
+# Class: obo:FLUXO_0000177 (steady state)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000177 "http://purl.obolibrary.org/obo/NCIT_C151966")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000177 "steady state")
+SubClassOf(obo:FLUXO_0000177 obo:BFO_0000031)
+
+# Class: obo:FLUXO_0000178 (Experimental design and studies)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000178 "http://edamontology.org/topic_3678")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000178 "Experimental design and studies")
+SubClassOf(obo:FLUXO_0000178 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000179 (isotopically steady state labeling experiment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000179 "An experiment in which isotopically labelled compounds are supplied to a biological system until the ratio of marked to unmarked molecules stabilizes at a constant level.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000179 "http://purl.obolibrary.org/obo/MSIO_0000185")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000179 "isotopically steady state labeling experiment")
+SubClassOf(obo:FLUXO_0000179 obo:FLUXO_0000049)
+
+# Class: obo:FLUXO_0000180 (isotopically non-stationary labeling experiment)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000180 "An experiment measures the rate at which isotopically labelled compounds are incorporated into cellular metabolites over time, specifically before the system reaches a stable isotopic equilibrium.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000180 "http://purl.obolibrary.org/obo/MSIO_0000053")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000180 "isotopically instationary labeling experiment")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000180 "isotopically unstationary labeling experiment")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000180 "isotopically non-stationary labeling experiment")
+SubClassOf(obo:FLUXO_0000180 obo:FLUXO_0000049)
+
+# Class: obo:FLUXO_0000181 (organism)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000181 "http://purl.uniprot.org/core/organism")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000181 "organism")
+SubClassOf(obo:FLUXO_0000181 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000182 (strain)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000182 "http://purl.uniprot.org/core/strain")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000182 "strain")
+SubClassOf(obo:FLUXO_0000182 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000184 (culture medium)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000184 "http://purl.obolibrary.org/obo/OBI_0000079")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000184 "culture medium")
+SubClassOf(obo:FLUXO_0000184 obo:COB_0000026)
+
+# Class: obo:FLUXO_0000185 (device)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000185 "http://purl.obolibrary.org/obo/COB_0001300")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000185 "device")
+SubClassOf(obo:FLUXO_0000185 obo:COB_0000026)
+
+# Class: obo:FLUXO_0000186 (mass spectrometer)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000186 "http://purl.obolibrary.org/obo/OBI_0000049")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000186 "mass spectrometer")
+SubClassOf(obo:FLUXO_0000186 obo:FLUXO_0000185)
+
+# Class: obo:FLUXO_0000187 (NMR instrument)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000187 "http://purl.obolibrary.org/obo/OBI_0000566")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000187 "NMR instrument")
+SubClassOf(obo:FLUXO_0000187 obo:FLUXO_0000185)
+
+# Class: obo:FLUXO_0000188 (metabolomics)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000188 "http://edamontology.org/topic_3172")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000188 "metabolomics")
+SubClassOf(obo:FLUXO_0000188 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000189 (proteomics)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000189 "http://edamontology.org/topic_0121")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000189 "proteomics")
+SubClassOf(obo:FLUXO_0000189 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000190 (mass spectrometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000190 "http://purl.obolibrary.org/obo/CHMO_0000470")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000190 "mass spectrometry")
+SubClassOf(obo:FLUXO_0000190 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000191 (liquid chromatography-mass spectrometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000191 "http://purl.obolibrary.org/obo/CHMO_0000524")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000191 "liquid chromatography-mass spectrometry")
+SubClassOf(obo:FLUXO_0000191 obo:FLUXO_0000190)
+
+# Class: obo:FLUXO_0000192 (gas chromatography-mass spectrometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000192 "http://purl.obolibrary.org/obo/CHMO_0000497")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000192 "gas chromatography-mass spectrometry")
+SubClassOf(obo:FLUXO_0000192 obo:FLUXO_0000190)
+
+# Class: obo:FLUXO_0000193 (tandem mass spectrometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000193 "http://purl.obolibrary.org/obo/CHMO_0000575")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000193 "tandem mass spectrometry")
+SubClassOf(obo:FLUXO_0000193 obo:FLUXO_0000190)
+
+# Class: obo:FLUXO_0000194 (isotope ratio mass spectrometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000194 "http://purl.obolibrary.org/obo/CHMO_0000506")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000194 "isotope ratio mass spectrometry")
+SubClassOf(obo:FLUXO_0000194 obo:FLUXO_0000190)
+
+# Class: obo:FLUXO_0000195 (nuclear magnetic resonance)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000195 "http://purl.obolibrary.org/obo/CHMO_0000591")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000195 "nuclear magnetic resonance")
+SubClassOf(obo:FLUXO_0000195 obo:COB_0000082)
+
+# Class: obo:FLUXO_0000196 (Isotope Natural Abundance Correction)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000196 "http://purl.obolibrary.org/obo/MSIO_0000130")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000196 "Isotope Natural Abundance Correction")
+SubClassOf(obo:FLUXO_0000196 obo:OBI_0200000)
+
+# Class: obo:FLUXO_0000197 (concentration)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000197 "http://purl.obolibrary.org/obo/STATO_0000704")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000197 "concentration")
+SubClassOf(obo:FLUXO_0000197 obo:IAO_0000109)
+
+# Class: obo:FLUXO_0000198 (systems biology representation)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000198 "http://biomodels.net/SBO/SBO_0000000")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000198 "systems biology representation")
+SubClassOf(obo:FLUXO_0000198 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000199 (chemical formula)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000199 "http://edamontology.org/data_0846")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000199 "chemical formula")
+SubClassOf(obo:FLUXO_0000199 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000200 (molecular charge)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000200 "http://edamontology.org/data_0845")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000200 "molecular charge")
+SubClassOf(obo:FLUXO_0000200 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000201 (demand reaction)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000201 "http://biomodels.net/SBO/SBO_0000628")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000201 "demand reaction")
+SubClassOf(obo:FLUXO_0000201 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000202 (exchange reaction)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000202 "http://biomodels.net/SBO/SBO_0000627")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000202 "exchange reaction")
+SubClassOf(obo:FLUXO_0000202 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000203 (sink reaction)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000203 "http://biomodels.net/SBO/SBO_0000632")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000203 "sink reaction")
+SubClassOf(obo:FLUXO_0000203 obo:FLUXO_0000005)
+
+# Class: obo:FLUXO_0000204 (reaction stoichiometry)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000204 "http://purl.obolibrary.org/obo/NCIT_C18110")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000204 "reaction stoichiometry")
+SubClassOf(obo:FLUXO_0000204 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000205 (stoichiometric coefficient)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000205 "http://purl.obolibrary.org/obo/MSIO_0000060")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000205 "stoichiometric coefficient")
+SubClassOf(obo:FLUXO_0000205 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000206 (flux bound)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000206 "http://biomodels.net/SBO/SBO_0000625")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000206 "flux bound")
+SubClassOf(obo:FLUXO_0000206 obo:FLUXO_0000153)
+
+# Class: obo:FLUXO_0000207 (statistic)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000207 "http://purl.obolibrary.org/obo/STATO_0000039")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000207 "statistic")
+SubClassOf(obo:FLUXO_0000207 obo:IAO_0000027)
+
+# Class: obo:FLUXO_0000208 (standard deviation)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000208 "http://purl.obolibrary.org/obo/STATO_0000237")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000208 "standard deviation")
+SubClassOf(obo:FLUXO_0000208 obo:FLUXO_0000207)
+
+# Class: obo:FLUXO_0000209 (confidence interval)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000209 "http://purl.obolibrary.org/obo/STATO_0000196")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000209 "confidence interval")
+SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
+
+# Class: obo:FLUXO_0000211 (statistical test hypothesis)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000211 "http://purl.obolibrary.org/obo/OBI_0000673")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000211 "statistical test hypothesis")
+SubClassOf(obo:FLUXO_0000211 obo:OBI_0200000)
+
+# Class: obo:FLUXO_0000212 (goodness of fit statistical test)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000212 "http://purl.obolibrary.org/obo/STATO_0000191")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000212 "goodness of fit statistical test")
+SubClassOf(obo:FLUXO_0000212 obo:FLUXO_0000211)
+
+# Class: obo:FLUXO_0000213 (chi-square test)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000213 "http://purl.obolibrary.org/obo/OBI_0200200")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000213 "chi-square test")
+SubClassOf(obo:FLUXO_0000213 obo:FLUXO_0000211)
+
+# Class: obo:FLUXO_0000214 (model parameter estimation)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000214 "http://purl.obolibrary.org/obo/STATO_0000119")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000214 "model parameter estimation")
+SubClassOf(obo:FLUXO_0000214 obo:OBI_0200000)
+
+# Class: obo:FLUXO_0000215 (sampling distribution estimation by bootstrapping)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000215 "http://purl.obolibrary.org/obo/STATO_0000548")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000215 "sampling distribution estimation by bootstrapping")
+SubClassOf(obo:FLUXO_0000215 obo:OBI_0200000)
+
+# Class: obo:FLUXO_0000216 (statistical model)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000216 "http://purl.obolibrary.org/obo/STATO_0000107")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000216 "statistical model")
+SubClassOf(obo:FLUXO_0000216 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000217 (matrix)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000217 "http://purl.obolibrary.org/obo/STATO_0000642")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000217 "matrix")
+SubClassOf(obo:FLUXO_0000217 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000219 (rate unit)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000219 "http://purl.obolibrary.org/obo/UO_0000280")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000219 "flux unit")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000219 "rate unit")
+SubClassOf(obo:FLUXO_0000219 obo:IAO_0000009)
+
+# Class: obo:FLUXO_0000220 (substance unit)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000220 "http://purl.obolibrary.org/obo/UO_0000006")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000220 "substance unit")
+SubClassOf(obo:FLUXO_0000220 obo:IAO_0000009)
+
+# Class: obo:FLUXO_0000221 (time unit)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000221 "http://purl.obolibrary.org/obo/UO_0000003")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000221 "time unit")
+SubClassOf(obo:FLUXO_0000221 obo:IAO_0000009)
+
+# Class: obo:FLUXO_0000222 (concentration unit)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000222 "http://purl.obolibrary.org/obo/UO_0000051")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000222 "concentration unit")
+SubClassOf(obo:FLUXO_0000222 obo:IAO_0000009)
+
+# Class: obo:FLUXO_0000223 (mathematical expression)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000223 "http://biomodels.net/SBO/SBO_0000064")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000223 "mathematical expression")
+SubClassOf(obo:FLUXO_0000223 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000227 (data file)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000227 "http://nmrML.org/nmrCV#NMR:1400267")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000227 "data file")
+SubClassOf(obo:FLUXO_0000227 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000228 (data file attribute)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000228 "http://nmrML.org/nmrCV#NMR:1000011")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000228 "data file attribute")
+SubClassOf(obo:FLUXO_0000228 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000229 (data file format)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000229 "http://nmrML.org/nmrCV#NMR:1001459")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000229 "data file format")
+SubClassOf(obo:FLUXO_0000229 obo:FLUXO_0000228)
+
+# Class: obo:FLUXO_0000230 (CSV)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000230 "http://edamontology.org/format_3752")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000230 "CSV")
+SubClassOf(obo:FLUXO_0000230 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000231 (MAT)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000231 "http://edamontology.org/format_3626")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000231 "MAT")
+SubClassOf(obo:FLUXO_0000231 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000232 (TSV)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000232 "http://edamontology.org/format_3475")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000232 "TSV")
+SubClassOf(obo:FLUXO_0000232 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000233 (xlsx)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000233 "http://edamontology.org/format_3620")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000233 "xlsx")
+SubClassOf(obo:FLUXO_0000233 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000234 (JSON)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000234 "http://edamontology.org/format_3464")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000234 "JSON")
+SubClassOf(obo:FLUXO_0000234 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000235 (SBML)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000235 "http://edamontology.org/format_2585")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000235 "SBML")
+SubClassOf(obo:FLUXO_0000235 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000238 (compound identifier)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000238 "http://edamontology.org/data_1086")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000238 "compound identifier")
+SubClassOf(obo:FLUXO_0000238 obo:IAO_0020000)
+
+# Class: obo:FLUXO_0000239 (InChI)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://pmc.ncbi.nlm.nih.gov/articles/PMC4486400/") oboInOwl:hasDbXref obo:FLUXO_0000239 "http://edamontology.org/format_1197")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000239 "InChI")
+SubClassOf(obo:FLUXO_0000239 obo:FLUXO_0000238)
+
+# Class: obo:FLUXO_0000240 (SMILES)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000240 "http://edamontology.org/format_1196")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000240 "SMILES")
+SubClassOf(obo:FLUXO_0000240 obo:FLUXO_0000238)
+
+# Class: obo:FLUXO_0000242 (software attribute)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000242 "http://nmrML.org/nmrCV#NMR:1000353")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000242 "software attribute")
+SubClassOf(obo:FLUXO_0000242 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000243 (version number)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000243 "http://purl.obolibrary.org/obo/IAO_0000129")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000243 "version number")
+SubClassOf(obo:FLUXO_0000243 obo:FLUXO_0000242)
+
+# Class: obo:FLUXO_0000244 (13CFLUX2)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1093/bioinformatics/bts646") oboInOwl:hasDbXref obo:FLUXO_0000244 "http://purl.obolibrary.org/obo/MSIO_0000042")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000244 "https://www.13cflux.net/13cflux2/index.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000244 "13CFLUX2")
+SubClassOf(obo:FLUXO_0000244 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000245 (FiatFlux)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1186/1471-2105-6-209") oboInOwl:hasDbXref obo:FLUXO_0000245 "http://purl.obolibrary.org/obo/MSIO_0000044")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000245 "https://imsb.ethz.ch/research/zamboni/resources/fiatflux.html")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000245 "FiatFlux")
+SubClassOf(obo:FLUXO_0000245 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000246 (SUMOFLUX)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1371/journal.pcbi.1005109") oboInOwl:hasDbXref obo:FLUXO_0000246 "http://purl.obolibrary.org/obo/MSIO_0000057")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000246 "https://github.com/zamboni-lab/sumoflux")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000246 "SUMOFLUX")
+SubClassOf(obo:FLUXO_0000246 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000247 (metran)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1074/jbc.M706494200") oboInOwl:hasDbXref obo:FLUXO_0000247 "http://purl.obolibrary.org/obo/MSIO_0000051")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000247 "https://tlo.mit.edu/industry-entrepreneurs/available-technologies/metran-software-13c-metabolic-flux-analysis")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000247 "metran")
+SubClassOf(obo:FLUXO_0000247 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000248 (OpenFLUX)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1186/1475-2859-8-25") oboInOwl:hasDbXref obo:FLUXO_0000248 "http://purl.obolibrary.org/obo/MSIO_0000035")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000248 "https://openflux.sourceforge.net/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000248 "OpenFLUX")
+SubClassOf(obo:FLUXO_0000248 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000249 (INCA)
+
+AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1093/bioinformatics/btu015") oboInOwl:hasDbXref obo:FLUXO_0000249 "http://purl.obolibrary.org/obo/MSIO_0000047")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000249 "Isotopomer Network Compartmental Analysis")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000249 "https://mfa.vueinnovations.com/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000249 "INCA")
+SubClassOf(obo:FLUXO_0000249 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000250 (iso2flux)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000250 "http://purl.obolibrary.org/obo/MSIO_0000048")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000250 "https://github.com/phnmnl/container-iso2flux")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000250 "iso2flux")
+SubClassOf(obo:FLUXO_0000250 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000251 (isodyn)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000251 "http://purl.obolibrary.org/obo/MSIO_0000049")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000251 "https://bio.tools/Isodyn")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000251 "isodyn")
+SubClassOf(obo:FLUXO_0000251 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000252 (IsoDesign)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000252 "http://purl.obolibrary.org/obo/MSIO_0000050")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000252 "https://isodesign.readthedocs.io/en/latest/")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000252 "IsoDesign")
+SubClassOf(obo:FLUXO_0000252 obo:FLUXO_0000103)
+
+# Class: obo:FLUXO_0000253 (person)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000253 "http://xmlns.com/foaf/0.1/Person")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000253 "person")
+SubClassOf(obo:FLUXO_0000253 obo:BFO_0000040)
+
+# Class: obo:FLUXO_0000254 (person identifier)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000254 "http://edamontology.org/data_2118")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000254 "person identifier")
+SubClassOf(obo:FLUXO_0000254 obo:BFO_0000031)
+
+# Class: obo:FLUXO_0000255 (person name)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000255 "http://edamontology.org/data_1692")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000255 "person name")
+SubClassOf(obo:FLUXO_0000255 obo:FLUXO_0000254)
+
+# Class: obo:FLUXO_0000256 (ORCID Identifier)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000256 "http://edamontology.org/data_4022")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000256 "ORCID Identifier")
+SubClassOf(obo:FLUXO_0000256 obo:FLUXO_0000254)
+
+# Class: obo:FLUXO_0000257 (Email address)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000257 "http://edamontology.org/data_1691")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000257 "Email address")
+SubClassOf(obo:FLUXO_0000257 obo:FLUXO_0000254)
+
+# Class: obo:FLUXO_0000258 (organization)
+
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000258 "http://purl.obolibrary.org/obo/OBI_0000245")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000258 "organization")
+SubClassOf(obo:FLUXO_0000258 obo:BFO_0000040)
+
+
+)

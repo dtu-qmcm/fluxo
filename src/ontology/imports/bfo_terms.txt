@@ -1,6 +1,0 @@
-http://purl.obolibrary.org/obo/BFO_0000001
-http://purl.obolibrary.org/obo/BFO_0000002
-http://purl.obolibrary.org/obo/BFO_0000003
-http://purl.obolibrary.org/obo/BFO_0000015
-http://purl.obolibrary.org/obo/BFO_0000023
-http://purl.obolibrary.org/obo/BFO_0000040

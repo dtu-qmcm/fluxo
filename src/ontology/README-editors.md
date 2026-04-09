@@ -1,4 +1,4 @@
-These notes are for the EDITORS of mfao
+These notes are for the EDITORS of fluxo
 
 This project was created using the [ontology development kit](https://github.com/INCATools/ontology-development-kit). See the site for details.
 

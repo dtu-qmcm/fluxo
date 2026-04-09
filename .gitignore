@@ -14,15 +14,15 @@ bin/
 
 .github/token.txt
 
-/mfao.owl
-/mfao.obo
-/mfao.json
-/mfao.db
-/mfao-base.*
-/mfao-basic.*
-/mfao-full.*
-/mfao-simple.*
-/mfao-simple-non-classified.*
+/fluxo.owl
+/fluxo.obo
+/fluxo.json
+/fluxo.db
+/fluxo-base.*
+/fluxo-basic.*
+/fluxo-full.*
+/fluxo-simple.*
+/fluxo-simple-non-classified.*
 /mappings/
 /patterns/
 /reports/
@@ -32,15 +32,15 @@ src/ontology/mirror
 src/ontology/mirror/*
 src/ontology/reports/*
 !src/ontology/reports/release-diff.md
-src/ontology/mfao.owl
-src/ontology/mfao.obo
-src/ontology/mfao.json
-src/ontology/mfao.db
-src/ontology/mfao-base.*
-src/ontology/mfao-basic.*
-src/ontology/mfao-full.*
-src/ontology/mfao-simple.*
-src/ontology/mfao-simple-non-classified.*
+src/ontology/fluxo.owl
+src/ontology/fluxo.obo
+src/ontology/fluxo.json
+src/ontology/fluxo.db
+src/ontology/fluxo-base.*
+src/ontology/fluxo-basic.*
+src/ontology/fluxo-full.*
+src/ontology/fluxo-simple.*
+src/ontology/fluxo-simple-non-classified.*
 
 src/ontology/seed.txt
 src/ontology/dosdp-tools.log
@@ -48,8 +48,8 @@ src/ontology/ed_definitions_merged.owl
 src/ontology/ontologyterms.txt
 src/ontology/simple_seed.txt
 src/ontology/patterns
-src/ontology/merged-mfao-edit.owl
-src/ontology/mfao-edit.properties
+src/ontology/merged-fluxo-edit.owl
+src/ontology/fluxo-edit.properties
 
 src/ontology/target/
 src/ontology/tmp/*

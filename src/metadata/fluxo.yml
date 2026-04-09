@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/fluxo
+
+idspace: FLUXO
+base_url: /obo/fluxo
+
+products:
+- fluxo.owl: https://raw.githubusercontent.com/dtu-qmcm/fluxo/main/fluxo.owl
+- fluxo.obo: https://raw.githubusercontent.com/dtu-qmcm/fluxo/main/fluxo.obo
+
+term_browser: ontobee
+example_terms:
+- FLUXO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/dtu-qmcm/fluxo/v
+
+- prefix: /tracker/
+  replacement: https://github.com/dtu-qmcm/fluxo/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/FLUXO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/dtu-qmcm/fluxo/main/
