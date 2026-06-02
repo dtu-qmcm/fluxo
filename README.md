@@ -4,7 +4,7 @@
 
 ## Description
 
-The Metabolic Flux Analysis Ontology (FLUXO) is an ontology that provides a structured framework for representing concepts, relationships, and data related to metabolic flux analysis. It covers experimental design, isotopic labeling, analytical instrumentation, computational methods, and statistical analysis used in 13C-metabolic flux analysis (13C-MFA) and related fluxomics workflows.
+The Metabolic Flux Analysis Ontology (FLUXO) is an ontology that provides a structured framework for representing concepts, relationships, and data related to metabolic flux analysis. It covers experimental design, isotopic labeling, analytical instrumentation, computational methods, and statistical analysis used in isotope-based metabolic flux analysis (I-MFA) and related fluxomics workflows.
 
 More information can be found at http://obofoundry.org/ontology/fluxo
 
