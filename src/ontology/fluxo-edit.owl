@@ -20,7 +20,6 @@ Annotation(dc:title "Metabolic Flux Analysis Ontology")
 Annotation(terms:license <http://creativecommons.org/licenses/by/4.0/>)
 Annotation(owl:versionInfo "2026-04-08")
 
-
 Declaration(Class(obo:BFO_0000141))
 Declaration(Class(obo:COB_0000026))
 Declaration(Class(obo:COB_0000082))
@@ -105,6 +104,7 @@ Declaration(Class(obo:FLUXO_0000078))
 Declaration(Class(obo:FLUXO_0000079))
 Declaration(Class(obo:FLUXO_0000080))
 Declaration(Class(obo:FLUXO_0000081))
+Declaration(Class(obo:FLUXO_0000082))
 Declaration(Class(obo:FLUXO_0000083))
 Declaration(Class(obo:FLUXO_0000084))
 Declaration(Class(obo:FLUXO_0000085))
@@ -232,6 +232,7 @@ Declaration(Class(obo:FLUXO_0000206))
 Declaration(Class(obo:FLUXO_0000207))
 Declaration(Class(obo:FLUXO_0000208))
 Declaration(Class(obo:FLUXO_0000209))
+Declaration(Class(obo:FLUXO_0000210))
 Declaration(Class(obo:FLUXO_0000211))
 Declaration(Class(obo:FLUXO_0000212))
 Declaration(Class(obo:FLUXO_0000213))
@@ -540,10 +541,11 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000037 "flux state sampl
 AnnotationAssertion(rdfs:label obo:FLUXO_0000037 "flux space sampling")
 SubClassOf(obo:FLUXO_0000037 obo:COB_0000082)
 
-# Class: obo:FLUXO_0000038 (fluxomics method)
+# Class: obo:FLUXO_0000038 (fluxomics)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000038 "A fluxomics method is a technique that determines the possible fluxes of the metabolic reactions in a network.")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000038 "fluxomics method")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000038 "Fluxomics is the study of metabolic fluxes of the reactions in a metabolic network.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000038 "fluxomics method")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000038 "fluxomics")
 SubClassOf(obo:FLUXO_0000038 obo:COB_0000082)
 
 # Class: obo:FLUXO_0000039 (flux balance analysis)
@@ -668,7 +670,7 @@ SubClassOf(obo:FLUXO_0000055 obo:FLUXO_0000141)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000056 "Measurement time is the time where a sample is taken from the biological experiment for analysis.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000056 "measurement time")
-SubClassOf(obo:FLUXO_0000056 obo:BFO_0000008)
+SubClassOf(obo:FLUXO_0000056 obo:BFO_0000148)
 
 # Class: obo:FLUXO_0000057 (metabolic network model)
 
@@ -826,6 +828,12 @@ AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000081 "Tracer cost is the price 
 AnnotationAssertion(rdfs:label obo:FLUXO_0000081 "tracer cost")
 SubClassOf(obo:FLUXO_0000081 obo:FLUXO_0000079)
 
+# Class: obo:FLUXO_0000082 (fluxomics software parameters)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000082 "Parameters that are required to execute fluxomics software for a fluxomics investigation.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000082 "fluxomics software parameters")
+SubClassOf(obo:FLUXO_0000082 obo:FLUXO_0000210)
+
 # Class: obo:FLUXO_0000083 (growth rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000083 "Growth rate is the rate of biomass formation.")
@@ -951,43 +959,43 @@ SubClassOf(obo:FLUXO_0000102 obo:IAO_0000010)
 
 # Class: obo:FLUXO_0000103 (metabolic flux analysis software)
 
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000103 "MFA Software")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000103 "Metabolic flux analysis software is a fluxomics software specifically designed to quantitatively estimate intracellular metabolic fluxes from an isotopic metabolic flux analysis investigation.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000103 "MFA Software")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000103 "metabolic flux analysis software")
 SubClassOf(obo:FLUXO_0000103 obo:FLUXO_0000102)
 
 # Class: obo:FLUXO_0000104 (tcaCALC & SIM)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000104 "https://invivometabolism.org/tca.html")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000104 "tcaCALC & SIM is a MATLAB-based software for estimating TCA cycle fluxes from 13C NMR isotopomer data (Chance et al., J Biol Chem, 1983; Malloy et al., Am J Physiol, 1990). SIM performs forward simulation of isotopic labeling in the citric acid cycle; tcaCALC performs flux calculation by fitting simulated isotopomer patterns to observed NMR data.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000104 "https://invivometabolism.org/tca.html")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000104 "tcaCALC & SIM")
 SubClassOf(obo:FLUXO_0000104 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000105 (13CFLUX)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000105 "https://www.13cflux.net/13cflux/index.html")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000105 "13CFLUX is a universal software framework for 13C-based metabolic flux analysis that supports modeling, simulation, design, evaluation, and statistical analysis of 13C-labeling experiments using a cumomer-based simulation approach (Wiechert et al., Metab Eng, 2001, DOI: 10.1006/mben.2001.0188).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000105 "https://www.13cflux.net/13cflux/index.html")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000105 "13CFLUX")
 SubClassOf(obo:FLUXO_0000105 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000106 (13CFLUXv3)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000106 "https://x3cflux.readthedocs.io/en/latest/")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000106 "13CFLUXv3 is a third-generation, high-performance simulator supporting both isotopically stationary and non-stationary 13C-MFA, featuring dual EMU/cumomer representations, multi-isotope tracer support, Bayesian uncertainty quantification, and a Python API (Stratmann et al., Bioinformatics, 2025, DOI: 10.1093/bioinformatics/btaf630).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000106 "https://x3cflux.readthedocs.io/en/latest/")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000106 "13CFLUXv3")
 SubClassOf(obo:FLUXO_0000106 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000107 (influx_s)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000107 "https://influx-si.readthedocs.io/en/latest/intro.html#influx-s")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000107 "influx_s is a software for estimating metabolic fluxes from stationary isotopic labeling data using the NLSIC algorithm, which provides more reliable convergence and better numerical accuracy than other optimization methods (Sokol et al., Bioinformatics, 2012, DOI: 10.1093/bioinformatics/bts705).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000107 "https://influx-si.readthedocs.io/en/latest/intro.html#influx-s")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000107 "influx_s")
 SubClassOf(obo:FLUXO_0000107 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000108 (influx_si)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000108 "https://influx-si.readthedocs.io/en/latest/index.html")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000108 "influx_si is an extended version of influx_s that handles isotopically non-stationary labeling experiments, sharing the same NLSIC fitting algorithm and input/output formats with unconditional stability during ODE solving (Sokol et al., Bioinformatics, 2012, DOI: 10.1093/bioinformatics/bts705).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000108 "https://influx-si.readthedocs.io/en/latest/index.html")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000108 "influx_si")
 SubClassOf(obo:FLUXO_0000108 obo:FLUXO_0000103)
 
@@ -999,78 +1007,78 @@ SubClassOf(obo:FLUXO_0000109 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000110 (Open Mebius)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000110 "https://en.metabolic-engineering.jp/page/software/openmebius")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000110 "Open Mebius is an open-source MATLAB-based software for both conventional and isotopically nonstationary 13C-MFA, featuring auto-generation of metabolic models from Excel configuration worksheets and using the Levenberg-Marquardt method for flux estimation (Kajihata et al., BioMed Res Int, 2014, DOI: 10.1155/2014/627014).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000110 "https://en.metabolic-engineering.jp/page/software/openmebius")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000110 "Open Mebius")
 SubClassOf(obo:FLUXO_0000110 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000111 (mfapy)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000111 "https://github.com/fumiomatsuda/mfapy")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000111 "mfapy is an open-source Python package for 13C-MFA supporting the EMU framework, INST-MFA, parallel labeling experiments, and a Bayesian Metropolis-Hastings approach, providing flexibility for custom analysis workflows and experimental design via simulation (Matsuda et al., Metab Eng Commun, 2021, DOI: 10.1016/j.mec.2021.e00177).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000111 "https://github.com/fumiomatsuda/mfapy")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000111 "mfapy")
 SubClassOf(obo:FLUXO_0000111 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000112 (OpenFLUX2)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000112 "https://sourceforge.net/projects/openflux2/")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000112 "OpenFLUX2 is an extended version of OpenFLUX with support for parallel labeling experiments, extended statistical analysis, structural identifiability analysis, Monte Carlo confidence interval estimation, and experimental design optimization (Shupletsov et al., Microb Cell Fact, 2014, DOI: 10.1186/s12934-014-0152-x).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000112 "https://sourceforge.net/projects/openflux2/")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000112 "OpenFLUX2")
 SubClassOf(obo:FLUXO_0000112 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000113 (sysmetab)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000113 "https://gitlab.com/scilab/forge/sysmetab/")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000113 "sysmetab is a Scilab-based open-source software for 13C metabolic flux analysis that provides tools for isotopomer modeling and flux estimation.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000113 "https://gitlab.com/scilab/forge/sysmetab/")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000113 "sysmetab")
 SubClassOf(obo:FLUXO_0000113 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000114 (WUFlux)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000114 "https://tang.eece.wustl.edu/ToolDevelopment.html")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000114 "WUFlux is a MATLAB-based 13C MFA software with graphical user interface that supports steady-state 13C-MFA with user-friendly data input and flux visualization (He et al., Biotechnol Bioeng, 2016, DOI: 10.1002/bit.25958).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000114 "https://tang.eece.wustl.edu/ToolDevelopment.html")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000114 "WUFlux")
 SubClassOf(obo:FLUXO_0000114 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000115 (FluxPyt)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000115 "https://sourceforge.net/projects/fluxpyt")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000115 "FluxPyt is a Python-based software package for stationary 13C metabolic flux analysis to estimate intracellular flux distributions.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000115 "https://sourceforge.net/projects/fluxpyt")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000115 "FluxPyt")
 SubClassOf(obo:FLUXO_0000115 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000116 (EMUlator)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000116 "https://doi.org/10.3389/fmicb.2019.00922")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000116 "EMUlator is an EMU-based isotope simulator that uses adjacency matrix representation to efficiently simulate isotopic labeling patterns, enabling rapid forward simulation of mass isotopomer distributions for metabolic flux analysis and experimental design (Wu et al., Front Microbiol, 2019, DOI: 10.3389/fmicb.2019.00922).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000116 "https://doi.org/10.3389/fmicb.2019.00922")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000116 "EMUlator")
 SubClassOf(obo:FLUXO_0000116 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000117 (freeflux)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000117 "https://github.com/Chaowu88/freeflux")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000117 "FreeFlux is a Python package for 13C metabolic flux analysis at both isotopic steady state and transient state, supporting flux estimation, labeling pattern simulation, flux balance/variability analysis, and 15N labeling data (Wu et al., ACS Synth Biol, 2023, DOI: 10.1021/acssynbio.3c00265).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000117 "https://github.com/Chaowu88/freeflux")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000117 "freeflux")
 SubClassOf(obo:FLUXO_0000117 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000118 (eiFlux)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000118 "https://doi.org/10.1371/journal.pcbi.1009831")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000118 "eiFlux is a MATLAB-based software that formulates isotope-assisted MFA as an equality-constrained nonlinear program, improving scalability and robustness compared to traditional formulations (Lugar and Sriram, PLOS Comput Biol, 2022, DOI: 10.1371/journal.pcbi.1009831).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000118 "https://doi.org/10.1371/journal.pcbi.1009831")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000118 "eiFlux")
 SubClassOf(obo:FLUXO_0000118 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000119 (CeCaFlux)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000119 "https://github.com/zhzhd82/CeCaFLUX")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000119 "CeCaFlux is a web-based server for INST-13C MFA with standardized and visual flux analysis, using evolutionary optimization in parallel and providing real-time visualization of the flux optimization process (Liu et al., Bioinformatics, 2022, DOI: 10.1093/bioinformatics/btac341).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000119 "https://github.com/zhzhd82/CeCaFLUX")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000119 "CeCaFlux")
 SubClassOf(obo:FLUXO_0000119 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000120 (BayFlux)
 
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000120 "https://github.com/JBEI/bayflux")
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000120 "BayFlux is an open-source software library for Bayesian genome-scale 13C metabolic flux analysis, using MCMC Bayesian inference with COBRApy for handling genome-scale models and supporting Two Scale 13C MFA (Backman et al., PLOS Comput Biol, 2023, DOI: 10.1371/journal.pcbi.1011111).")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000120 "https://github.com/JBEI/bayflux")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000120 "BayFlux")
 SubClassOf(obo:FLUXO_0000120 obo:FLUXO_0000103)
 
@@ -1327,7 +1335,7 @@ SubClassOf(obo:FLUXO_0000159 obo:IAO_0000027)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000160 "Model parameters is the set of all parameters that are necessary to run labeling simulation.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000160 "model parameters")
-SubClassOf(obo:FLUXO_0000160 obo:IAO_0000027)
+SubClassOf(obo:FLUXO_0000160 obo:FLUXO_0000210)
 
 # Class: obo:FLUXO_0000161 (groupscale)
 
@@ -1674,6 +1682,12 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000209 "http://purl.obolibrary
 AnnotationAssertion(rdfs:label obo:FLUXO_0000209 "confidence interval")
 SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
 
+# Class: obo:FLUXO_0000210 (fluxomics parameters)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000210 "Data items that are required to run a fluxomics investigation."@en)
+AnnotationAssertion(rdfs:label obo:FLUXO_0000210 "fluxomics parameters")
+SubClassOf(obo:FLUXO_0000210 obo:FLUXO_0000242)
+
 # Class: obo:FLUXO_0000211 (statistical test hypothesis)
 
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000211 "http://purl.obolibrary.org/obo/OBI_0000673")
@@ -1836,10 +1850,10 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000240 "http://edamontology.or
 AnnotationAssertion(rdfs:label obo:FLUXO_0000240 "SMILES")
 SubClassOf(obo:FLUXO_0000240 obo:FLUXO_0000238)
 
-# Class: obo:FLUXO_0000242 (software attribute)
+# Class: obo:FLUXO_0000242 (information about software)
 
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000242 "http://nmrML.org/nmrCV#NMR:1000353")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000242 "software attribute")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000242 "information about software")
 SubClassOf(obo:FLUXO_0000242 obo:IAO_0000030)
 
 # Class: obo:FLUXO_0000243 (version number)
@@ -1851,50 +1865,50 @@ SubClassOf(obo:FLUXO_0000243 obo:FLUXO_0000242)
 
 # Class: obo:FLUXO_0000244 (13CFLUX2)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000244 "13CFLUX2 is a high-performance software suite for steady-state 13C-MFA featuring efficient cumomer and EMU simulation algorithms, arbitrary measurement specifications, FluxML standardized file format, and bindings for optimization frameworks like IPOPT (Weitzel et al., Bioinformatics, 2013, DOI: 10.1093/bioinformatics/bts646).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1093/bioinformatics/bts646") oboInOwl:hasDbXref obo:FLUXO_0000244 "http://purl.obolibrary.org/obo/MSIO_0000042")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000244 "https://www.13cflux.net/13cflux2/index.html")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000244 "13CFLUX2 is a high-performance software suite for steady-state 13C-MFA featuring efficient cumomer and EMU simulation algorithms, arbitrary measurement specifications, FluxML standardized file format, and bindings for optimization frameworks like IPOPT (Weitzel et al., Bioinformatics, 2013, DOI: 10.1093/bioinformatics/bts646).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000244 "13CFLUX2")
 SubClassOf(obo:FLUXO_0000244 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000245 (FiatFlux)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000245 "FiatFlux is a user-friendly software package for 13C metabolic flux analysis that automatically calculates flux ratios from GC-MS-detected 13C patterns in protein-bound amino acids, and then estimates net fluxes from extracellular flux measurements and the determined ratios (Zamboni et al., BMC Bioinformatics, 2005, DOI: 10.1186/1471-2105-6-209).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1186/1471-2105-6-209") oboInOwl:hasDbXref obo:FLUXO_0000245 "http://purl.obolibrary.org/obo/MSIO_0000044")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000245 "https://imsb.ethz.ch/research/zamboni/resources/fiatflux.html")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000245 "FiatFlux is a user-friendly software package for 13C metabolic flux analysis that automatically calculates flux ratios from GC-MS-detected 13C patterns in protein-bound amino acids, and then estimates net fluxes from extracellular flux measurements and the determined ratios (Zamboni et al., BMC Bioinformatics, 2005, DOI: 10.1186/1471-2105-6-209).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000245 "FiatFlux")
 SubClassOf(obo:FLUXO_0000245 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000246 (SUMOFLUX)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000246 "SUMOFLUX is a MATLAB-based toolbox for targeted 13C metabolic flux ratio analysis using surrogate modeling, generating random metabolic flux distributions and 13C labeling patterns, then training machine learning models to predict specific flux ratios from measured labeling data (Kogadeeva and Zamboni, PLOS Comput Biol, 2016, DOI: 10.1371/journal.pcbi.1005109).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1371/journal.pcbi.1005109") oboInOwl:hasDbXref obo:FLUXO_0000246 "http://purl.obolibrary.org/obo/MSIO_0000057")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000246 "https://github.com/zamboni-lab/sumoflux")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000246 "SUMOFLUX is a MATLAB-based toolbox for targeted 13C metabolic flux ratio analysis using surrogate modeling, generating random metabolic flux distributions and 13C labeling patterns, then training machine learning models to predict specific flux ratios from measured labeling data (Kogadeeva and Zamboni, PLOS Comput Biol, 2016, DOI: 10.1371/journal.pcbi.1005109).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000246 "SUMOFLUX")
 SubClassOf(obo:FLUXO_0000246 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000247 (metran)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000247 "METRAN is a MATLAB-based 13C-MFA software based on the Elementary Metabolite Unit (EMU) framework, supporting steady-state MFA, tracer experiment design, and statistical analysis (Antoniewicz et al., Metab Eng, 2007, DOI: 10.1016/j.ymben.2006.09.001).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1074/jbc.M706494200") oboInOwl:hasDbXref obo:FLUXO_0000247 "http://purl.obolibrary.org/obo/MSIO_0000051")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000247 "https://tlo.mit.edu/industry-entrepreneurs/available-technologies/metran-software-13c-metabolic-flux-analysis")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000247 "METRAN is a MATLAB-based 13C-MFA software based on the Elementary Metabolite Unit (EMU) framework, supporting steady-state MFA, tracer experiment design, and statistical analysis (Antoniewicz et al., Metab Eng, 2007, DOI: 10.1016/j.ymben.2006.09.001).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000247 "metran")
 SubClassOf(obo:FLUXO_0000247 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000248 (OpenFLUX)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000248 "OpenFLUX is an open-source MATLAB/Java-based modelling software for 13C metabolic flux analysis implementing the EMU technique, featuring a Java GUI for model generation and MATLAB-based flux analysis (Quek et al., Microb Cell Fact, 2009, DOI: 10.1186/1475-2859-8-25).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1186/1475-2859-8-25") oboInOwl:hasDbXref obo:FLUXO_0000248 "http://purl.obolibrary.org/obo/MSIO_0000035")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000248 "https://openflux.sourceforge.net/")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000248 "OpenFLUX is an open-source MATLAB/Java-based modelling software for 13C metabolic flux analysis implementing the EMU technique, featuring a Java GUI for model generation and MATLAB-based flux analysis (Quek et al., Microb Cell Fact, 2009, DOI: 10.1186/1475-2859-8-25).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000248 "OpenFLUX")
 SubClassOf(obo:FLUXO_0000248 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000249 (INCA)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000249 "INCA is a MATLAB-based computational platform that was the first publicly available software to perform both steady-state and isotopically non-stationary 13C-MFA, using the EMU framework and supporting parallel labeling experiments, goodness-of-fit testing, and confidence interval estimation (Young, Bioinformatics, 2014, DOI: 10.1093/bioinformatics/btu015).")
 AnnotationAssertion(Annotation(obo:IAO_0000119 "https://doi.org/10.1093/bioinformatics/btu015") oboInOwl:hasDbXref obo:FLUXO_0000249 "http://purl.obolibrary.org/obo/MSIO_0000047")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000249 "Isotopomer Network Compartmental Analysis")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000249 "https://mfa.vueinnovations.com/")
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000249 "INCA is a MATLAB-based computational platform that was the first publicly available software to perform both steady-state and isotopically non-stationary 13C-MFA, using the EMU framework and supporting parallel labeling experiments, goodness-of-fit testing, and confidence interval estimation (Young, Bioinformatics, 2014, DOI: 10.1093/bioinformatics/btu015).")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000249 "INCA")
 SubClassOf(obo:FLUXO_0000249 obo:FLUXO_0000103)
 
@@ -1962,5 +1976,6 @@ AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000258 "An organization is an ent
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000258 "http://purl.obolibrary.org/obo/OBI_0000245")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000258 "organization")
 SubClassOf(obo:FLUXO_0000258 obo:BFO_0000040)
+
 
 )
