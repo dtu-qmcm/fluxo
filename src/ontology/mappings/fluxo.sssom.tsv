@@ -1,0 +1,98 @@
+#curie_map:
+#  FLUXO: "http://purl.obolibrary.org/obo/FLUXO_"
+#  PATO: "http://purl.obolibrary.org/obo/PATO_"
+#  MSIO: "http://purl.obolibrary.org/obo/MSIO_"
+#  CHEBI: "http://purl.obolibrary.org/obo/CHEBI_"
+#  NCIT: "http://purl.obolibrary.org/obo/NCIT_"
+#  EDAM: "http://edamontology.org/"
+#  uniprot: "http://purl.uniprot.org/core/"
+#  OBI: "http://purl.obolibrary.org/obo/OBI_"
+#  COB: "http://purl.obolibrary.org/obo/COB_"
+#  CHMO: "http://purl.obolibrary.org/obo/CHMO_"
+#  STATO: "http://purl.obolibrary.org/obo/STATO_"
+#  SBO: "http://biomodels.net/SBO/SBO_"
+#  UO: "http://purl.obolibrary.org/obo/UO_"
+#  IAO: "http://purl.obolibrary.org/obo/IAO_"
+#  NMR: "http://nmrML.org/nmrCV#NMR:"
+#  foaf: "http://xmlns.com/foaf/0.1/"
+#  skos: "http://www.w3.org/2004/02/skos/core#"
+#  semapv: "https://w3id.org/semapv/vocab/"
+#mapping_set_id: https://w3id.org/fluxo/mappings/fluxo
+#mapping_set_version: 2026-04-10
+#mapping_set_description: Cross-ontology mappings for the Metabolic Flux Analysis Ontology (FLUXO) to external ontologies and vocabularies.
+#license: https://creativecommons.org/licenses/by/4.0/
+#subject_type: owl class
+#object_type: owl class
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+FLUXO:0000151	amount	skos:narrowMatch	PATO:0000070	amount	semapv:LexicalMatching
+FLUXO:0000163	metabolite uptake flux	skos:exactMatch	MSIO:0000153	metabolite uptake flux	semapv:LexicalMatching
+FLUXO:0000164	metabolite excretion flux	skos:exactMatch	MSIO:0000152	metabolite excretion flux	semapv:LexicalMatching
+FLUXO:0000166	chemical reaction	skos:exactMatch	MSIO:0000001	chemical reaction	semapv:LexicalMatching
+FLUXO:0000170	molecule	skos:exactMatch	CHEBI:25367	molecule	semapv:LexicalMatching
+FLUXO:0000171	molecular entity	skos:exactMatch	CHEBI:23367	molecular entity	semapv:LexicalMatching
+FLUXO:0000172	metabolite	skos:exactMatch	CHEBI:25212	metabolite	semapv:LexicalMatching
+FLUXO:0000177	steady state	skos:closeMatch	NCIT:C151966	Steady-State	semapv:ManualMappingCuration
+FLUXO:0000178	Experimental design and studies	skos:exactMatch	EDAM:topic_3678	Experimental design and studies	semapv:LexicalMatching
+FLUXO:0000181	organism	skos:exactMatch	uniprot:organism	organism	semapv:LexicalMatching
+FLUXO:0000182	strain	skos:exactMatch	uniprot:strain	strain	semapv:LexicalMatching
+FLUXO:0000184	culture medium	skos:exactMatch	OBI:0000079	culture medium	semapv:LexicalMatching
+FLUXO:0000185	device	skos:exactMatch	COB:0001300	device	semapv:LexicalMatching
+FLUXO:0000186	mass spectrometer	skos:exactMatch	OBI:0000049	mass spectrometer	semapv:LexicalMatching
+FLUXO:0000187	NMR instrument	skos:exactMatch	OBI:0000566	NMR instrument	semapv:LexicalMatching
+FLUXO:0000188	metabolomics	skos:exactMatch	EDAM:topic_3172	Metabolomics	semapv:LexicalMatching
+FLUXO:0000189	proteomics	skos:exactMatch	EDAM:topic_0121	Proteomics	semapv:LexicalMatching
+FLUXO:0000190	mass spectrometry	skos:exactMatch	CHMO:0000470	mass spectrometry	semapv:LexicalMatching
+FLUXO:0000191	liquid chromatography-mass spectrometry	skos:exactMatch	CHMO:0000524	liquid chromatography-mass spectrometry	semapv:LexicalMatching
+FLUXO:0000192	gas chromatography-mass spectrometry	skos:exactMatch	CHMO:0000497	gas chromatography-mass spectrometry	semapv:LexicalMatching
+FLUXO:0000193	tandem mass spectrometry	skos:exactMatch	CHMO:0000575	tandem mass spectrometry	semapv:LexicalMatching
+FLUXO:0000194	isotope ratio mass spectrometry	skos:exactMatch	CHMO:0000506	isotope ratio mass spectrometry	semapv:LexicalMatching
+FLUXO:0000195	nuclear magnetic resonance	skos:closeMatch	CHMO:0000591	nuclear magnetic resonance spectroscopy	semapv:ManualMappingCuration
+FLUXO:0000196	Isotope Natural Abundance Correction	skos:exactMatch	MSIO:0000130	isotope natural abundance correction	semapv:LexicalMatching
+FLUXO:0000197	concentration	skos:exactMatch	STATO:0000704	concentration	semapv:LexicalMatching
+FLUXO:0000198	systems biology representation	skos:exactMatch	SBO:0000000	systems biology representation	semapv:LexicalMatching
+FLUXO:0000199	chemical formula	skos:exactMatch	EDAM:data_0846	Chemical formula	semapv:LexicalMatching
+FLUXO:0000200	molecular charge	skos:exactMatch	EDAM:data_0845	Molecular charge	semapv:LexicalMatching
+FLUXO:0000201	demand reaction	skos:exactMatch	SBO:0000628	demand reaction	semapv:LexicalMatching
+FLUXO:0000202	exchange reaction	skos:exactMatch	SBO:0000627	exchange reaction	semapv:LexicalMatching
+FLUXO:0000203	sink reaction	skos:exactMatch	SBO:0000632	sink reaction	semapv:LexicalMatching
+FLUXO:0000204	reaction stoichiometry	skos:closeMatch	NCIT:C18110	Stoichiometry	semapv:ManualMappingCuration
+FLUXO:0000205	stoichiometric coefficient	skos:exactMatch	MSIO:0000060	stoichiometric coefficient	semapv:LexicalMatching
+FLUXO:0000206	flux bound	skos:exactMatch	SBO:0000625	flux bound	semapv:LexicalMatching
+FLUXO:0000207	statistic	skos:exactMatch	STATO:0000039	statistic	semapv:LexicalMatching
+FLUXO:0000208	standard deviation	skos:exactMatch	STATO:0000237	Standard deviation	semapv:LexicalMatching
+FLUXO:0000209	confidence interval	skos:exactMatch	STATO:0000196	Confidence interval	semapv:LexicalMatching
+FLUXO:0000211	statistical test hypothesis	skos:closeMatch	OBI:0000673	statistical hypothesis test	semapv:ManualMappingCuration
+FLUXO:0000212	goodness of fit statistical test	skos:exactMatch	STATO:0000191	goodness of fit statistical test	semapv:LexicalMatching
+FLUXO:0000213	chi-square test	skos:closeMatch	OBI:0200200	chi square test	semapv:ManualMappingCuration
+FLUXO:0000214	model parameter estimation	skos:exactMatch	STATO:0000119	model parameter estimation	semapv:LexicalMatching
+FLUXO:0000215	sampling distribution estimation by bootstrapping	skos:exactMatch	STATO:0000548	sampling distribution estimation by bootstrapping	semapv:LexicalMatching
+FLUXO:0000216	statistical model	skos:exactMatch	STATO:0000107	statistical model	semapv:LexicalMatching
+FLUXO:0000217	matrix	skos:exactMatch	STATO:0000642	matrix	semapv:LexicalMatching
+FLUXO:0000219	rate unit	skos:exactMatch	UO:0000280	rate unit	semapv:LexicalMatching
+FLUXO:0000220	substance unit	skos:exactMatch	UO:0000006	substance unit	semapv:LexicalMatching
+FLUXO:0000221	time unit	skos:exactMatch	UO:0000003	time unit	semapv:LexicalMatching
+FLUXO:0000222	concentration unit	skos:exactMatch	UO:0000051	concentration unit	semapv:LexicalMatching
+FLUXO:0000223	mathematical expression	skos:exactMatch	SBO:0000064	mathematical expression	semapv:LexicalMatching
+FLUXO:0000227	data file	skos:exactMatch	NMR:1400267	data file	semapv:LexicalMatching
+FLUXO:0000228	data file attribute	skos:exactMatch	NMR:1000011	data file attribute	semapv:LexicalMatching
+FLUXO:0000229	data file format	skos:exactMatch	NMR:1001459	data file format	semapv:LexicalMatching
+FLUXO:0000230	CSV	skos:exactMatch	EDAM:format_3752	CSV	semapv:LexicalMatching
+FLUXO:0000231	MAT	skos:exactMatch	EDAM:format_3626	MAT	semapv:LexicalMatching
+FLUXO:0000232	TSV	skos:exactMatch	EDAM:format_3475	TSV	semapv:LexicalMatching
+FLUXO:0000233	xlsx	skos:exactMatch	EDAM:format_3620	xlsx	semapv:LexicalMatching
+FLUXO:0000234	JSON	skos:exactMatch	EDAM:format_3464	JSON	semapv:LexicalMatching
+FLUXO:0000235	SBML	skos:exactMatch	EDAM:format_2585	SBML	semapv:LexicalMatching
+FLUXO:0000238	compound identifier	skos:exactMatch	EDAM:data_1086	Compound identifier	semapv:LexicalMatching
+FLUXO:0000239	InChI	skos:exactMatch	EDAM:format_1197	InChI	semapv:LexicalMatching
+FLUXO:0000240	SMILES	skos:exactMatch	EDAM:format_1196	SMILES	semapv:LexicalMatching
+FLUXO:0000242	software attribute	skos:exactMatch	NMR:1000353	software attribute	semapv:LexicalMatching
+FLUXO:0000243	version number	skos:exactMatch	IAO:0000129	version number	semapv:LexicalMatching
+FLUXO:0000250	iso2flux	skos:exactMatch	MSIO:0000048	iso2flux	semapv:LexicalMatching
+FLUXO:0000251	isodyn	skos:exactMatch	MSIO:0000049	isodyn	semapv:LexicalMatching
+FLUXO:0000252	IsoDesign	skos:exactMatch	MSIO:0000050	isodesign	semapv:LexicalMatching
+FLUXO:0000253	person	skos:exactMatch	foaf:Person	Person	semapv:LexicalMatching
+FLUXO:0000254	person identifier	skos:exactMatch	EDAM:data_2118	Person identifier	semapv:LexicalMatching
+FLUXO:0000255	person name	skos:exactMatch	EDAM:data_1692	Person name	semapv:LexicalMatching
+FLUXO:0000256	ORCID Identifier	skos:exactMatch	EDAM:data_4022	ORCID Identifier	semapv:LexicalMatching
+FLUXO:0000257	Email address	skos:exactMatch	EDAM:data_1691	Email address	semapv:LexicalMatching
+FLUXO:0000258	organization	skos:exactMatch	OBI:0000245	organization	semapv:LexicalMatching

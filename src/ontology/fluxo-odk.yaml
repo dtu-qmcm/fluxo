@@ -15,6 +15,9 @@ export_formats:
 components:
   products:
       - filename: bfo.owl
+sssom_mapping_set_group:
+  products:
+    - id: fluxo
 import_group:
   use_base_merging: TRUE
   products:
