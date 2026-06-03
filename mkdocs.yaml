@@ -1,0 +1,12 @@
+site_name: Metabolic Flux Analysis Ontology (FLUXO)
+site_url: https://dtu-qmcm.github.io/mfao/
+repo_url: https://github.com/dtu-qmcm/mfao
+repo_name: dtu-qmcm/mfao
+
+nav:
+  - Home: index.md
+  - Contributing: contributing.md
+  - Code of Conduct: code_of_conduct.md
+
+theme:
+  name: material
