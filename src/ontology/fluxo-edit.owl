@@ -325,6 +325,7 @@ SubClassOf(obo:FLUXO_0000004 obo:FLUXO_0000123)
 # Class: obo:FLUXO_0000005 (metabolic reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000005 "A metabolic reaction is the biochemical reaction within a biological entity that is part of the metabolism.")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000005 "biochemical -> chemical")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000005 "metabolic reaction")
 SubClassOf(obo:FLUXO_0000005 obo:FLUXO_0000166)
 
@@ -344,6 +345,7 @@ SubClassOf(obo:FLUXO_0000007 obo:BFO_0000019)
 # Class: obo:FLUXO_0000008 (unidirectional reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000008 "A unidirectional reaction is a metabolic reaction that solely operates in a single direction, it can be forward or backward direction.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000008 "Te: Put into parent class")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000008 "irreversible reaction")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000008 "property or class")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000008 "unidirectional reaction")
@@ -373,6 +375,7 @@ SubClassOf(obo:FLUXO_0000011 obo:FLUXO_0000005)
 # Class: obo:FLUXO_0000012 (backward reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000012 "A backward reaction is the reaction that proceeds from products to substrates.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000012 "Te: Put into parent class")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000012 "reverse direction")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000012 "backward reaction")
 SubClassOf(obo:FLUXO_0000012 obo:FLUXO_0000005)
@@ -404,6 +407,7 @@ SubClassOf(obo:FLUXO_0000016 obo:FLUXO_0000198)
 # Class: obo:FLUXO_0000017 (fluxotype)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000017 "A fluxotype is the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000017 "Te: put under information content entity or quality? Check phenotype or genotype")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "flux state")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "metabolic flux phenotype")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000017 "fluxotype")
@@ -837,6 +841,7 @@ SubClassOf(obo:FLUXO_0000082 obo:FLUXO_0000210)
 # Class: obo:FLUXO_0000083 (growth rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000083 "Growth rate is the rate of biomass formation.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000083 "Te: Isn't this a quality? refer to PATO:0001492")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000083 "growth rate")
 SubClassOf(obo:FLUXO_0000083 obo:IAO_0000109)
 
@@ -849,12 +854,14 @@ SubClassOf(obo:FLUXO_0000084 obo:FLUXO_0000083)
 # Class: obo:FLUXO_0000085 (yield)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000085 "Yield is efficiency of substrate conversion into product/biomass (mass or molar basis).")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000085 "Te: what about SSSOM with SBO:0000668")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000085 "yield")
 SubClassOf(obo:FLUXO_0000085 obo:IAO_0000109)
 
 # Class: obo:FLUXO_0000086 (weighted sum of squared residuals)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000086 "Weighted sum of squared residuals is a measure used in flux estimation, specifically the variance-weighted sum of squares residuals, which is minimized to quantify fluxes. It serves as a key indicator of goodness-ofreflect the certainty with which metabolic fluxes were determined.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000086 "Te: not general, refer to STATO:0000375")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000086 "weighted sum of squared residuals")
 SubClassOf(obo:FLUXO_0000086 obo:FLUXO_0000207)
 
@@ -1097,6 +1104,7 @@ SubClassOf(obo:FLUXO_0000122 obo:IAO_0000098)
 # Class: obo:FLUXO_0000123 (metabolic flux)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000123 "Metabolic flux is a data item which represents the speed of a chemical reaction turning reactive species into product species of event (i.e the number of such conversions) occuring over a time interval.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000123 "Te: Is this a measurement datum? Need to add term reaction rate? STATO:0000071 and MSIO:0000154")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000123 "flux")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000123 "reaction rate")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000123 "it is commonly refer to flux in MFA, even though formally it is a rate. The actual definition of metabolic flux is the amount of metabolite which is converted per time unit. It is calculated as the reaction rate times stoichiometric coefficient, often normalized to a specific quantity (e.g. cell dry weight or volume of a compartment)")
@@ -1177,6 +1185,7 @@ SubClassOf(obo:FLUXO_0000134 obo:FLUXO_0000171)
 # Class: obo:FLUXO_0000135 (commercial isotopically labelled molecular entity)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000135 "A commercial isotopically labelled molecular entity is the commercial version of the isotopically labelled molecular entity (e.g. the purchased [1-¹³C]glucose with purity of 99 atom % 13C).")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000135 "Te: This is one use case for metadata annotation of the I-MFA experiment")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000135 "commercially labelled molecule")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000135 "commercial isotopically labelled molecular entity")
 SubClassOf(obo:FLUXO_0000135 obo:FLUXO_0000134)
@@ -1280,6 +1289,7 @@ SubClassOf(obo:FLUXO_0000150 obo:FLUXO_0000146)
 
 # Class: obo:FLUXO_0000151 (amount)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000151 "Te: Missing defintion, refer to PATO:0000070")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000151 "amount")
 SubClassOf(obo:FLUXO_0000151 obo:IAO_0000109)
 
@@ -1490,6 +1500,7 @@ SubClassOf(obo:FLUXO_0000180 obo:FLUXO_0000049)
 
 # Class: obo:FLUXO_0000181 (organism)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000181 "Te: add SIO:010000 as reference? strain from as subclass (SIO:010055)")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000181 "http://purl.uniprot.org/core/organism")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000181 "organism")
 SubClassOf(obo:FLUXO_0000181 obo:BFO_0000040)
@@ -1589,7 +1600,7 @@ SubClassOf(obo:FLUXO_0000195 obo:COB_0000082)
 
 # Class: obo:FLUXO_0000196 (isotope natural abundance correction)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000196 "Isotope natural abundance correction is natural abundance correction is a data transformation which aims to take into account the contribution of natural random variation in isotopic composition in the environment and adjust for it during the calculation of mass isotopologue distribution in a tracer based metabolomics experiment.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000196 "Isotope natural abundance correction is a data transformation which aims to take into account the contribution of natural random variation in isotopic composition in the environment and adjust for it during the calculation of mass isotopologue distribution in a tracer based metabolomics experiment.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000196 "http://purl.obolibrary.org/obo/MSIO_0000130")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000196 "isotope natural abundance correction")
 SubClassOf(obo:FLUXO_0000196 obo:OBI_0200000)
@@ -1611,6 +1622,7 @@ SubClassOf(obo:FLUXO_0000198 obo:IAO_0000030)
 # Class: obo:FLUXO_0000199 (chemical formula)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000199 "A chemical formula is a specification of a chemical structure.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000199 "Te: specification is not a data item? It should be a textual information?")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000199 "http://edamontology.org/data_0846")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000199 "chemical formula")
 SubClassOf(obo:FLUXO_0000199 obo:IAO_0000027)
@@ -1625,6 +1637,7 @@ SubClassOf(obo:FLUXO_0000200 obo:IAO_0000027)
 # Class: obo:FLUXO_0000201 (demand reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000201 "A modeling process analogous to exchange reaction, but which operates upon \"internal\" metabolites. Metabolites that are consumed by these reactions are assumed to be used in intra-cellular processes that are not part of the model. Demand reactions, often represented 'R_DM_', can also deliver metabolites (from intra-cellular processes that are not considered in the model).")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000201 "Te: under pseudo reaction")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000201 "http://biomodels.net/SBO/SBO_0000628")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000201 "demand reaction")
 SubClassOf(obo:FLUXO_0000201 obo:FLUXO_0000005)
@@ -1639,12 +1652,14 @@ SubClassOf(obo:FLUXO_0000202 obo:FLUXO_0000005)
 # Class: obo:FLUXO_0000203 (sink reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000203 "A sink reaction is an unbalanced, typically reversible reaction used to add or remove intracellular metabolites from the system.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000203 "Te: part of pseudo reaction")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000203 "http://biomodels.net/SBO/SBO_0000632")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000203 "sink reaction")
 SubClassOf(obo:FLUXO_0000203 obo:FLUXO_0000005)
 
 # Class: obo:FLUXO_0000204 (reaction stoichiometry)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000204 "Te: ADD: The relation between the quantities of substances that take part in a reaction or form a compound (typically a ratio of whole integers).")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000204 "http://purl.obolibrary.org/obo/NCIT_C18110")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000204 "reaction stoichiometry")
 SubClassOf(obo:FLUXO_0000204 obo:IAO_0000027)
@@ -1666,18 +1681,22 @@ SubClassOf(obo:FLUXO_0000206 obo:FLUXO_0000153)
 # Class: obo:FLUXO_0000207 (statistic)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000207 "A statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000207 "Te: number of degrees of freedom STATO:0000069? for calculation of independent fluxes")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000207 "http://purl.obolibrary.org/obo/STATO_0000039")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000207 "statistic")
 SubClassOf(obo:FLUXO_0000207 obo:IAO_0000027)
 
 # Class: obo:FLUXO_0000208 (standard deviation)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000208 "Te: ADD: The standard deviation of a random variable, statistical population, data set, or probability distribution is a measure of variation which correspond to the average distance from the mean of the data set to any given point of that dataset. It also corresponds to the square root of its variance.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000208 "http://purl.obolibrary.org/obo/STATO_0000237")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000208 "standard deviation")
 SubClassOf(obo:FLUXO_0000208 obo:FLUXO_0000207)
 
 # Class: obo:FLUXO_0000209 (confidence interval)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000209 "Te: DISCUSS: the frequency (i.e., the proportion) of possible confidence intervals that contain the true value of their corresponding parameter. In other words, if confidence intervals are constructed using a given confidence level in an infinite number of independent experiments, the proportion of those intervals that contain the true value of the parameter will match the confidence level.
+A probability measure of the reliability of an inferential statistical test that has been applied to sample data and which is provided along with the confidence interval for the output statistic.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000209 "http://purl.obolibrary.org/obo/STATO_0000196")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000209 "confidence interval")
 SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
