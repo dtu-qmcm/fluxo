@@ -245,6 +245,7 @@ Declaration(Class(obo:FLUXO_0000220))
 Declaration(Class(obo:FLUXO_0000221))
 Declaration(Class(obo:FLUXO_0000222))
 Declaration(Class(obo:FLUXO_0000223))
+Declaration(Class(obo:FLUXO_0000225))
 Declaration(Class(obo:FLUXO_0000227))
 Declaration(Class(obo:FLUXO_0000228))
 Declaration(Class(obo:FLUXO_0000229))
@@ -332,6 +333,7 @@ SubClassOf(obo:FLUXO_0000005 obo:FLUXO_0000166)
 # Class: obo:FLUXO_0000006 (reaction bidirectionality)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000006 "A reaction bidirectionality is a characteristic of a biochemical reaction which may proceed simultaneously in forward and backward direction.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000006 "Te: A quality is a characteristic?")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000006 "reaction bidirectionality")
 SubClassOf(obo:FLUXO_0000006 obo:BFO_0000019)
 
@@ -719,10 +721,11 @@ AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000063 "A reaction pool is a set 
 AnnotationAssertion(rdfs:label obo:FLUXO_0000063 "reaction pool")
 SubClassOf(obo:FLUXO_0000063 obo:BFO_0000027)
 
-# Class: obo:FLUXO_0000064 (symmetry)
+# Class: obo:FLUXO_0000064 (molecular symmetry)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000064 "A symmetry is a property of molecules where certain atoms are chemically indistinguishable, making a unique atom numbering impossible.")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000064 "symmetry")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000064 "A molecular symmetry is a property of molecules where certain atoms are chemically indistinguishable, making a unique atom numbering impossible.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000064 "Te: Change from \"symmetry\" to \"molecular symmetry\", and add exact synonym")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000064 "molecular symmetry")
 SubClassOf(obo:FLUXO_0000064 obo:BFO_0000019)
 
 # Class: obo:FLUXO_0000065 (pseudo reaction)
@@ -1507,6 +1510,7 @@ SubClassOf(obo:FLUXO_0000181 obo:BFO_0000040)
 
 # Class: obo:FLUXO_0000182 (strain)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000182 "strain has a different definition in SIO:010055")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000182 "http://purl.uniprot.org/core/strain")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000182 "strain")
 SubClassOf(obo:FLUXO_0000182 obo:BFO_0000040)
@@ -1533,12 +1537,14 @@ SubClassOf(obo:FLUXO_0000185 obo:COB_0000026)
 # Class: obo:FLUXO_0000186 (mass spectrometer)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000186 "A mass spectrometer is an instrument which is used to measure the mass to charge ratio of ions. All mass spectrometers consist of three basic parts: an ion source, a mass analyzer, and a detector system. The stages within the mass spectrometer are: 1. Production of ions from the sample 2. Separation of ions with different masses 3. Detection of the number of ions of each mass produced 4.Collection of data to generate the mass spectrum")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000186 "Te: Should we include GC-MS and LC-MS (spectrometor)? OR in general OBI:0000048, what is the use case?")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000186 "http://purl.obolibrary.org/obo/OBI_0000049")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000186 "mass spectrometer")
 SubClassOf(obo:FLUXO_0000186 obo:FLUXO_0000185)
 
 # Class: obo:FLUXO_0000187 (NMR instrument)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000187 "An Instrument which is used to carry out a NMR analysis of some sample.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000187 "http://purl.obolibrary.org/obo/OBI_0000566")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000187 "NMR instrument")
 SubClassOf(obo:FLUXO_0000187 obo:FLUXO_0000185)
@@ -1592,10 +1598,12 @@ AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000194 "http://purl.obolibrary
 AnnotationAssertion(rdfs:label obo:FLUXO_0000194 "isotope ratio mass spectrometry")
 SubClassOf(obo:FLUXO_0000194 obo:FLUXO_0000190)
 
-# Class: obo:FLUXO_0000195 (nuclear magnetic resonance)
+# Class: obo:FLUXO_0000195 (nuclear magnetic resonance spectroscopy)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000195 "")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000195 "A nuclear magnetic resonance method in which the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000195 "http://purl.obolibrary.org/obo/CHMO_0000591")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000195 "nuclear magnetic resonance")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000195 "nuclear magnetic resonance spectroscopy")
 SubClassOf(obo:FLUXO_0000195 obo:COB_0000082)
 
 # Class: obo:FLUXO_0000196 (isotope natural abundance correction)
@@ -1709,6 +1717,7 @@ SubClassOf(obo:FLUXO_0000210 obo:FLUXO_0000242)
 
 # Class: obo:FLUXO_0000211 (statistical test hypothesis)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000211 "A statistical hypothesis test data transformation is a data transformation that has objective statistical hypothesis test.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000211 "http://purl.obolibrary.org/obo/OBI_0000673")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000211 "statistical test hypothesis")
 SubClassOf(obo:FLUXO_0000211 obo:OBI_0200000)
@@ -1722,6 +1731,7 @@ SubClassOf(obo:FLUXO_0000212 obo:FLUXO_0000211)
 
 # Class: obo:FLUXO_0000213 (chi-square test)
 
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000213 "The chi-square test is a data transformation with the objective of statistical hypothesis testing, in which the sampling distribution of the test statistic is a chi-square distribution when the null hypothesis is true, or any in which this is asymptotically true, meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-square distribution as closely as desired by making the sample size large enough.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000213 "http://purl.obolibrary.org/obo/OBI_0200200")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000213 "chi-square test")
 SubClassOf(obo:FLUXO_0000213 obo:FLUXO_0000211)
@@ -1786,6 +1796,13 @@ AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000223 "Mathematical expression i
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000223 "http://biomodels.net/SBO/SBO_0000064")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000223 "mathematical expression")
 SubClassOf(obo:FLUXO_0000223 obo:IAO_0000030)
+
+# Class: obo:FLUXO_0000225 (bioreactor)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000225 "A device or system that is a material entity designed to support the run of a biological and biochemical process by controlling regulated environmental and cultivation conditions, such as temperature, agitation or nutrient injection at different scales, including lab-scale, pilot plant, and industrial-scale systems.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000225 "http://purl.obolibrary.org/obo/PREFER_0000014")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000225 "bioreactor")
+SubClassOf(obo:FLUXO_0000225 obo:FLUXO_0000185)
 
 # Class: obo:FLUXO_0000227 (data file)
 
@@ -1957,6 +1974,7 @@ SubClassOf(obo:FLUXO_0000252 obo:FLUXO_0000103)
 
 # Class: obo:FLUXO_0000253 (person)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000253 "Te: Different definition in SIO_000498")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000253 "http://xmlns.com/foaf/0.1/Person")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000253 "person")
 SubClassOf(obo:FLUXO_0000253 obo:BFO_0000040)
