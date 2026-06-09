@@ -299,6 +299,7 @@ Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
 # Class: obo:FLUXO_0000001 (fluxome)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000001 "A fluxome is the complete set of metabolic fluxes (reaction rates) in a biological system at a given point in time.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000001 "Sergi: This is a data item")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000001 "fluxomics")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000001 "fluxome")
 SubClassOf(obo:FLUXO_0000001 obo:BFO_0000141)
@@ -326,6 +327,7 @@ SubClassOf(obo:FLUXO_0000004 obo:FLUXO_0000123)
 # Class: obo:FLUXO_0000005 (metabolic reaction)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000005 "A metabolic reaction is the biochemical reaction within a biological entity that is part of the metabolism.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000005 "Sergi: Most subclasses should be moved to be subclasses of chemical reaction instead")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000005 "biochemical -> chemical")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000005 "metabolic reaction")
 SubClassOf(obo:FLUXO_0000005 obo:FLUXO_0000166)
@@ -385,6 +387,7 @@ SubClassOf(obo:FLUXO_0000012 obo:FLUXO_0000005)
 # Class: obo:FLUXO_0000013 (equilibrium)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000013 "An equilibrium is the reaction that the rate of the forward reaction equals the rate of the backward reaction.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000013 "Sergi: This is not a quality. I'ts a realizable entity")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000013 "equilibrium")
 SubClassOf(obo:FLUXO_0000013 obo:FLUXO_0000010)
 
@@ -409,7 +412,8 @@ SubClassOf(obo:FLUXO_0000016 obo:FLUXO_0000198)
 # Class: obo:FLUXO_0000017 (fluxotype)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000017 "A fluxotype is the specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions.")
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000017 "Te: put under information content entity or quality? Check phenotype or genotype")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000017 "Te: put under information content entity or quality? Check phenotype or genotype
+Sergi: If we refer to the information about the fluxes yes, if we talk about the stuff that is happening inside the cell it should stay here")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "flux state")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000017 "metabolic flux phenotype")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000017 "fluxotype")
@@ -418,6 +422,7 @@ SubClassOf(obo:FLUXO_0000017 obo:BFO_0000031)
 # Class: obo:FLUXO_0000018 (stoichiometry-based fluxomics method)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000018 "A stoichiometry-based fluxomics method is set of mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000018 "Sergi: Move to planned process")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000018 "stoichiometry-based fluxomics method")
 SubClassOf(obo:FLUXO_0000018 obo:FLUXO_0000162)
 
@@ -430,6 +435,7 @@ SubClassOf(obo:FLUXO_0000019 obo:FLUXO_0000018)
 # Class: obo:FLUXO_0000020 (flux measurement method)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000020 "A flux measurement method is a methodology that determines metabolic fluxes within a cell based on empirical data.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000020 "Sergi: Move to planned process")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000020 "flux measurement method")
 SubClassOf(obo:FLUXO_0000020 obo:FLUXO_0000162)
 
@@ -511,6 +517,7 @@ SubClassOf(obo:FLUXO_0000031 obo:FLUXO_0000170)
 # Class: obo:FLUXO_0000032 (isotopic labeling state)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000032 "An isotopic labeling state is the specific distribution of istopic atom in a metabolite pools at specific time.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000032 "Sergi: Move to data item")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000032 "metabolite labeling pattern")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000032 "isotopic labeling state")
 SubClassOf(obo:FLUXO_0000032 obo:BFO_0000019)
@@ -543,6 +550,7 @@ SubClassOf(obo:FLUXO_0000036 obo:FLUXO_0000177)
 # Class: obo:FLUXO_0000037 (flux space sampling)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000037 "Flux space sampling is a stochastic process for characterizing the range of possible/feasible metabolic flux vectors.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000037 "Sergi: Move to data transformation?")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000037 "flux state sampling")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000037 "flux space sampling")
 SubClassOf(obo:FLUXO_0000037 obo:COB_0000082)
@@ -593,6 +601,7 @@ SubClassOf(obo:FLUXO_0000043 obo:FLUXO_0000041)
 # Class: obo:FLUXO_0000044 (isotopically non-stationary metabolic flux analysis)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000044 "Isotopically non-stationary metabolic flux analysis is isotope-based metabolic flux analysis technique, assuming isotopic transient state and metabolic steady state.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000044 "Sergi: Definition is incompatible with parent")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "INST-13C-MFA")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "INST-MFA")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000044 "Isotopic Non-Stationary MFA")
@@ -626,6 +635,7 @@ SubClassOf(obo:FLUXO_0000048 obo:FLUXO_0000046)
 # Class: obo:FLUXO_0000049 (fluxomics isotope labeling experiment)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000049 "A fluxomics isotope labeling experiment is an experiment where biological entities are fed stable isotopic tracers (like 13C) which are then distributed throughout the metabolic network via metabolic activity.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000049 "Sergi: Move to planned process")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "ILE")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "SIL")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000049 "SILE")
@@ -755,6 +765,7 @@ SubClassOf(obo:FLUXO_0000068 obo:FLUXO_0000223)
 # Class: obo:FLUXO_0000069 (atom identifier)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000069 "An atom identifier is a unique position to atoms in a molecule to track its position within the molecule.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000069 "Sergi: Not sure this goes here based on data item definition")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000069 "atom address")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000069 "https://www.inchi-trust.org/download/104/InChI_TechMan.pdf")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000069 "atom identifier")
@@ -763,6 +774,7 @@ SubClassOf(obo:FLUXO_0000069 obo:IAO_0000027)
 # Class: obo:FLUXO_0000070 (atom mapping)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000070 "An atom mapping is the precise mapping of how each relevant atom in a substrate is rearranged to form the product metabolites during a reaction. It usually excludes hydrogens.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000070 "Sergi: Not sure this goes here based on data item definition")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000070 "atom mapping")
 SubClassOf(obo:FLUXO_0000070 obo:IAO_0000027)
 
@@ -775,6 +787,7 @@ SubClassOf(obo:FLUXO_0000071 obo:BFO_0000027)
 # Class: obo:FLUXO_0000072 (atom transition annotation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000072 "An atom transition annotation is the annotation types for atom transition.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000072 "Sergi: Not really an identifier")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000072 "atom transition annotation")
 SubClassOf(obo:FLUXO_0000072 obo:IAO_0020000)
 
@@ -826,6 +839,7 @@ SubClassOf(obo:FLUXO_0000079 obo:BFO_0000019)
 # Class: obo:FLUXO_0000080 (label input isotopic purity)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000080 "Label input isotopic purity is the purity of the isotopic tracer specified in the label input.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000080 "Sergi: VERY confusing definition. Improve")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000080 "label input isotopic purity")
 SubClassOf(obo:FLUXO_0000080 obo:FLUXO_0000079)
 
@@ -844,7 +858,8 @@ SubClassOf(obo:FLUXO_0000082 obo:FLUXO_0000210)
 # Class: obo:FLUXO_0000083 (growth rate)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000083 "Growth rate is the rate of biomass formation.")
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000083 "Te: Isn't this a quality? refer to PATO:0001492")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000083 "Te: Isn't this a quality? refer to PATO:0001492
+Sergi: I don't think so, it's a number measuring how fast cells are growing. A quality does not require any process to be realized according to definition, and growth rate depends on a lot of factors and other stuff. If this was max growth rate, ir would be a realizable entity.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000083 "growth rate")
 SubClassOf(obo:FLUXO_0000083 obo:IAO_0000109)
 
@@ -871,6 +886,7 @@ SubClassOf(obo:FLUXO_0000086 obo:FLUXO_0000207)
 # Class: obo:FLUXO_0000087 (labeling simulation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000087 "Labeling simulation is the procedure used to obtain labeling data from a given metabolic models and presumed fluxes/metabolite concentrations.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000087 "Sergi: Maybe move to data transformation?")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000087 "forward simulation")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000087 "labeling simulation")
 SubClassOf(obo:FLUXO_0000087 obo:COB_0000082)
@@ -910,6 +926,7 @@ SubClassOf(obo:FLUXO_0000092 obo:FLUXO_0000217)
 # Class: obo:FLUXO_0000093 (lumped measurements)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000093 "Lumped measurements are the measurements corresponding to the linear combination of two or more metabolites.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000093 "Sergi: Should be moved. Maybe inside measurement datum?")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000093 "lumped measurements")
 SubClassOf(obo:FLUXO_0000093 obo:IAO_0000027)
 
@@ -1117,6 +1134,7 @@ SubClassOf(obo:FLUXO_0000123 obo:IAO_0000027)
 # Class: obo:FLUXO_0000124 (external flux)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000124 "External flux is the metabolic flux of a metabolic reaction that occurs across metabolic network model boundaries.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000124 "Sergi: Maybe move this to transport flux")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000124 "boundary flux")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000124 "external rate")
 AnnotationAssertion(rdfs:comment obo:FLUXO_0000124 "In the FBA field, the exchange flux means the external flux.")
@@ -1311,12 +1329,14 @@ SubClassOf(obo:FLUXO_0000153 obo:FLUXO_0000068)
 # Class: obo:FLUXO_0000154 (atom map)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000154 "An atom map is a set of all atom identifiers considered for a molecule.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000154 "Sergi: Not sure this goes here based on data item definition")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000154 "atom map")
 SubClassOf(obo:FLUXO_0000154 obo:IAO_0000027)
 
 # Class: obo:FLUXO_0000155 (atom transition)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000155 "An atom transition is the precise bijection of how each relevant atom identifier in a substrate is rearranged to form the product during a reaction.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000155 "Sergi: Not sure this goes here based on data item definition")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000155 "atom transition")
 SubClassOf(obo:FLUXO_0000155 obo:IAO_0000027)
 
@@ -1517,6 +1537,7 @@ SubClassOf(obo:FLUXO_0000182 obo:BFO_0000040)
 
 # Class: obo:FLUXO_0000183 (isotope labeling experiment representation)
 
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000183 "Sergi: Again, according to data item definition this is not a subclass.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000183 "isotope labeling experiment representation")
 SubClassOf(obo:FLUXO_0000183 obo:IAO_0000030)
 
@@ -1623,6 +1644,7 @@ SubClassOf(obo:FLUXO_0000197 obo:IAO_0000109)
 # Class: obo:FLUXO_0000198 (systems biology representation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000198 "Systems biology representation is the representation of an entity used in a systems biology knowledge reconstruction, such as a model, pathway, network.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000198 "Sergi: Not a data item. Maybe move to information content entity")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000198 "http://biomodels.net/SBO/SBO_0000000")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000198 "systems biology representation")
 SubClassOf(obo:FLUXO_0000198 obo:IAO_0000030)
@@ -1631,6 +1653,7 @@ SubClassOf(obo:FLUXO_0000198 obo:IAO_0000030)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000199 "A chemical formula is a specification of a chemical structure.")
 AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000199 "Te: specification is not a data item? It should be a textual information?")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000199 "Sergi: Not sure this goes here based on data item definition")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000199 "http://edamontology.org/data_0846")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000199 "chemical formula")
 SubClassOf(obo:FLUXO_0000199 obo:IAO_0000027)
@@ -1667,7 +1690,8 @@ SubClassOf(obo:FLUXO_0000203 obo:FLUXO_0000005)
 
 # Class: obo:FLUXO_0000204 (reaction stoichiometry)
 
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000204 "Te: ADD: The relation between the quantities of substances that take part in a reaction or form a compound (typically a ratio of whole integers).")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000204 "Te: ADD: The relation between the quantities of substances that take part in a reaction or form a compound (typically a ratio of whole integers).
+Sergi: Not sure this is a data item according to definition")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000204 "http://purl.obolibrary.org/obo/NCIT_C18110")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000204 "reaction stoichiometry")
 SubClassOf(obo:FLUXO_0000204 obo:IAO_0000027)
@@ -1675,6 +1699,7 @@ SubClassOf(obo:FLUXO_0000204 obo:IAO_0000027)
 # Class: obo:FLUXO_0000205 (stoichiometric coefficient)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000205 "A stoichiometric coefficient is an information object which is part of an equation describing a chemical reaction and which corresponds to the number of molecules of a reactant  taking part in a reaction.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000205 "Sergi: This shouldn't be in data item according to definition")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000205 "http://purl.obolibrary.org/obo/MSIO_0000060")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000205 "stoichiometric coefficient")
 SubClassOf(obo:FLUXO_0000205 obo:IAO_0000027)
@@ -1704,7 +1729,8 @@ SubClassOf(obo:FLUXO_0000208 obo:FLUXO_0000207)
 # Class: obo:FLUXO_0000209 (confidence interval)
 
 AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000209 "Te: DISCUSS: the frequency (i.e., the proportion) of possible confidence intervals that contain the true value of their corresponding parameter. In other words, if confidence intervals are constructed using a given confidence level in an infinite number of independent experiments, the proportion of those intervals that contain the true value of the parameter will match the confidence level.
-A probability measure of the reliability of an inferential statistical test that has been applied to sample data and which is provided along with the confidence interval for the output statistic.")
+A probability measure of the reliability of an inferential statistical test that has been applied to sample data and which is provided along with the confidence interval for the output statistic.
+Sergi: This definition is defining something else.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000209 "http://purl.obolibrary.org/obo/STATO_0000196")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000209 "confidence interval")
 SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
@@ -1712,12 +1738,14 @@ SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
 # Class: obo:FLUXO_0000210 (fluxomics parameters)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000210 "Data items that are required to run a fluxomics investigation."@en)
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000210 "Sergi: I'm not sure that this is a subclass of information about software. These do not refer to the software itself, but are instead things we use to calculate something using the software. Maybe move to specifically dependent continuant?")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000210 "fluxomics parameters")
 SubClassOf(obo:FLUXO_0000210 obo:FLUXO_0000242)
 
 # Class: obo:FLUXO_0000211 (statistical test hypothesis)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000211 "A statistical hypothesis test data transformation is a data transformation that has objective statistical hypothesis test.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000211 "Sergi: What?")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000211 "http://purl.obolibrary.org/obo/OBI_0000673")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000211 "statistical test hypothesis")
 SubClassOf(obo:FLUXO_0000211 obo:OBI_0200000)
@@ -1753,6 +1781,7 @@ SubClassOf(obo:FLUXO_0000215 obo:OBI_0200000)
 # Class: obo:FLUXO_0000216 (statistical model)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000216 "A statistical model is an information content entity which is a formalization of relationships between variables in the form of mathematical equations. A statistical model describes how one or more random variables are related to one or more other variables. The model is statistical as the variables are not deterministically but stochastically related.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000216 "Sergi: Move to immaterial entity")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000216 "http://purl.obolibrary.org/obo/STATO_0000107")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000216 "statistical model")
 SubClassOf(obo:FLUXO_0000216 obo:IAO_0000030)
@@ -1760,6 +1789,7 @@ SubClassOf(obo:FLUXO_0000216 obo:IAO_0000030)
 # Class: obo:FLUXO_0000217 (matrix)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000217 "A matrix is a rectangular array of numbers, which are called entries of the matrix.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000217 "Sergi: Move to immaterial entity")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000217 "http://purl.obolibrary.org/obo/STATO_0000642")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000217 "matrix")
 SubClassOf(obo:FLUXO_0000217 obo:IAO_0000030)
@@ -1793,6 +1823,7 @@ SubClassOf(obo:FLUXO_0000222 obo:IAO_0000009)
 # Class: obo:FLUXO_0000223 (mathematical expression)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000223 "Mathematical expression is the formal representation of a calculus linking parameters and variables of a model.")
+AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000223 "Sergi: Move to immaterial entity")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000223 "http://biomodels.net/SBO/SBO_0000064")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000223 "mathematical expression")
 SubClassOf(obo:FLUXO_0000223 obo:IAO_0000030)
