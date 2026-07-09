@@ -51,12 +51,12 @@ FLUXO_0000223	mathematical expression	skos:exactMatch	http://biomodels.net/SBO/S
 FLUXO_0000227	data file	skos:exactMatch	http://nmrML.org/nmrCV#NMR:1400267	data file	semapv:LexicalMatching
 FLUXO_0000228	data file attribute	skos:exactMatch	http://nmrML.org/nmrCV#NMR:1000011	data file attribute	semapv:LexicalMatching
 FLUXO_0000229	data file format	skos:exactMatch	http://nmrML.org/nmrCV#NMR:1001459	data file format	semapv:LexicalMatching
-FLUXO_0000230	CSV	skos:exactMatch	http://edamontology.org/format_3752	CSV	semapv:LexicalMatching
-FLUXO_0000231	MAT	skos:exactMatch	http://edamontology.org/format_3626	MAT	semapv:LexicalMatching
-FLUXO_0000232	TSV	skos:exactMatch	http://edamontology.org/format_3475	TSV	semapv:LexicalMatching
-FLUXO_0000233	xlsx	skos:exactMatch	http://edamontology.org/format_3620	xlsx	semapv:LexicalMatching
-FLUXO_0000234	JSON	skos:exactMatch	http://edamontology.org/format_3464	JSON	semapv:LexicalMatching
-FLUXO_0000235	SBML	skos:exactMatch	http://edamontology.org/format_2585	SBML	semapv:LexicalMatching
+FLUXO_0000230	CSV format	skos:exactMatch	http://edamontology.org/format_3752	CSV	semapv:LexicalMatching
+FLUXO_0000231	MAT format	skos:exactMatch	http://edamontology.org/format_3626	MAT	semapv:LexicalMatching
+FLUXO_0000232	TSV format	skos:exactMatch	http://edamontology.org/format_3475	TSV	semapv:LexicalMatching
+FLUXO_0000233	xlsx format	skos:exactMatch	http://edamontology.org/format_3620	xlsx	semapv:LexicalMatching
+FLUXO_0000234	JSON format	skos:exactMatch	http://edamontology.org/format_3464	JSON	semapv:LexicalMatching
+FLUXO_0000235	SBML format	skos:exactMatch	http://edamontology.org/format_2585	SBML	semapv:LexicalMatching
 FLUXO_0000238	compound identifier	skos:exactMatch	http://edamontology.org/data_1086	Compound identifier	semapv:LexicalMatching
 FLUXO_0000239	InChI	skos:exactMatch	http://edamontology.org/format_1197	InChI	semapv:LexicalMatching
 FLUXO_0000240	SMILES	skos:exactMatch	http://edamontology.org/format_1196	SMILES	semapv:LexicalMatching
@@ -67,7 +67,7 @@ FLUXO_0000251	isodyn	skos:exactMatch	http://purl.obolibrary.org/obo/MSIO_0000049
 FLUXO_0000252	IsoDesign	skos:exactMatch	http://purl.obolibrary.org/obo/MSIO_0000050	isodesign	semapv:LexicalMatching
 FLUXO_0000253	person	skos:exactMatch	http://xmlns.com/foaf/0.1/Person	Person	semapv:LexicalMatching
 FLUXO_0000254	person identifier	skos:exactMatch	http://edamontology.org/data_2118	Person identifier	semapv:LexicalMatching
-FLUXO_0000255	person name	skos:exactMatch	http://edamontology.org/data_1692	Person name	semapv:LexicalMatching
-FLUXO_0000256	ORCID Identifier	skos:exactMatch	http://edamontology.org/data_4022	ORCID Identifier	semapv:LexicalMatching
-FLUXO_0000257	Email address	skos:exactMatch	http://edamontology.org/data_1691	Email address	semapv:LexicalMatching
+FLUXO_0000255	person name	skos:exactMatch	http://purl.obolibrary.org/obo/IAO_0020015	personal name	semapv:LexicalMatching
+FLUXO_0000256	ORCID Identifier	skos:exactMatch	http://purl.obolibrary.org/obo/IAO_0000708	ORCID Identifier	semapv:LexicalMatching
+FLUXO_0000257	Email address	skos:exactMatch	http://purl.obolibrary.org/obo/IAO_0000429	Email address	semapv:LexicalMatching
 FLUXO_0000258	organization	skos:exactMatch	http://purl.obolibrary.org/obo/OBI_0000245	organization	semapv:LexicalMatching
