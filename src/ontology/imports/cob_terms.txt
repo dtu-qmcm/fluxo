@@ -1,2 +1,3 @@
 http://purl.obolibrary.org/obo/COB_0000026
 http://purl.obolibrary.org/obo/COB_0000082
+http://purl.obolibrary.org/obo/COB_0001300

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                7d2598698574022e5fa89f1d192932b676ce9aa581fae30f0478fac3389e8d47
+CONFIG_HASH=                9ddaa876a76915373b41b025d0233f53ae3d182fda5aad4a7f9acf3dfbd8b434
 
 
 # ----------------------------------------
