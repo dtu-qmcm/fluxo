@@ -293,7 +293,10 @@ Declaration(Class(obo:FLUXO_0000256))
 Declaration(Class(obo:FLUXO_0000257))
 Declaration(Class(obo:FLUXO_0000258))
 Declaration(Class(obo:FLUXO_0000259))
+Declaration(Class(obo:FLUXO_0000260))
 Declaration(Class(obo:FLUXO_0000261))
+Declaration(Class(obo:FLUXO_0000262))
+Declaration(Class(obo:FLUXO_0000263))
 Declaration(Class(obo:IAO_0000009))
 Declaration(Class(obo:IAO_0000010))
 Declaration(Class(obo:IAO_0000027))
@@ -347,11 +350,9 @@ SubClassOf(obo:FLUXO_0000004 obo:FLUXO_0000123)
 
 # Class: obo:FLUXO_0000005 (metabolic reaction)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000005 "A chemical reaction within a biological entity that is part of the metabolism.")
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000005 "Sergi: Most subclasses should be moved to be subclasses of chemical reaction instead")
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000005 "biochemical -> chemical")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000005 "A chemical or physical process within a biological entity that is part of the metabolism.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000005 "metabolic reaction")
-SubClassOf(obo:FLUXO_0000005 obo:FLUXO_0000166)
+SubClassOf(obo:FLUXO_0000005 obo:BFO_0000015)
 
 # Class: obo:FLUXO_0000006 (reaction bidirectionality)
 
@@ -381,7 +382,6 @@ DisjointClasses(obo:FLUXO_0000008 obo:FLUXO_0000009)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000009 "The chemical reaction that may operate simultaneously in forward and backward direction.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000009 "reversible reaction")
-AnnotationAssertion(rdfs:comment obo:FLUXO_0000009 "property or class")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000009 "bidirectional reaction")
 SubClassOf(obo:FLUXO_0000009 obo:FLUXO_0000166)
 
@@ -393,14 +393,13 @@ SubClassOf(obo:FLUXO_0000010 obo:BFO_0000019)
 
 # Class: obo:FLUXO_0000011 (forward reaction)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000011 "The chemical reaction that proceeds from substrates to products.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000011 "The chemical reaction that proceeds from reactants to products.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000011 "forward reaction")
 SubClassOf(obo:FLUXO_0000011 obo:FLUXO_0000166)
 
 # Class: obo:FLUXO_0000012 (backward reaction)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000012 "The chemical reaction that proceeds from products to substrates.")
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000012 "Te: Put into parent class")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000012 "The chemical reaction that proceeds from products to reactants.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000012 "reverse direction")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000012 "backward reaction")
 SubClassOf(obo:FLUXO_0000012 obo:FLUXO_0000166)
@@ -765,9 +764,9 @@ SubClassOf(obo:FLUXO_0000064 obo:BFO_0000019)
 
 # Class: obo:FLUXO_0000065 (pseudo metabolic reaction)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000065 "A metabolic reaction that does not have any biological counterpart and is purely introduced for modeling reason.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000065 "A system biology representation that models a metabolic reaction that does not have any biological counterpart.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000065 "pseudo metabolic reaction")
-SubClassOf(obo:FLUXO_0000065 obo:FLUXO_0000005)
+SubClassOf(obo:FLUXO_0000065 obo:FLUXO_0000198)
 
 # Class: obo:FLUXO_0000066 (lumped metabolic reaction)
 
@@ -1183,9 +1182,7 @@ SubClassOf(obo:FLUXO_0000125 obo:FLUXO_0000198)
 
 # Class: obo:FLUXO_0000126 (metabolism)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000126 "A process that is the set of chemical processes that occur within a living organism in order to maintain life.")
-AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000126 "Te: Is metabolism a process or a material entity logically? http://semanticscience.org/resource/SIO_010308
-Original: the chemical compounds of a biological entity are connected by metabolic reactions which convert one compound into another.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000126 "A process that is the set of physical or chemical processes that occur within a living organism in order to maintain life.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000126 "metabolism")
 SubClassOf(obo:FLUXO_0000126 obo:BFO_0000015)
 
@@ -1196,10 +1193,11 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000127 "network")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000127 "metabolic network model")
 SubClassOf(obo:FLUXO_0000127 obo:FLUXO_0000125)
 
-# Class: obo:FLUXO_0000128 (transport reaction)
+# Class: obo:FLUXO_0000128 (transport process)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000128 "Transport reaction is the transfer of a metabolite or metabolites between two compartments.")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000128 "transport reaction")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000128 "A metabolic reaction that is the transfer of a metabolite or metabolites between two compartments.")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000128 "transport reaction")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000128 "transport process")
 SubClassOf(obo:FLUXO_0000128 obo:FLUXO_0000005)
 
 # Class: obo:FLUXO_0000129 (pseudomolecule)
@@ -1458,17 +1456,18 @@ SubClassOf(obo:FLUXO_0000165 obo:FLUXO_0000125)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000166 "A process which uses or consumes chemical/molecular entities to generate other molecular entities.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000166 "http://purl.obolibrary.org/obo/MSIO_0000001")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000166 "reaction")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000166 "chemical reaction")
 SubClassOf(obo:FLUXO_0000166 obo:BFO_0000015)
 
-# Class: obo:FLUXO_0000167 (reactant)
+# Class: obo:FLUXO_0000167 (reactant role)
 
-AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000167 "A role of a molecule that is present at the start of a reaction and is consumed in the reaction.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000167 "A reaction participant that is present at the start of a reaction and is consumed in the reaction.")
 AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000167 "Te: It sits on the left side of the reaction equation.")
 AnnotationAssertion(oboInOwl:hasBroadSynonym obo:FLUXO_0000167 "reagent")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000167 "http://biomodels.net/SBO/SBO_0000010")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000167 "educt")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000167 "reactant")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000167 "reactant role")
 SubClassOf(obo:FLUXO_0000167 obo:FLUXO_0000185)
 
 # Class: obo:FLUXO_0000168 (substrate)
@@ -1476,14 +1475,15 @@ SubClassOf(obo:FLUXO_0000167 obo:FLUXO_0000185)
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000168 "A role of a molecule or pseudo molecule which is acted upon by an enzyme.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000168 "http://biomodels.net/SBO/SBO_0000015")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000168 "substrate")
-SubClassOf(obo:FLUXO_0000168 obo:FLUXO_0000167)
+SubClassOf(obo:FLUXO_0000168 obo:FLUXO_0000185)
 
-# Class: obo:FLUXO_0000169 (product)
+# Class: obo:FLUXO_0000169 (product role)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000169 "A role of a molecule or pseudo molecule which is produced from a chemical reaction.")
 AnnotationAssertion(obo:IAO_0000116 obo:FLUXO_0000169 "Te: It usually sits on the right side of the reaction equation.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000169 "http://biomodels.net/SBO/SBO_0000011")
-AnnotationAssertion(rdfs:label obo:FLUXO_0000169 "product")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000169 "product")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000169 "product role")
 SubClassOf(obo:FLUXO_0000169 obo:FLUXO_0000185)
 
 # Class: obo:FLUXO_0000170 (molecule)
@@ -1796,6 +1796,7 @@ SubClassOf(obo:FLUXO_0000208 obo:FLUXO_0000207)
 # Class: obo:FLUXO_0000209 (confidence interval)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000209 "A statistic which defines an range of values in which a measurement or trial falls corresponding to a given probability.")
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000209 "upper confidence limit is a data item which is a largest value bounding a confidence interval.")
 AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000209 "http://purl.obolibrary.org/obo/STATO_0000196")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000209 "confidence interval")
 SubClassOf(obo:FLUXO_0000209 obo:FLUXO_0000207)
@@ -2170,11 +2171,33 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:FLUXO_0000259 "metabolic flux a
 AnnotationAssertion(rdfs:label obo:FLUXO_0000259 "fluxomics")
 SubClassOf(obo:FLUXO_0000259 obo:COB_0000082)
 
+# Class: obo:FLUXO_0000260 (95% confidence interval)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000260 "a confidence interval which covers 95% of the sampling distribution, meaning that there is a 5% risk of false positive (type I error).")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000260 "http://purl.obolibrary.org/obo/STATO_0000231")
+AnnotationAssertion(rdfs:comment obo:FLUXO_0000260 "If the number of observations made is large enough, the sampling distribution can be assumed to be normal, which entails that 95% of the sampling distributions falls within roughly2 (1.96) standard deviations from the mean.")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000260 "95% confidence interval")
+SubClassOf(obo:FLUXO_0000260 obo:FLUXO_0000209)
+
 # Class: obo:FLUXO_0000261 (XML format)
 
 AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000261 "A data file format that is a flexible text format used to store and transport structured data, and is defined by Extensible Markup Language specification.")
 AnnotationAssertion(rdfs:label obo:FLUXO_0000261 "XML format")
 SubClassOf(obo:FLUXO_0000261 obo:FLUXO_0000229)
+
+# Class: obo:FLUXO_0000262 (lower confidence limit)
+
+AnnotationAssertion(obo:IAO_0000112 obo:FLUXO_0000262 "a confidence interval which gives a lowest value bounding a confidence interval.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000262 "http://purl.obolibrary.org/obo/STATO_0000315")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000262 "lower confidence limit")
+SubClassOf(obo:FLUXO_0000262 obo:FLUXO_0000209)
+
+# Class: obo:FLUXO_0000263 (upper confidence limit)
+
+AnnotationAssertion(obo:IAO_0000115 obo:FLUXO_0000263 "a confidence interval which gives a largest value bounding a confidence interval.")
+AnnotationAssertion(oboInOwl:hasDbXref obo:FLUXO_0000263 "http://purl.obolibrary.org/obo/STATO_0000314")
+AnnotationAssertion(rdfs:label obo:FLUXO_0000263 "upper confidence limit")
+SubClassOf(obo:FLUXO_0000263 obo:FLUXO_0000209)
 
 
 )
