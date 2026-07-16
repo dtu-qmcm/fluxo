@@ -7,12 +7,13 @@
 #  EDAM: "http://edamontology.org/"
 #  uniprot: "http://purl.uniprot.org/core/"
 #  OBI: "http://purl.obolibrary.org/obo/OBI_"
-#  COB: "http://purl.obolibrary.org/obo/COB_"
 #  CHMO: "http://purl.obolibrary.org/obo/CHMO_"
 #  STATO: "http://purl.obolibrary.org/obo/STATO_"
 #  SBO: "http://biomodels.net/SBO/SBO_"
 #  UO: "http://purl.obolibrary.org/obo/UO_"
 #  IAO: "http://purl.obolibrary.org/obo/IAO_"
+#  PREFER: "http://purl.obolibrary.org/obo/PREFER_"
+#  SIO: "http://semanticscience.org/resource/SIO_"
 #  NMR: "http://nmrML.org/nmrCV#NMR:"
 #  foaf: "http://xmlns.com/foaf/0.1/"
 #  skos: "http://www.w3.org/2004/02/skos/core#"
@@ -36,7 +37,6 @@ FLUXO:0000178	Experimental design and studies	skos:exactMatch	EDAM:topic_3678	Ex
 FLUXO:0000181	organism	skos:exactMatch	uniprot:organism	organism	semapv:LexicalMatching
 FLUXO:0000182	strain	skos:exactMatch	uniprot:strain	strain	semapv:LexicalMatching
 FLUXO:0000184	culture medium	skos:exactMatch	OBI:0000079	culture medium	semapv:LexicalMatching
-FLUXO:0000185	device	skos:exactMatch	COB:0001300	device	semapv:LexicalMatching
 FLUXO:0000186	mass spectrometer	skos:exactMatch	OBI:0000049	mass spectrometer	semapv:LexicalMatching
 FLUXO:0000187	NMR instrument	skos:exactMatch	OBI:0000566	NMR instrument	semapv:LexicalMatching
 FLUXO:0000188	metabolomics	skos:exactMatch	EDAM:topic_3172	Metabolomics	semapv:LexicalMatching
@@ -68,11 +68,14 @@ FLUXO:0000214	model parameter estimation	skos:exactMatch	STATO:0000119	model par
 FLUXO:0000215	sampling distribution estimation by bootstrapping	skos:exactMatch	STATO:0000548	sampling distribution estimation by bootstrapping	semapv:LexicalMatching
 FLUXO:0000216	statistical model	skos:exactMatch	STATO:0000107	statistical model	semapv:LexicalMatching
 FLUXO:0000217	matrix	skos:exactMatch	STATO:0000642	matrix	semapv:LexicalMatching
+FLUXO:0000218	cultivation condition	skos:exactMatch	PREFER:0000008	cultivation condition	semapv:LexicalMatching
 FLUXO:0000219	rate unit	skos:exactMatch	UO:0000280	rate unit	semapv:LexicalMatching
 FLUXO:0000220	substance unit	skos:exactMatch	UO:0000006	substance unit	semapv:LexicalMatching
 FLUXO:0000221	time unit	skos:exactMatch	UO:0000003	time unit	semapv:LexicalMatching
 FLUXO:0000222	concentration unit	skos:exactMatch	UO:0000051	concentration unit	semapv:LexicalMatching
 FLUXO:0000223	mathematical expression	skos:exactMatch	SBO:0000064	mathematical expression	semapv:LexicalMatching
+FLUXO:0000225	bioreactor	skos:exactMatch	PREFER:0000014	bioreactor	semapv:LexicalMatching
+FLUXO:0000226	representation	skos:exactMatch	SIO:000612	representation	semapv:LexicalMatching
 FLUXO:0000227	data file	skos:exactMatch	NMR:1400267	data file	semapv:LexicalMatching
 FLUXO:0000228	data file attribute	skos:exactMatch	NMR:1000011	data file attribute	semapv:LexicalMatching
 FLUXO:0000229	data file format	skos:exactMatch	NMR:1001459	data file format	semapv:LexicalMatching

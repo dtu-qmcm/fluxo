@@ -28,26 +28,34 @@ Editors of this ontology should use the edit version, [src/ontology/fluxo-edit.o
 
 ## External Ontologies
 
-FLUXO reuses terms and aligns with the following external ontologies and vocabularies:
+### Core imported ontologies
+
+These ontologies are directly imported into FLUXO and provide its foundational upper-level structure and relations:
 
 | Ontology | Prefix | Description |
 |----------|--------|-------------|
-| [IAO](https://obofoundry.org/ontology/iao.html) | IAO | Information Artifact Ontology |
-| [COB](https://obofoundry.org/ontology/cob.html) | COB | Core Ontology for Biology and Biomedicine |
 | [BFO](https://obofoundry.org/ontology/bfo.html) | BFO | Basic Formal Ontology |
-| [MSIO](https://obofoundry.org/ontology/msio.html) | MSIO | Metabolomics Standards Initiative Ontology |
+| [COB](https://obofoundry.org/ontology/cob.html) | COB | Core Ontology for Biology and Biomedicine |
+| [IAO](https://obofoundry.org/ontology/iao.html) | IAO | Information Artifact Ontology |
+| [RO](https://obofoundry.org/ontology/ro.html) | RO | Relations Ontology |
+
+### Externally linked ontologies
+
+These ontologies are referenced in FLUXO's [SSSOM cross-ontology mappings](src/ontology/mappings/fluxo.sssom.tsv) but are not directly imported:
+
+| Ontology | Prefix | Description |
+|----------|--------|-------------|
 | [CHEBI](https://obofoundry.org/ontology/chebi.html) | CHEBI | Chemical Entities of Biological Interest |
-| [PATO](https://obofoundry.org/ontology/pato.html) | PATO | Phenotype And Trait Ontology |
-| [OBI](https://obofoundry.org/ontology/obi.html) | OBI | Ontology for Biomedical Investigations |
-| [STATO](https://obofoundry.org/ontology/stato.html) | STATO | Statistics Ontology |
 | [CHMO](https://obofoundry.org/ontology/chmo.html) | CHMO | Chemical Methods Ontology |
+| [EDAM](https://edamontology.org) | EDAM | Ontology of bioscientific data analysis and data management |
+| [MSIO](https://obofoundry.org/ontology/msio.html) | MSIO | Metabolomics Standards Initiative Ontology |
 | [NCIT](https://obofoundry.org/ontology/ncit.html) | NCIT | National Cancer Institute Thesaurus |
-| [UO](https://obofoundry.org/ontology/uo.html) | UO | Units of Measurement Ontology |
-| [EDAM](https://edamontology.org) | EDAM | Ontology of data analysis methods |
-| [SBO](https://www.ebi.ac.uk/sbo/) | SBO | Systems Biology Ontology |
 | [nmrCV](http://nmrML.org/nmrCV) | NMR | nmrCV controlled vocabulary |
-| [FOAF](http://xmlns.com/foaf/0.1/) | foaf | Friend of a Friend vocabulary |
-| [UniProt](https://www.uniprot.org/) | uniprot | UniProt knowledgebase |
+| [OBI](https://obofoundry.org/ontology/obi.html) | OBI | Ontology for Biomedical Investigations |
+| [PATO](https://obofoundry.org/ontology/pato.html) | PATO | Phenotype And Trait Ontology |
+| [SBO](https://www.ebi.ac.uk/sbo/) | SBO | Systems Biology Ontology |
+| [STATO](https://obofoundry.org/ontology/stato.html) | STATO | Statistics Ontology |
+| [UO](https://obofoundry.org/ontology/uo.html) | UO | Units of Measurement Ontology |
 
 ## Contact
 
