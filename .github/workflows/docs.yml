@@ -14,6 +14,10 @@ jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
+    # Grant the default GITHUB_TOKEN write access so the action can push
+    # the built site to the gh-pages branch (fixes 403 on deploy).
+    permissions:
+      contents: write
     steps:
       - name: Checkout main
         uses: actions/checkout@v4

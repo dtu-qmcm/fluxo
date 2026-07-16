@@ -70,3 +70,7 @@ src/patterns/all_pattern_terms.txt
 
 # Local repository guide (not for GitHub)
 .REPO_GUIDE.md
+
+# Local working files (not tracked)
+/mapping.tsv
+/definition_review.tsv

@@ -53,7 +53,9 @@ These ontologies are referenced in FLUXO's [SSSOM cross-ontology mappings](src/o
 | [nmrCV](http://nmrML.org/nmrCV) | NMR | nmrCV controlled vocabulary |
 | [OBI](https://obofoundry.org/ontology/obi.html) | OBI | Ontology for Biomedical Investigations |
 | [PATO](https://obofoundry.org/ontology/pato.html) | PATO | Phenotype And Trait Ontology |
+| [PREFER](https://obofoundry.org/ontology/prefer.html) | PREFER | Precision Fermentation Ontology |
 | [SBO](https://www.ebi.ac.uk/sbo/) | SBO | Systems Biology Ontology |
+| [SIO](https://bioportal.bioontology.org/ontologies/SIO) | SIO | Semanticscience Integrated Ontology |
 | [STATO](https://obofoundry.org/ontology/stato.html) | STATO | Statistics Ontology |
 | [UO](https://obofoundry.org/ontology/uo.html) | UO | Units of Measurement Ontology |
 
