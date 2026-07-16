@@ -23,6 +23,7 @@ import_group:
   products:
     - id: iao
     - id: cob
+    - id: ro
 robot_java_args: "-Xmx8G"
 robot_report:
   use_labels: TRUE
