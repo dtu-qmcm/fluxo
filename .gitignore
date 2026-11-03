@@ -74,3 +74,12 @@ src/patterns/all_pattern_terms.txt
 # Local working files (not tracked)
 /mapping.tsv
 /definition_review.tsv
+
+# Release artefacts copied to the repo root by `make prepare_release` must be
+# committed so the OBO Foundry download link / PURL can serve them
+!/fluxo.owl
+!/fluxo.obo
+!/fluxo.json
+!/fluxo-base.*
+!/fluxo-full.*
+!/fluxo-simple.*
