@@ -1,0 +1,2380 @@
+format-version: 1.2
+data-version: fluxo/releases/2026-09-04/fluxo-simple.owl
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: foaf http://xmlns.com/foaf/0.1/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
+ontology: fluxo/fluxo-simple
+property_value: dc:contributor "Te Chen\nSergi Muyo Abad\nShawn Tan\nKatharina Nöh\nPierre Millard\nMartin Beyß\nTxell Amigo\nMatthias Mattanovich\nNicholas Luke Cowie\nEdward Teddy Groves\nLars Keld Nielsen" xsd:string
+property_value: dc:description "Metabolic Flux Analysis Ontology is an ontology that provides a structured framework for representing concepts, relationships, and data related to metabolic flux analysis." xsd:string
+property_value: dc:title "Metabolic Flux Analysis Ontology" xsd:string
+property_value: owl:versionInfo "2026-04-08" xsd:string
+property_value: owl:versionInfo "2026-09-04" xsd:string
+property_value: terms:license http://creativecommons.org/licenses/by/4.0/
+
+[Term]
+id: FLUXO:0000001
+name: fluxome
+def: "An information content entity that represents the complete set of metabolic fluxes (reaction rates) in a biological system." []
+synonym: "fluxomics" BROAD []
+
+[Term]
+id: FLUXO:0000002
+name: fluxomics data
+def: "An information content entity that contains files to determine the rates of metabolic reactions." []
+comment: It generally includes the model of metabolic networks and experimental data.
+relationship: BFO:0000051 FLUXO:0000125 ! has part metabolic model
+relationship: BFO:0000051 FLUXO:0000159 ! has part flux solution
+relationship: BFO:0000051 FLUXO:0000227 ! has part data file
+property_value: IAO:0000116 "Could be moved to role" xsd:string
+
+[Term]
+id: FLUXO:0000003
+name: internal flux
+def: "A metabolic flux of a metabolic reaction that occurs within a metabolic network model boundries." []
+is_a: FLUXO:0000123 ! metabolic flux
+disjoint_from: FLUXO:0000124 ! external flux
+
+[Term]
+id: FLUXO:0000004
+name: transport flux
+def: "A metabolic flux that is the rate of a transport process." []
+synonym: "transport rate" EXACT []
+is_a: FLUXO:0000123 ! metabolic flux
+
+[Term]
+id: FLUXO:0000005
+name: metabolic reaction
+def: "A chemical or physical process within a biological entity that is part of the metabolism." []
+synonym: "metabolic process" BROAD []
+is_a: FLUXO:0000166 ! chemical reaction
+relationship: BFO:0000051 FLUXO:0000166 ! has part chemical reaction
+relationship: RO:0003301 FLUXO:0000126 ! has role in modeling metabolism
+relationship: RO:0003301 FLUXO:0000278 ! has role in modeling metabolic network
+
+[Term]
+id: FLUXO:0000006
+name: reaction bidirectionality
+def: "A quality of a biochemical reaction which may proceed simultaneously in forward and backward direction." []
+
+[Term]
+id: FLUXO:0000007
+name: reaction reversibility
+def: "A quality of metabolic reaction to proceed in forward and backward direction." []
+comment: property could be True or False
+
+[Term]
+id: FLUXO:0000008
+name: unidirectional reaction
+def: "The chemical reaction that solely operates in a single direction, it can be forward or backward direction." []
+comment: property or class
+synonym: "irreversible reaction" EXACT []
+is_a: FLUXO:0000166 ! chemical reaction
+disjoint_from: FLUXO:0000009 ! bidirectional reaction
+
+[Term]
+id: FLUXO:0000009
+name: bidirectional reaction
+def: "The chemical reaction that may operate simultaneously in forward and backward direction." []
+synonym: "reversible reaction" EXACT []
+is_a: FLUXO:0000166 ! chemical reaction
+
+[Term]
+id: FLUXO:0000010
+name: reaction direction
+def: "A quality of the chemical reaction that shows direction of the reaction operates, which is determined by the Gibbs free energy change." []
+
+[Term]
+id: FLUXO:0000011
+name: forward reaction
+def: "The chemical reaction that proceeds from reactants to products." []
+is_a: FLUXO:0000166 ! chemical reaction
+
+[Term]
+id: FLUXO:0000012
+name: backward reaction
+def: "The chemical reaction that proceeds from products to reactants." []
+synonym: "reverse direction" EXACT []
+is_a: FLUXO:0000166 ! chemical reaction
+
+[Term]
+id: FLUXO:0000013
+name: chemical equilibrium
+def: "The realizable entity that is realized when the reactants and products of the chemical process are present in concentrations which have no further tendency to change with time, so that there is no observable change in the properties of the system." []
+comment: At equilibrium, the reaction Gibbs energy is zero.
+
+[Term]
+id: FLUXO:0000014
+name: source metabolite
+def: "A metabolite which is only consumed, typically the substrate(s)." []
+is_a: FLUXO:0000172 ! metabolite
+
+[Term]
+id: FLUXO:0000015
+name: sink metabolite
+def: "A metabolite which is only produced, typically the by-product(s)." []
+is_a: FLUXO:0000172 ! metabolite
+
+[Term]
+id: FLUXO:0000016
+name: flux map
+def: "The system biology representation that is based on quantitative visualization of reactions and metabolic fluxes within a metabolic network." []
+is_a: FLUXO:0000198 ! systems biology representation
+property_value: IAO:0000112 "The flux map is typically scaled by flux magnitude and annotated with directionality." xsd:string
+
+[Term]
+id: FLUXO:0000017
+name: fluxotype
+def: "A fluxome that indicates specific pattern or distribution of metabolic fluxes within a biological system, such as a cell or organism, under defined conditions." []
+synonym: "flux state" EXACT []
+synonym: "metabolic flux phenotype" EXACT []
+is_a: FLUXO:0000001 ! fluxome
+
+[Term]
+id: FLUXO:0000018
+name: stoichiometry-based fluxomics method
+def: "The metabolic flux anlaysis method based on mathemetical approaches for characterizing metabolic states that constrain the possible flux space given a reaction stoichiometry." []
+is_a: FLUXO:0000021 ! fluxomics method
+relationship: RO:0000058 FLUXO:0000039 ! is concretized as flux balance analysis
+relationship: RO:0017010 FLUXO:0000173 ! specified by information stoichiometry matrix
+
+[Term]
+id: FLUXO:0000019
+name: constraint-based fluxomics method
+def: "The stoichiometry-based fluxomics method that uses set of mathematical approaches in which the possible fluxes are constrained by a minimum and maximum range of bounds, and further restrictions such as the reaction stoichiometry or objectives." []
+is_a: FLUXO:0000018 ! stoichiometry-based fluxomics method
+
+[Term]
+id: FLUXO:0000020
+name: flux measurement method
+def: "A metabolic flux analysis method that determines metabolic fluxes within a cell based on empirical data." []
+relationship: IAO:0000136 FLUXO:0000005 ! is about metabolic reaction
+
+[Term]
+id: FLUXO:0000021
+name: fluxomics method
+def: "A plan specification that quantitatively estimate/infer metabolic fluxes using a metabolic reaction model, experimental data and computation." []
+relationship: RO:0000058 FLUXO:0000057 ! is concretized as fluxomics simulation
+relationship: RO:0000058 FLUXO:0000102 ! is concretized as fluxomics software
+relationship: RO:0000058 FLUXO:0000162 ! is concretized as fluxomics investigation
+
+[Term]
+id: FLUXO:0000022
+name: steady state flux solution space
+def: "An information content entity that contains set of all possible flux vectors that are consistent with reaction stoichiometries and a set of flux constraints at metabolic steady state." []
+synonym: "flux polytope" EXACT []
+synonym: "flux solution space" EXACT []
+synonym: "flux space" EXACT []
+
+[Term]
+id: FLUXO:0000023
+name: flux vector
+def: "The data item with a list of the rates of all chemical reactions in a biological network." []
+synonym: "flux distribution" EXACT []
+relationship: BFO:0000050 FLUXO:0000159 ! part of flux solution
+
+[Term]
+id: FLUXO:0000024
+name: stoichiometric reaction model
+def: "A representation of chemical or biological networks that uses the quantitative relationships (stoichiometry) between reactants and products." []
+is_a: FLUXO:0000226 ! representation
+
+[Term]
+id: FLUXO:0000025
+name: forward flux
+def: "The reaction rate at which a specific chemical reaction proceeds from reactants to products." []
+comment: non-negative
+is_a: FLUXO:0000236 ! reaction rate
+
+[Term]
+id: FLUXO:0000026
+name: backward flux
+def: "The reaction rate at which a specific reaction proceeds from products to reactants." []
+comment: non-negative
+synonym: "reverse flux" EXACT []
+is_a: FLUXO:0000236 ! reaction rate
+
+[Term]
+id: FLUXO:0000027
+name: net flux
+def: "The reaction rate that denotes the difference between the forward and backward flux for a chemical reaction." []
+synonym: "net rate" EXACT []
+is_a: FLUXO:0000236 ! reaction rate
+
+[Term]
+id: FLUXO:0000028
+name: exchange flux
+def: "The reaction rate that denotes the minimum of the forward and backward fluxes of a chemical reaction." []
+comment: non-negative; This is different from exchange flux in flux balance analysis (make note in ontology)
+is_a: FLUXO:0000236 ! reaction rate
+
+[Term]
+id: FLUXO:0000029
+name: flux ratio
+def: "The data item that represents the relative proportion of metabolic flow directed into a specific pathway at a divergence point compared to the total flow or an alternative route at that same junction." []
+
+[Term]
+id: FLUXO:0000030
+name: degrees of freedom in stoichiometry matrix
+def: "A number of degrees of freedom that represents the number of free/independent fluxes that can be varied independently within the network, which is determined by the null space of the stoichiometric matrix." []
+comment: The dimension of this null space gives the number of fluxes needed to define all other fluxes.
+is_a: FLUXO:0000287 ! number of degrees of freedom
+relationship: IAO:0000136 FLUXO:0000173 ! is about stoichiometry matrix
+
+[Term]
+id: FLUXO:0000031
+name: isomer
+def: "A molecule that has the same atomic composition (molecular formula) but different line formulae or different stereochemical formulae and hence different physical and/or chemical properties." []
+is_a: FLUXO:0000170 ! molecule
+
+[Term]
+id: FLUXO:0000032
+name: isotopic labeling state
+def: "A data item that is the specific distribution of istopic atom in a metabolite pools at specific time." []
+synonym: "metabolite labeling pattern" EXACT []
+
+[Term]
+id: FLUXO:0000033
+name: pseudo-steady state assumption
+def: "The information content entity that describes the rate of change of an intracellular metabolite concentration is considered negligible, which holds when the metabolic flux through the metabolite pools is much larger than the change in their pool sizes over time." []
+synonym: "Metabolic Pseudo-Steady State" EXACT []
+
+[Term]
+id: FLUXO:0000034
+name: metabolic steady state
+def: "A steady state in which both metabolic fluxes and intracellular metabolite pool sizes are approximately constant over time." []
+is_a: FLUXO:0000177 ! steady state
+
+[Term]
+id: FLUXO:0000035
+name: isotopic transient state
+def: "A process of an isotopic labeling experiment where metabolite labeling patterns are not yet constant." []
+
+[Term]
+id: FLUXO:0000036
+name: isotopic steady state
+def: "A steady state when the distribution of a stable isotope label within a biological system has become and remains constant over time." []
+is_a: FLUXO:0000177 ! steady state
+
+[Term]
+id: FLUXO:0000037
+name: metabolic flux space sampling
+def: "A fluxomics simulation that performs stochastic process for characterizing the range of possible/feasible metabolic flux vectors." []
+synonym: "flux state sampling" EXACT []
+is_a: FLUXO:0000057 ! fluxomics simulation
+
+[Term]
+id: FLUXO:0000038
+name: fluxomics assay
+def: "A completely executed planned process that studies the metabolic fluxes of the reactions in a metabolic network." []
+relationship: BFO:0000050 FLUXO:0000162 ! part of fluxomics investigation
+relationship: RO:0000059 FLUXO:0000021 ! concretizes fluxomics method
+
+[Term]
+id: FLUXO:0000039
+name: flux balance analysis
+def: "The fluxomics investigation that predicts physiological phenotypes allowed by the underlying metabolic model, typically enforced by a metabolic goal (e.g., maximize growth rate)." []
+synonym: "FBA" EXACT []
+is_a: FLUXO:0000162 ! fluxomics investigation
+
+[Term]
+id: FLUXO:0000040
+name: metabolic flux analysis
+def: "The fluxomics investigation that employs a quantitative strategy based on a metabolic network and experimental data to determine intracellular reaction rates (fluxes) with the highest possible accuracy." []
+synonym: "MFA" EXACT []
+is_a: FLUXO:0000162 ! fluxomics investigation
+relationship: BFO:0000051 FLUXO:0000038 ! has part fluxomics assay
+relationship: BFO:0000051 FLUXO:0000046 ! has part isotope labeling experiment design
+
+[Term]
+id: FLUXO:0000041
+name: isotope-based metabolic flux analysis method
+def: "The metabolic flux analysis method that used to measure the rates of intracellular metabolic reactions in living cells using data from isotope labeling experiments." []
+synonym: "I-MFA" EXACT []
+is_a: FLUXO:0000021 ! fluxomics method
+relationship: RO:0000058 FLUXO:0000040 ! is concretized as metabolic flux analysis
+relationship: RO:0000058 FLUXO:0000049 ! is concretized as fluxomics isotope labeling experiment
+
+[Term]
+id: FLUXO:0000042
+name: 13C metabolic flux analysis method
+def: "The isotope-based metabolic flux analysis that estimates metabolic fluxes by tracking from the distribution of 13C isotopes in metabolites." []
+synonym: "13C-based metabolic flux analysis" EXACT []
+synonym: "13C-MFA" EXACT []
+is_a: FLUXO:0000041 ! isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000043
+name: isotopically stationary metabolic flux analysis method
+def: "The isotope-based metabolic flux analysis assumes isotopic steady state and metabolic steady state." []
+synonym: "IST-MFA" EXACT []
+is_a: FLUXO:0000041 ! isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000044
+name: isotopically non-stationary metabolic flux analysis method
+def: "The isotope-based metabolic flux analysis that assumes isotopic transient state and metabolic steady state." []
+synonym: "INST-13C-MFA" EXACT []
+synonym: "INST-MFA" EXACT []
+synonym: "Isotopic Non-Stationary MFA" EXACT []
+is_a: FLUXO:0000041 ! isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000045
+name: dynamic Isotope-based metabolic flux analysis method
+def: "The isotope-based metabolic flux analysis that assumes both isotopic and metabolic dynamic state." []
+is_a: FLUXO:0000041 ! isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000046
+name: isotope labeling experiment design
+def: "The experimental design and studies that aims to increase the information content of an isotope labeling experiment." []
+is_a: FLUXO:0000178 ! experimental design and studies
+relationship: BFO:0000050 FLUXO:0000049 ! part of fluxomics isotope labeling experiment
+
+[Term]
+id: FLUXO:0000047
+name: optimal isotope labeling experimental design
+def: "The isotope labeling experiment design that achieves targeted improvement of the information gain of an isotope labeling experiment." []
+is_a: FLUXO:0000046 ! isotope labeling experiment design
+
+[Term]
+id: FLUXO:0000048
+name: tracer selection
+def: "The isotope labeling experiment design that strategically choose isotopic tracers (molecule, labeling position, isotope) based on target pathway thermodynamics and atom transitions." []
+is_a: FLUXO:0000046 ! isotope labeling experiment design
+
+[Term]
+id: FLUXO:0000049
+name: fluxomics isotope labeling experiment
+def: "A fluxoimcs assay where biological entities are fed stable isotopic tracers (like 13C) which are then distributed throughout the metabolic network via metabolic activity." []
+synonym: "fluxomics stable isotope labeling experiment" EXACT []
+synonym: "ILE" BROAD []
+synonym: "SIL" BROAD []
+synonym: "SILE" BROAD []
+synonym: "Stable-isotope labeling experiment" BROAD []
+is_a: FLUXO:0000038 ! fluxomics assay
+relationship: BFO:0000051 FLUXO:0000046 ! has part isotope labeling experiment design
+relationship: RO:0000057 FLUXO:0000134 ! has participant isotopically labelled molecular entity
+relationship: RO:0000057 FLUXO:0000176 ! has participant isotopic tracer
+relationship: RO:0000059 FLUXO:0000041 ! concretizes isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000050
+name: parallel labeling experiments
+def: "The fluxomics isotope labeling experiment where different isotopic tracers with distinct labeling patterns or tracer mixtures are supplied to resolve overlapping metabolic routes." []
+is_a: FLUXO:0000049 ! fluxomics isotope labeling experiment
+disjoint_from: FLUXO:0000051 ! single labeling experiment
+
+[Term]
+id: FLUXO:0000051
+name: single labeling experiment
+def: "A fluxomics isotope labeling experiment where a single tracer or tracer mixture is supplied." []
+is_a: FLUXO:0000049 ! fluxomics isotope labeling experiment
+
+[Term]
+id: FLUXO:0000052
+name: product ion
+def: "A molecular entity that is an electrically charged product of reaction of a particular parent ion." []
+comment: In general such ions have a direct relationship to a particular precursor ion and indeed may relate to a unique state of the precursor ion. The reaction need not necessarily involve fragmentation. It could, for example, involve a change in the number of charges carried. Thus, all fragment ions are daughter ions, but not all daughter ions are necessarily fragment ions.
+synonym: "daughter ion" EXACT []
+is_a: FLUXO:0000171 ! molecular entity
+relationship: RO:0002434 FLUXO:0000186 ! interacts with mass spectrometer
+property_value: IAO:0000119 "https://goldbook.iupac.org/terms/view/D01524" xsd:string
+
+[Term]
+id: FLUXO:0000053
+name: parent ion
+def: "A molecular entity that is an electrically charged molecular moiety which may dissociate to form fragments, one or more of which may be electrically charged, and one or more neutral species." []
+comment: A parent ion may be a molecular ion or an electrically charged fragment of a molecular ion.
+synonym: "precursor ion" EXACT []
+is_a: FLUXO:0000171 ! molecular entity
+relationship: RO:0002434 FLUXO:0000186 ! interacts with mass spectrometer
+property_value: IAO:0000119 "https://goldbook.iupac.org/terms/view/P04406" xsd:string
+
+[Term]
+id: FLUXO:0000054
+name: tandem isotopologue distribution
+def: "An isotopologue distribution that is of the relative abundance of different isotopomers in both a parent molecule and its fragments, obtained through tandem mass spectrometry (MS/MS)." []
+is_a: FLUXO:0000143 ! isotopologue distribution
+
+[Term]
+id: FLUXO:0000055
+name: fractional enrichment
+def: "An isotopic information that is the percentage of molecules in a given metabolite pool that contain one or more isotopic labels from a tracer." []
+synonym: "specific enrichment" EXACT []
+is_a: FLUXO:0000141 ! isotopic information
+relationship: RO:0017010 FLUXO:0000149 ! specified by information cumomer representation
+property_value: IAO:0000112 "e.g. it can be represented using cumonomer representation as \"x1x/(x0x + x1x)\"." xsd:string
+
+[Term]
+id: FLUXO:0000056
+name: sampling time
+def: "A zero-dimensional temporal region where a sample is taken from the biological experiment for analysis." []
+
+[Term]
+id: FLUXO:0000057
+name: fluxomics simulation
+def: "A model parameter estimation that runs a metabolic flux analysis method on a metabolic network model and/or experimental data using a fluxomics software, producing a flux solution and associated statistics." []
+relationship: RO:0002333 FLUXO:0000102 ! enabled by fluxomics software
+
+[Term]
+id: FLUXO:0000058
+name: compartment
+def: "A three-dimensional spatial region that is a physically or functionally distinct space (e.g., Cytosol, Mitochondria, Metabolon)." []
+property_value: IAO:0000116 "Maybe change name to biological compartment or cellular compartment" xsd:string
+
+[Term]
+id: FLUXO:0000059
+name: biomass composition
+def: "A system biology representation that defines the stoichiometric representation of cellular macromolecules (e.g. Protein, DNA, RNA, Lipids)." []
+is_a: FLUXO:0000061 ! pseudo metabolite pool
+
+[Term]
+id: FLUXO:0000060
+name: metabolite pool
+def: "A system biology representation that is a set of one or several metabolites." []
+is_a: FLUXO:0000198 ! systems biology representation
+relationship: FLUXO:0000301 FLUXO:0000172 ! is model of metabolite
+
+[Term]
+id: FLUXO:0000061
+name: pseudo metabolite pool
+def: "A system biology representation that is a metabolite pool in the metabolic network that does not have any biological counterpart and is purely introduced for modeling reason." []
+is_a: FLUXO:0000198 ! systems biology representation
+
+[Term]
+id: FLUXO:0000062
+name: metabolite pool size
+def: "An data entity that is an amount of molecular entity available to a particular metabolic process." []
+
+[Term]
+id: FLUXO:0000063
+name: metabolic reaction pool
+def: "A system biology representation that the aggregate of metabolic reactions in a metabolic network model." []
+synonym: "reaction pool" EXACT []
+is_a: FLUXO:0000198 ! systems biology representation
+relationship: FLUXO:0000301 FLUXO:0000005 ! is model of metabolic reaction
+
+[Term]
+id: FLUXO:0000064
+name: molecular symmetry
+def: "A molecule property where certain atoms are chemically indistinguishable, making a unique atom numbering impossible." []
+synonym: "symmetry" BROAD []
+is_a: FLUXO:0000270 ! molecule property
+
+[Term]
+id: FLUXO:0000065
+name: pseudo metabolic reaction
+def: "A system biology representation that models a metabolic reaction that does not have any biological counterpart." []
+is_a: FLUXO:0000198 ! systems biology representation
+
+[Term]
+id: FLUXO:0000066
+name: lumped metabolic reaction
+def: "A lumped reaction is a simplified reaction that merge multiple chemical reactions into a single reaction for modeling reason." []
+synonym: "lumped reaction" BROAD []
+is_a: FLUXO:0000065 ! pseudo metabolic reaction
+
+[Term]
+id: FLUXO:0000067
+name: biomass reaction
+def: "A pseudo metabolic reaction that is an abstract reaction that represents consumption of metabolites for cellular growth in a metabolic model." []
+is_a: FLUXO:0000065 ! pseudo metabolic reaction
+
+[Term]
+id: FLUXO:0000068
+name: linear flux constraint
+def: "A mathematical expression that represents the limits on metabolic flux value on reactions." []
+is_a: FLUXO:0000223 ! mathematical expression
+
+[Term]
+id: FLUXO:0000069
+name: atom identifier
+def: "An identifier that is a unique position to atoms in a molecule to track its position within the molecule." []
+synonym: "atom address" EXACT []
+property_value: seeAlso "https://www.inchi-trust.org/download/104/InChI_TechMan.pdf" xsd:string
+
+[Term]
+id: FLUXO:0000070
+name: atom mapping
+def: "A representation that is the precise mapping of how each relevant atom in a substrate is rearranged to form the product metabolites during a reaction. It usually excludes hydrogens." []
+is_a: FLUXO:0000226 ! representation
+relationship: BFO:0000051 FLUXO:0000154 ! has part atom map
+relationship: FLUXO:0000301 FLUXO:0000166 ! is model of chemical reaction
+
+[Term]
+id: FLUXO:0000071
+name: atom transition network
+def: "An object aggregate that is made of atom transitions for all reactions making up a metabolic network model." []
+relationship: BFO:0000051 FLUXO:0000155 ! has part atom transition
+property_value: IAO:0000116 "Not a material entity. Systems biology representation" xsd:string
+
+[Term]
+id: FLUXO:0000072
+name: atom transition annotation
+def: "The identifier that records the annotation types for atom transition." []
+
+[Term]
+id: FLUXO:0000073
+name: letter-based atom transition annotation
+def: "An atom transition annotation that uses a-z and A-Z to represent the order of the tracked atoms in a molecule." []
+is_a: FLUXO:0000072 ! atom transition annotation
+
+[Term]
+id: FLUXO:0000074
+name: fluxml-based atom transition annotation
+def: "An atom transition annotation that uses FluxML definition to track atom mapping in a reaction." []
+is_a: FLUXO:0000072 ! atom transition annotation
+
+[Term]
+id: FLUXO:0000075
+name: InChI-based atom transition annotation
+def: "An atom transition annotation that uses InChI specification to track atoms in a reaction." []
+is_a: FLUXO:0000072 ! atom transition annotation
+
+[Term]
+id: FLUXO:0000076
+name: SMILE-based atom transition annotation
+def: "An atom transition annotation that uses SMILE specification to track atoms in a reaction." []
+is_a: FLUXO:0000072 ! atom transition annotation
+
+[Term]
+id: FLUXO:0000077
+name: symmetric atom transition
+def: "An atom transition that represents the complementary atom transition in a reaction that involves symmetric compound." []
+synonym: "scrambling" EXACT []
+is_a: FLUXO:0000155 ! atom transition
+
+[Term]
+id: FLUXO:0000078
+name: labelled source
+def: "An object aggregate that is made of differentially labeled substrate isotopomers (e.g., % [1-¹³C]glucose + % [U-¹³C]glucose) administered in an ILE." []
+synonym: "commercial isotopically labelled molecular entity mixture" EXACT []
+synonym: "tracer mixture" EXACT []
+relationship: BFO:0000051 FLUXO:0000176 ! has part isotopic tracer
+
+[Term]
+id: FLUXO:0000079
+name: isotopic tracer property
+def: "The quality that defines the characteristics of the isotopic tracer." []
+relationship: RO:0000080 FLUXO:0000176 ! quality of isotopic tracer
+
+[Term]
+id: FLUXO:0000080
+name: tracer chemical purity
+def: "An isotopic tracer property that is the chemical purity specified in the label input." []
+synonym: "chemical purity" EXACT []
+is_a: FLUXO:0000079 ! isotopic tracer property
+property_value: IAO:0000112 "e.g. The chemical purity of 1,2-13C-Glucose is 99% meaning the glucose is 99% out of all label input." xsd:string
+property_value: IAO:0000116 "Could be changed to \"Chemical purity\" and moved up" xsd:string
+
+[Term]
+id: FLUXO:0000081
+name: tracer cost
+def: "An isotopic tracer property that gives the price of the isotopic tracer molecular entity." []
+is_a: FLUXO:0000079 ! isotopic tracer property
+property_value: IAO:0000116 "All: Isotopic tracer property that defines the price of the isotopic tracer molecular entity.\n\nBUT is this the object property? When to use it?" xsd:string
+property_value: IAO:0000116 "Could be changed to \"Cost\" and make it general" xsd:string
+
+[Term]
+id: FLUXO:0000082
+name: fluxomics software parameter
+def: "A fluxomics parameter that is required to execute fluxomics software for a fluxomics investigation." []
+is_a: FLUXO:0000210 ! fluxomics parameter
+relationship: FLUXO:0000285 FLUXO:0000102 ! is specified data input of fluxomics software
+relationship: IAO:0000136 FLUXO:0000162 ! is about fluxomics investigation
+
+[Term]
+id: FLUXO:0000083
+name: growth rate
+def: "A measurement datum that measures the rate of biomass formation." []
+xref: http://purl.obolibrary.org/obo/PATO_0001492
+property_value: IAO:0000116 "Te: Isn't this a quality? refer to PATO:0001492\nSergi: I don't think so, it's a number measuring how fast cells are growing. A quality does not require any process to be realized according to definition, and growth rate depends on a lot of factors and other stuff. If this was max growth rate, ir would be a realizable entity." xsd:string
+
+[Term]
+id: FLUXO:0000084
+name: specific growth rate
+def: "A growth rate that measures the biomass increase per unit of existing biomass per unit of time." []
+is_a: FLUXO:0000083 ! growth rate
+
+[Term]
+id: FLUXO:0000085
+name: yield
+def: "A measurement datum that represents the efficiency of substrate conversion into product/biomass (mass or molar basis)." []
+
+[Term]
+id: FLUXO:0000086
+name: weighted sum of squared residuals
+def: "A statistic that measures the gap between observed values and model predictions, and unlike ordinary least squares, it assigns a specific weight to each data point." []
+is_a: FLUXO:0000207 ! statistic
+property_value: IAO:0000112 "It is used in flux estimation, specifically the variance-weighted sum of squares residuals, which is minimized to quantify fluxes. It serves as a key indicator of goodness-of-fit to reflect the certainty with which metabolic fluxes were determined." xsd:string
+
+[Term]
+id: FLUXO:0000087
+name: labeling simulation
+def: "A data transformation that used to obtain labeling data from a given metabolic models and presumed fluxes/metabolite concentrations." []
+synonym: "forward simulation" EXACT []
+
+[Term]
+id: FLUXO:0000088
+name: metabolic flux estimation
+def: "A model parameter estimation that quantifies metabolic fluxes including their uncertainties." []
+synonym: "metabolic flux fitting" EXACT []
+is_a: FLUXO:0000057 ! fluxomics simulation
+
+[Term]
+id: FLUXO:0000089
+name: labeling measurement model
+def: "A statistical mdoel that is to describe how to compute a labeling measurement based on the simulated labeling state space." []
+comment: It is usually represented as a matrix.
+synonym: "measurement model" BROAD []
+is_a: FLUXO:0000216 ! statistical model
+
+[Term]
+id: FLUXO:0000090
+name: simulated isotopic measurement
+def: "A measurement value of a measured quantity as obtained by a forward simulation of the metabolic network model." []
+synonym: "simulated measurement" BROAD []
+
+[Term]
+id: FLUXO:0000091
+name: error model
+def: "A statistical model that is to calculate the measurement standard deviation of a simulated measurement." []
+is_a: FLUXO:0000216 ! statistical model
+
+[Term]
+id: FLUXO:0000092
+name: correction matrix
+def: "A matrix that is used to remove the contribution of naturally occurring heavy isotopes (e.g., 13C, 15N, 18O) from raw mass spectrometry data." []
+synonym: "Deconvolution matrix" EXACT []
+is_a: FLUXO:0000217 ! matrix
+
+[Term]
+id: FLUXO:0000093
+name: lumped measurements
+def: "Lumped measurements are the measurements corresponding to the linear combination of two or more metabolites." []
+
+[Term]
+id: FLUXO:0000094
+name: nuisance parameter
+def: "A fluxomics model parameter that is not of primary interest but must be included to correctly define the model and analyze the parameters that are of interest." []
+is_a: FLUXO:0000160 ! fluxomics model parameter
+
+[Term]
+id: FLUXO:0000095
+name: D-parameter
+def: "A nuisance parameter that is to model residual naturally labeled tracer in an input pool." []
+is_a: FLUXO:0000094 ! nuisance parameter
+
+[Term]
+id: FLUXO:0000096
+name: G-parameter
+def: "A nuisance parameter that is to account for residual naturally labeled fractions in a measurement group." []
+is_a: FLUXO:0000094 ! nuisance parameter
+
+[Term]
+id: FLUXO:0000097
+name: experimental design criterion
+def: "A mathematical expression that represents a criterion value for a proposed experimental design." []
+is_a: FLUXO:0000223 ! mathematical expression
+
+[Term]
+id: FLUXO:0000098
+name: FML format
+def: "An XML format that is defined by FluxML specification for modeling metabolic flux analysis." []
+is_a: FLUXO:0000261 ! XML format
+relationship: RO:0017010 FLUXO:0000099 ! specified by information FluxML specification
+
+[Term]
+id: FLUXO:0000099
+name: FluxML specification
+def: "A data format specification for creating, validating, and exchanging metabolic flux analysis models in 13CFlux Software." []
+comment: It is designed with the aim of providing a standard document format for creating, validating and reliable exchanging of arbitrary metabolic models across different simulation tools.
+relationship: RO:0017002 FLUXO:0000098 ! information specifies FML format
+
+[Term]
+id: FLUXO:0000100
+name: FTBL specification
+def: "A data format specification that is a tabular text-based file format specification for defining metabolic reaction networks and isotopic labeling data used in 13C metabolic flux analysis." []
+comment: The format is obsolete.
+relationship: RO:0017002 FLUXO:0000232 ! information specifies TSV format
+
+[Term]
+id: FLUXO:0000101
+name: MTF specification
+def: "A data format specification for metabolic tracer flux data exchange in metabolic flux analysis for Influx_si software." []
+relationship: RO:0017002 FLUXO:0000232 ! information specifies TSV format
+
+[Term]
+id: FLUXO:0000102
+name: fluxomics software
+def: "A software designed to perform, support, or facilitate metabolic flux computations." []
+relationship: FLUXO:0000266 FLUXO:0000082 ! has specified data input fluxomics software parameter
+relationship: FLUXO:0000266 FLUXO:0000227 ! has specified data input data file
+relationship: FLUXO:0000284 FLUXO:0000227 ! has specified data output data file
+
+[Term]
+id: FLUXO:0000103
+name: metabolic flux analysis software
+def: "The fluxomics software specifically designed to quantitatively estimate intracellular metabolic fluxes from an isotopic metabolic flux analysis investigation." []
+synonym: "MFA Software" EXACT []
+is_a: FLUXO:0000102 ! fluxomics software
+relationship: FLUXO:0000266 FLUXO:0000125 ! has specified data input metabolic model
+relationship: FLUXO:0000266 FLUXO:0000141 ! has specified data input isotopic information
+relationship: FLUXO:0000266 FLUXO:0000155 ! has specified data input atom transition
+relationship: FLUXO:0000284 FLUXO:0000023 ! has specified data output flux vector
+relationship: FLUXO:0000284 FLUXO:0000159 ! has specified data output flux solution
+relationship: FLUXO:0000284 FLUXO:0000207 ! has specified data output statistic
+relationship: RO:0000053 FLUXO:0000242 ! has characteristic software property
+relationship: RO:0000059 FLUXO:0000021 ! concretizes fluxomics method
+
+[Term]
+id: FLUXO:0000104
+name: tcaCALC & SIM
+def: "A metabolic flux analysis software that is a MATLAB-based software for estimating TCA cycle fluxes from 13C NMR isotopomer data (Chance et al., J Biol Chem, 1983; Malloy et al., Am J Physiol, 1990)." []
+comment: SIM performs forward simulation of isotopic labeling in the citric acid cycle; tcaCALC performs flux calculation by fitting simulated isotopomer patterns to observed NMR data.
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://invivometabolism.org/tca.html" xsd:string
+
+[Term]
+id: FLUXO:0000105
+name: 13CFLUX
+def: "A metabolic flux analysis software that is a universal software framework for 13C-based metabolic flux analysis that supports modeling, simulation, design, evaluation, and statistical analysis of 13C-labeling experiments using a cumomer-based simulation approach (Wiechert et al., Metab Eng, 2001, DOI: 10.1006/mben.2001.0188)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://www.13cflux.net/13cflux/index.html" xsd:string
+
+[Term]
+id: FLUXO:0000106
+name: 13CFLUXv3
+def: "A metabolic flux analysis software that is a third-generation, high-performance simulator supporting both isotopically stationary and non-stationary 13C-MFA, featuring dual EMU/cumomer representations, multi-isotope tracer support, Bayesian uncertainty quantification, and a Python API (Stratmann et al., Bioinformatics, 2025, DOI: 10.1093/bioinformatics/btaf630)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://x3cflux.readthedocs.io/en/latest/" xsd:string
+
+[Term]
+id: FLUXO:0000107
+name: influx_s
+def: "A metabolic flux analysis software that for estimating metabolic fluxes from stationary isotopic labeling data using the NLSIC algorithm, which provides more reliable convergence and better numerical accuracy than other optimization methods (Sokol et al., Bioinformatics, 2012, DOI: 10.1093/bioinformatics/bts705)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://influx-si.readthedocs.io/en/latest/intro.html#influx-s" xsd:string
+
+[Term]
+id: FLUXO:0000108
+name: influx_si
+def: "A metabolic flux analysis software that is an extended version of influx_s that handles isotopically non-stationary labeling experiments, sharing the same NLSIC fitting algorithm and input/output formats with unconditional stability during ODE solving (Sokol et al., Bioinformatics, 2012, DOI: 10.1093/bioinformatics/bts705)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://influx-si.readthedocs.io/en/latest/index.html" xsd:string
+
+[Term]
+id: FLUXO:0000109
+name: INCA2
+def: "A metabolic flux analysis software that is an updated MATLAB-based 13C MFA software building on the INCA platform, supporting both steady-state and isotopically non-stationary MFA with the EMU framework, parallel labeling experiments, and improved computational capabilities (Young, Bioinformatics, 2014, DOI: 10.1093/bioinformatics/btu015)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://mfa.vueinnovations.com/" xsd:string
+
+[Term]
+id: FLUXO:0000110
+name: Open Mebius
+def: "A metabolic flux analysis software that is an open-source MATLAB-based software for both conventional and isotopically nonstationary 13C-MFA, featuring auto-generation of metabolic models from Excel configuration worksheets and using the Levenberg-Marquardt method for flux estimation (Kajihata et al., BioMed Res Int, 2014, DOI: 10.1155/2014/627014)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://en.metabolic-engineering.jp/page/software/openmebius" xsd:string
+
+[Term]
+id: FLUXO:0000111
+name: mfapy
+def: "A metabolic flux analysis software that is an open-source Python package for 13C-MFA supporting the EMU framework, INST-MFA, parallel labeling experiments, and a Bayesian Metropolis-Hastings approach, providing flexibility for custom analysis workflows and experimental design via simulation (Matsuda et al., Metab Eng Commun, 2021, DOI: 10.1016/j.mec.2021.e00177)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/fumiomatsuda/mfapy" xsd:string
+
+[Term]
+id: FLUXO:0000112
+name: OpenFLUX2
+def: "A metabolic flux analysis software that is an extended version of OpenFLUX with support for parallel labeling experiments, extended statistical analysis, structural identifiability analysis, Monte Carlo confidence interval estimation, and experimental design optimization (Shupletsov et al., Microb Cell Fact, 2014, DOI: 10.1186/s12934-014-0152-x)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://sourceforge.net/projects/openflux2/" xsd:string
+
+[Term]
+id: FLUXO:0000113
+name: sysmetab
+def: "A metabolic flux analysis software that is a Scilab-based open-source software for 13C metabolic flux analysis that provides tools for isotopomer modeling and flux estimation." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://gitlab.com/scilab/forge/sysmetab/" xsd:string
+
+[Term]
+id: FLUXO:0000114
+name: WUFlux
+def: "A metabolic flux analysis software that is a MATLAB-based 13C MFA software with graphical user interface that supports steady-state 13C-MFA with user-friendly data input and flux visualization (He et al., Biotechnol Bioeng, 2016, DOI: 10.1002/bit.25958)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://tang.eece.wustl.edu/ToolDevelopment.html" xsd:string
+
+[Term]
+id: FLUXO:0000115
+name: FluxPyt
+def: "A metabolic flux analysis software that is a Python-based software package for stationary 13C metabolic flux analysis to estimate intracellular flux distributions." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://sourceforge.net/projects/fluxpyt" xsd:string
+
+[Term]
+id: FLUXO:0000116
+name: EMUlator
+def: "A metabolic flux analysis software that is an EMU-based isotope simulator that uses adjacency matrix representation to efficiently simulate isotopic labeling patterns, enabling rapid forward simulation of mass isotopomer distributions for metabolic flux analysis and experimental design (Wu et al., Front Microbiol, 2019, DOI: 10.3389/fmicb.2019.00922)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://doi.org/10.3389/fmicb.2019.00922" xsd:string
+
+[Term]
+id: FLUXO:0000117
+name: freeflux
+def: "A metabolic flux analysis software that is a Python package for 13C metabolic flux analysis at both isotopic steady state and transient state, supporting flux estimation, labeling pattern simulation, flux balance/variability analysis, and 15N labeling data (Wu et al., ACS Synth Biol, 2023, DOI: 10.1021/acssynbio.3c00265)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/Chaowu88/freeflux" xsd:string
+
+[Term]
+id: FLUXO:0000118
+name: eiFlux
+def: "A metabolic flux analysis software that is a MATLAB-based software that formulates isotope-assisted MFA as an equality-constrained nonlinear program, improving scalability and robustness compared to traditional formulations (Lugar and Sriram, PLOS Comput Biol, 2022, DOI: 10.1371/journal.pcbi.1009831)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: seeAlso "https://doi.org/10.1371/journal.pcbi.1009831" xsd:string
+
+[Term]
+id: FLUXO:0000119
+name: CeCaFlux
+def: "A metabolic flux analysis software that is a web-based server for INST-13C MFA with standardized and visual flux analysis, using evolutionary optimization in parallel and providing real-time visualization of the flux optimization process (Liu et al., Bioinformatics, 2022, DOI: 10.1093/bioinformatics/btac341)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/zhzhd82/CeCaFLUX" xsd:string
+
+[Term]
+id: FLUXO:0000120
+name: BayFlux
+def: "A metabolic flux analysis software that is an open-source software library for Bayesian genome-scale 13C metabolic flux analysis, using MCMC Bayesian inference with COBRApy for handling genome-scale models and supporting Two Scale 13C MFA (Backman et al., PLOS Comput Biol, 2023, DOI: 10.1371/journal.pcbi.1011111)." []
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/JBEI/bayflux" xsd:string
+
+[Term]
+id: FLUXO:0000121
+name: Freeflux specification
+def: "A data format specification for defining metabolic models and experimental data used by the FreeFlux software package." []
+relationship: RO:0017002 FLUXO:0000230 ! information specifies CSV format
+
+[Term]
+id: FLUXO:0000122
+name: INCA specification
+def: "A data format specification for defining metabolic models and experimental data used by the INCA software package." []
+relationship: RO:0017002 FLUXO:0000231 ! information specifies MAT format
+
+[Term]
+id: FLUXO:0000123
+name: metabolic flux
+def: "A data item which represents the speed of a metabolic reaction." []
+comment: it is commonly refer to flux in MFA, even though formally it is a rate. The actual definition of metabolic flux is the amount of metabolite which is converted per time unit. It is calculated as the reaction rate times stoichiometric coefficient, often normalized to a specific quantity (e.g. cell dry weight or volume of a compartment)
+synonym: "flux" EXACT []
+relationship: IAO:0000136 FLUXO:0000005 ! is about metabolic reaction
+
+[Term]
+id: FLUXO:0000124
+name: external flux
+def: "The metabolic flux of a metabolic reaction that occurs across metabolic network model boundaries." []
+comment: In the FBA field, the exchange flux means the external flux.
+synonym: "boundary flux" EXACT []
+synonym: "external rate" EXACT []
+is_a: FLUXO:0000004 ! transport flux
+
+[Term]
+id: FLUXO:0000125
+name: metabolic model
+def: "A system biology representation that is a model representation of metabolism, which describes the biochemical reactions occurring within a cell or organism, connecting its genome to its physiology." []
+is_a: FLUXO:0000198 ! systems biology representation
+
+[Term]
+id: FLUXO:0000126
+name: metabolism
+def: "A process that is the set of physical or chemical processes that occur within a living organism in order to maintain life." []
+
+[Term]
+id: FLUXO:0000127
+name: metabolic network model
+def: "A metabolic model that represents a set of interconnected pathways of metabolic reactions within a biological entity." []
+synonym: "network" EXACT []
+is_a: FLUXO:0000125 ! metabolic model
+relationship: RO:0017002 FLUXO:0000278 ! information specifies metabolic network
+
+[Term]
+id: FLUXO:0000128
+name: transport process
+def: "A metabolic reaction that is the transfer of a metabolite or metabolites between two compartments." []
+synonym: "transport reaction" EXACT []
+is_a: FLUXO:0000005 ! metabolic reaction
+
+[Term]
+id: FLUXO:0000129
+name: pseudomolecule
+def: "A system biology representation that is an imaginary construct of a molecular entity that exist purely for modeling reasons (e.g. biomass)." []
+is_a: FLUXO:0000198 ! systems biology representation
+
+[Term]
+id: FLUXO:0000130
+name: relative exchange flux
+def: "A exchange flux that represents the minimum of the forward and backward fluxes of a chemical reaction, calculated by convention as a/(1+a), where a is the exchange flux." []
+is_a: FLUXO:0000028 ! exchange flux
+
+[Term]
+id: FLUXO:0000131
+name: tracer isotopologue
+def: "An isotopologue that differs only in isotopic composition by a single element (e.g. 13C-1-glucose and 13C-2-glucose)." []
+is_a: FLUXO:0000174 ! isotopologue
+property_value: IAO:0000112 "In MS, this is the output of the natural isotope abundance correction." xsd:string
+
+[Term]
+id: FLUXO:0000132
+name: tracer element
+def: "An isotopic tracer property that denotes the labelled chemical element for the fluxomics investigation (e.g. Carbon in a 13C labelled molecular entity)." []
+is_a: FLUXO:0000079 ! isotopic tracer property
+
+[Term]
+id: FLUXO:0000133
+name: mass number
+def: "A data entity that describes the total number of heavy particles (protons and neutrons jointly called nucleons) in the atomic nucleus." []
+comment: Symbol m in mass spectrometry.
+synonym: "nucleon number" EXACT []
+property_value: IAO:0000116 "Duplicate of monoisotopic molecular mass. Maybe make it broad synonym?" xsd:string
+
+[Term]
+id: FLUXO:0000134
+name: isotopically labelled molecular entity
+def: "A molecular entity with isotopic tracer at specific atom number(s)." []
+synonym: "isotopically labelled molecule" EXACT []
+is_a: FLUXO:0000171 ! molecular entity
+relationship: RO:0000053 FLUXO:0000079 ! has characteristic isotopic tracer property
+
+[Term]
+id: FLUXO:0000135
+name: commercial isotopically labelled molecular entity
+def: "An isotopically labelled molecular entity that is the market version of the isotopically labelled molecule with manufacturer, purity and cost properties." []
+synonym: "commercially labelled molecule" EXACT []
+is_a: FLUXO:0000134 ! isotopically labelled molecular entity
+property_value: IAO:0000112 "e.g. the purchased [1-¹³C]glucose with purity of 99 atom % 13C." xsd:string
+
+[Term]
+id: FLUXO:0000136
+name: label input
+def: "An isotopic information that is the input of the labelled source for the metabolic network model." []
+is_a: FLUXO:0000141 ! isotopic information
+
+[Term]
+id: FLUXO:0000137
+name: tracer position
+def: "An isotopic tracer property that specifies the atom number of the isotopic tracer in the isotopically labelled molecular entity." []
+is_a: FLUXO:0000079 ! isotopic tracer property
+
+[Term]
+id: FLUXO:0000138
+name: label input proportion
+def: "An isotopic tracer property that is the percentage of isotopically labelled molecular entity in a labelled source." []
+relationship: RO:0000080 FLUXO:0000136 ! quality of label input
+
+[Term]
+id: FLUXO:0000139
+name: tracer isotopic purity
+def: "An isotopic tracer property that specifies the purity of the isotopic tracer in the commercial isotopically labelled molecular entity." []
+is_a: FLUXO:0000079 ! isotopic tracer property
+property_value: IAO:0000112 "e.g. the isotopic purity for 1,2-13C-Glucose is 99% on position 1 and 2." xsd:string
+
+[Term]
+id: FLUXO:0000140
+name: mean enrichment
+def: "An isotopic information that is the average fraction of isotopically labeled atoms in a metabolite pool, calculated as the weighted sum of isotopologue abundances divided by the maximum possible number of label incorporations." []
+comment: Pierre: An average content of isotopic tracer element in the molecule that is calculated from isotopologue distribution.
+is_a: FLUXO:0000141 ! isotopic information
+
+[Term]
+id: FLUXO:0000141
+name: isotopic information
+def: "An information entity that contains details necessary to describe isotope or isotopologue information." []
+relationship: RO:0017002 FLUXO:0000171 ! information specifies molecular entity
+
+[Term]
+id: FLUXO:0000142
+name: isotopic composition
+def: "An isotopic information that describes the isotopic content of the molecule." []
+is_a: FLUXO:0000141 ! isotopic information
+property_value: IAO:0000112 "e.g. percentage of 1,13C-Glucose in the total pool of Glucose in labbel input." xsd:string
+
+[Term]
+id: FLUXO:0000143
+name: isotopologue distribution
+def: "An isotopic information that is the relative abundances of molecule isotopologues." []
+synonym: "ID" EXACT []
+synonym: "isotopologue fractional abundance" EXACT []
+synonym: "mass ditribution vector" EXACT []
+synonym: "MDV" EXACT []
+synonym: "MID" EXACT []
+is_a: FLUXO:0000141 ! isotopic information
+relationship: RO:0017010 FLUXO:0000150 ! specified by information elementary metabolite unit representation
+
+[Term]
+id: FLUXO:0000144
+name: isotopomer distribution
+def: "An isotopic information that is the abundance of isotopomers relative to the abundance of the complete set or subset of isotopic species." []
+is_a: FLUXO:0000141 ! isotopic information
+relationship: RO:0017010 FLUXO:0000148 ! specified by information isotopomer representation
+
+[Term]
+id: FLUXO:0000145
+name: cumomer distribution
+def: "An isotopic information that is the abundance of cumomer relative to the abundance of the complete set or subset of isotopic species." []
+is_a: FLUXO:0000141 ! isotopic information
+relationship: RO:0017010 FLUXO:0000149 ! specified by information cumomer representation
+
+[Term]
+id: FLUXO:0000146
+name: isotopic state-space representation
+def: "A representation that is of isotopic state of a metabolite." []
+is_a: FLUXO:0000226 ! representation
+
+[Term]
+id: FLUXO:0000147
+name: isotopic state-space
+def: "A representation that is the space of all isotopic forms of a metabolite." []
+is_a: FLUXO:0000226 ! representation
+relationship: FLUXO:0000301 FLUXO:0000031 ! is model of isomer
+
+[Term]
+id: FLUXO:0000148
+name: isotopomer representation
+def: "An isotopic state-space representation that models positional labeling by a binary number (0: non-labeled, 1: labeled)." []
+is_a: FLUXO:0000146 ! isotopic state-space representation
+
+[Term]
+id: FLUXO:0000149
+name: cumomer representation
+def: "An isotopic state-space representation that models positional labeling by a state based on three possibilities: 0 represents unlabeled, 1 represents labeled or x: either labeled or unlabeled." []
+is_a: FLUXO:0000146 ! isotopic state-space representation
+
+[Term]
+id: FLUXO:0000150
+name: elementary metabolite unit representation
+def: "An isotopic state-space representation that models the mass differences due to labeling of a compound fragment. The fragment is defined by a binary number (position is/is not part of the fragment)." []
+synonym: "EMU" EXACT []
+is_a: FLUXO:0000146 ! isotopic state-space representation
+
+[Term]
+id: FLUXO:0000151
+name: amount
+def: "A measurement datum that measures the number of a particular countable entity." []
+xref: http://purl.obolibrary.org/obo/PATO_0000070
+
+[Term]
+id: FLUXO:0000152
+name: flux equality constraint
+def: "A linear flux constraint that is the fixed value for linear combination of fluxes." []
+is_a: FLUXO:0000068 ! linear flux constraint
+
+[Term]
+id: FLUXO:0000153
+name: flux inequality constraint
+def: "A linear flux constraint that represents the upper or lower bound of linear combinations of fluxes." []
+is_a: FLUXO:0000068 ! linear flux constraint
+
+[Term]
+id: FLUXO:0000154
+name: atom map
+def: "A representation that consists of a set of all atom identifiers considered for a molecule." []
+is_a: FLUXO:0000226 ! representation
+relationship: FLUXO:0000301 FLUXO:0000171 ! is model of molecular entity
+
+[Term]
+id: FLUXO:0000155
+name: atom transition
+def: "The representation that records the precise bijection of how each relevant atom identifier in a substrate is rearranged to form the product during a reaction." []
+is_a: FLUXO:0000226 ! representation
+relationship: BFO:0000051 FLUXO:0000070 ! has part atom mapping
+
+[Term]
+id: FLUXO:0000156
+name: measurement uncertainty
+def: "A statistic that is the inherent variability of repeated observation measurements of a quantity including quantities evaluated by statistical methods and by other means." []
+xref: http://purl.obolibrary.org/obo/NCIT_C71478
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000157
+name: flux uncertainty quantification method
+def: "A metabolic flux analysis method that is used to quantify the flux uncertainty estimate." []
+relationship: IAO:0000136 FLUXO:0000005 ! is about metabolic reaction
+
+[Term]
+id: FLUXO:0000158
+name: flux uncertainty estimate
+def: "A statistic that quantify the uncertainty of the flux solution." []
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000159
+name: flux solution
+def: "A data entity that specifies the parameters including flux vector and other parameters (e.g. metabolite pool sizes and model parameters) that best explains experimental data." []
+relationship: RO:0000058 FLUXO:0000016 ! is concretized as flux map
+
+[Term]
+id: FLUXO:0000160
+name: fluxomics model parameter
+def: "A fluxomics parameter that are necessary to run fluxomics labeling simulation." []
+synonym: "model parameter" BROAD []
+is_a: FLUXO:0000210 ! fluxomics parameter
+
+[Term]
+id: FLUXO:0000161
+name: groupscale
+def: "A nuisance parameter that is to scale measurements of a measurement group to better fit simulated measurements." []
+is_a: FLUXO:0000094 ! nuisance parameter
+
+[Term]
+id: FLUXO:0000162
+name: fluxomics investigation
+def: "A completely executed planned process that aims at quantifying the fluxes of molecules in biological entities." []
+synonym: "fluxomics" EXACT []
+synonym: "fluxomics study" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000182
+relationship: BFO:0000051 FLUXO:0000057 ! has part fluxomics simulation
+relationship: BFO:0000051 FLUXO:0000178 ! has part experimental design and studies
+relationship: BFO:0000051 FLUXO:0000277 ! has part metabolic model curation
+relationship: BFO:0000051 FLUXO:0000279 ! has part metabolic model construction
+relationship: RO:0000059 FLUXO:0000021 ! concretizes fluxomics method
+relationship: RO:0003301 FLUXO:0000005 ! has role in modeling metabolic reaction
+relationship: RO:0003301 FLUXO:0000126 ! has role in modeling metabolism
+
+[Term]
+id: FLUXO:0000163
+name: metabolite uptake flux
+def: "A external flux indicating the rate of absorption of a molecular entity by a cell system from its surroundings." []
+synonym: "uptake rate" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000153
+is_a: FLUXO:0000124 ! external flux
+
+[Term]
+id: FLUXO:0000164
+name: metabolite excretion flux
+def: "A external flux indicating the rate of release of a metabolite by a cell system to its surroundings." []
+synonym: "secretion rate" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000152
+is_a: FLUXO:0000124 ! external flux
+
+[Term]
+id: FLUXO:0000165
+name: metabolic pathway model
+def: "A metabolic model that represents a series of connected metabolic reactions." []
+synonym: "pathway" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000059
+is_a: FLUXO:0000125 ! metabolic model
+relationship: RO:0017002 FLUXO:0000299 ! information specifies metabolic pathway
+
+[Term]
+id: FLUXO:0000166
+name: chemical reaction
+def: "A process which uses or consumes chemical/molecular entities to generate other molecular entities." []
+synonym: "reaction" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000001
+
+[Term]
+id: FLUXO:0000167
+name: reactant role
+def: "A reaction participant that is present at the start of a reaction and is consumed in the reaction." []
+comment: It usually sits on the left side of the reaction equation.
+synonym: "educt" EXACT []
+synonym: "reagent" BROAD []
+xref: http://biomodels.net/SBO/SBO_0000010
+is_a: FLUXO:0000185 ! reaction participant
+
+[Term]
+id: FLUXO:0000168
+name: substrate
+def: "A role of a molecule or pseudo molecule which is acted upon by an enzyme." []
+xref: http://biomodels.net/SBO/SBO_0000015
+is_a: FLUXO:0000185 ! reaction participant
+
+[Term]
+id: FLUXO:0000169
+name: product role
+def: "A role of a molecule or pseudo molecule which is produced from a chemical reaction." []
+comment: It usually sits on the right side of the reaction equation.
+synonym: "product" EXACT []
+xref: http://biomodels.net/SBO/SBO_0000011
+is_a: FLUXO:0000185 ! reaction participant
+
+[Term]
+id: FLUXO:0000170
+name: molecule
+def: "A material entity that is an electrically neutral entity consisting of more than one atom." []
+xref: http://purl.obolibrary.org/obo/CHEBI_25367
+is_a: FLUXO:0000171 ! molecular entity
+relationship: RO:0000087 FLUXO:0000172 ! has role metabolite
+relationship: RO:0000087 FLUXO:0000185 ! has role reaction participant
+property_value: IAO:0000116 "Must be electrically neutral and must consist of more than one atom bonded together." xsd:string
+
+[Term]
+id: FLUXO:0000171
+name: molecular entity
+def: "A material entity that is any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+xref: http://purl.obolibrary.org/obo/CHEBI_23367
+
+[Term]
+id: FLUXO:0000172
+name: metabolite
+def: "A role of a molecule that is of any intermediate or product resulting from metabolism." []
+xref: http://purl.obolibrary.org/obo/CHEBI_25212
+property_value: IAO:0000112 "The term 'metabolite' subsumes the classes commonly known as primary and secondary metabolites." xsd:string
+
+[Term]
+id: FLUXO:0000173
+name: stoichiometry matrix
+def: "A matrix that is a representation of a metabolic network, with rows representing metabolites and columns representing reactions. Each value indicates the stoichiometric coefficients, metabolites that are consumed are negative values and produced are positive values." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000079
+is_a: FLUXO:0000217 ! matrix
+
+[Term]
+id: FLUXO:0000174
+name: isotopologue
+def: "An isomer that differs only in isotopic composition (number of isotopic substitutions)." []
+synonym: "isotopologues" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000034 {IAO:0000119="https://goldbook.iupac.org/terms/view/I03351"}
+is_a: FLUXO:0000031 ! isomer
+
+[Term]
+id: FLUXO:0000175
+name: isotopomer
+def: "An isomer that is having the same number of each isotopic atom but differing in their positions." []
+synonym: "isotopic isomer" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000036 {IAO:0000119="https://goldbook.iupac.org/terms/view/I03352"}
+is_a: FLUXO:0000031 ! isomer
+
+[Term]
+id: FLUXO:0000176
+name: isotopic tracer
+def: "A processed material entity that a isotope of the tracer element which are easily detectable due to their nuclear properties," []
+synonym: "isotopic label" EXACT []
+synonym: "isotopic marker" EXACT []
+synonym: "tracer" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000031
+relationship: BFO:0000051 FLUXO:0000134 ! has part isotopically labelled molecular entity
+relationship: RO:0000086 FLUXO:0000079 ! has quality isotopic tracer property
+property_value: IAO:0000112 "It is used in fluxomics investigation. (e.g. 13C in a 13C labelled molecular entity)." xsd:string
+property_value: IAO:0000112 "It is used in various fields to study scientific problems by tracing the source, composition, distribution, and fate of elements or compounds." xsd:string
+
+[Term]
+id: FLUXO:0000177
+name: steady state
+def: "a state or condition of a system or process (such as one of the energy states of an atom) that does not change in time concerned." []
+xref: http://purl.obolibrary.org/obo/NCIT_C151966
+property_value: IAO:0000112 "A cell where metabolite concentration are stable in time has reached a steady state" xsd:string
+property_value: IAO:0000116 "A realiable entity that takes place when a system has some parts or processes of interest that do not change over time." xsd:string
+property_value: IAO:0000116 "A realizable entity that takes place when an entity has reached equilibrium for the measurement or phenomenon concerned." xsd:string
+property_value: IAO:0000119 "https://www.merriam-webster.com/dictionary/steady%20state" xsd:string
+
+[Term]
+id: FLUXO:0000178
+name: experimental design and studies
+def: "A planned process that is intended to test a hypothesis, and describe or explain empirical data obtained under various experimental conditions." []
+xref: http://edamontology.org/topic_3678
+relationship: BFO:0000050 FLUXO:0000162 ! part of fluxomics investigation
+
+[Term]
+id: FLUXO:0000179
+name: isotopically steady state labeling experiment
+def: "A fluxomics isotope labeling experiment in which isotopically labelled compounds are supplied to a biological system until the ratio of marked to unmarked molecules stabilizes at a constant level." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000185
+is_a: FLUXO:0000049 ! fluxomics isotope labeling experiment
+relationship: RO:0000059 FLUXO:0000043 ! concretizes isotopically stationary metabolic flux analysis method
+relationship: RO:0002333 FLUXO:0000034 ! enabled by metabolic steady state
+relationship: RO:0002333 FLUXO:0000036 ! enabled by isotopic steady state
+
+[Term]
+id: FLUXO:0000180
+name: isotopically non-stationary labeling experiment
+def: "An fluxomics isotope labeling experiment that measures the rate at which isotopically labelled compounds are incorporated into cellular metabolites over time, specifically before the system reaches a stable isotopic equilibrium." []
+synonym: "isotopically instationary labeling experiment" EXACT []
+synonym: "isotopically unstationary labeling experiment" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000053
+is_a: FLUXO:0000049 ! fluxomics isotope labeling experiment
+relationship: BFO:0000051 FLUXO:0000056 ! has part sampling time
+relationship: RO:0000059 FLUXO:0000044 ! concretizes isotopically non-stationary metabolic flux analysis method
+relationship: RO:0002333 FLUXO:0000034 ! enabled by metabolic steady state
+relationship: RO:0002333 FLUXO:0000035 ! enabled by isotopic transient state
+
+[Term]
+id: FLUXO:0000181
+name: organism
+def: "A material entity that is a maximal functionally integrated unit that develops from a program encoded in a genome" []
+xref: http://purl.obolibrary.org/obo/COB_0000022
+
+[Term]
+id: FLUXO:0000182
+name: strain
+def: "An organism that is genetically different from others of the same species and possessing a set of defined characteristics." []
+xref: http://purl.uniprot.org/core/strain
+is_a: FLUXO:0000181 ! organism
+
+[Term]
+id: FLUXO:0000183
+name: number of traced atoms
+def: "A data entity that records the number of atoms of the tracer element in this metabolite." []
+synonym: "number of tracked atoms" EXACT []
+property_value: IAO:0000112 "e.g., 6 for carbons in glucose" xsd:string
+
+[Term]
+id: FLUXO:0000184
+name: culture medium
+def: "A processed material that provides the needed nourishment for microorganisms or cells grown in vitro." []
+xref: http://purl.obolibrary.org/obo/OBI_0000079
+
+[Term]
+id: FLUXO:0000185
+name: reaction participant
+def: "A role that is a molecule participating in a reaction as reactant or product with an associated stoichiometric coefficient." []
+relationship: RO:0000081 FLUXO:0000171 ! role of molecular entity
+
+[Term]
+id: FLUXO:0000186
+name: mass spectrometer
+def: "A device which is used to measure the mass to charge ratio of ions, and it consists of three basic parts: an ion source, a mass analyzer, and a detector system." []
+comment: The stages within the mass spectrometer are: 1. Production of ions from the sample 2. Separation of ions with different masses 3. Detection of the number of ions of each mass produced 4.Collection of data to generate the mass spectrum
+xref: http://purl.obolibrary.org/obo/OBI_0000049
+is_a: FLUXO:0000298 ! measurement device
+relationship: RO:0000056 FLUXO:0000049 ! participates in fluxomics isotope labeling experiment
+relationship: RO:0017001 FLUXO:0000264 ! device utilizes material sample
+
+[Term]
+id: FLUXO:0000187
+name: NMR instrument
+def: "A device which is used to carry out a nuclear magnetic resonance analysis of some sample." []
+xref: http://purl.obolibrary.org/obo/OBI_0000566
+is_a: FLUXO:0000298 ! measurement device
+relationship: RO:0000056 FLUXO:0000049 ! participates in fluxomics isotope labeling experiment
+relationship: RO:0017001 FLUXO:0000264 ! device utilizes material sample
+
+[Term]
+id: FLUXO:0000188
+name: metabolomics
+def: "A systematic study of metabolites, the chemical processes they are involved, and the chemical fingerprints of specific cellular processes in a whole cell, tissue, organ or organism." []
+xref: http://edamontology.org/topic_3172
+
+[Term]
+id: FLUXO:0000189
+name: proteomics
+def: "Proteomics is in the narrow sense (sensu stricto) the application of methods to separate, characterise, identify, and quantify all proteins (the proteome) - or a substantial set of proteins - that are present in a sample." []
+comment: Proteomics in the broad sense is the science of proteins and peptides on the large scale.
+xref: http://edamontology.org/topic_0121
+
+[Term]
+id: FLUXO:0000190
+name: mass spectrometry method
+def: "A plan specification that is a spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance." []
+synonym: "mass spectrometry" BROAD []
+xref: http://purl.obolibrary.org/obo/CHMO_0000470
+relationship: RO:0010001 FLUXO:0000186 ! generically depends on mass spectrometer
+
+[Term]
+id: FLUXO:0000191
+name: liquid chromatography-mass spectrometry
+def: "A mass spectrometry method where a sample mixture is first separated by liquid chromatography before being converted into ions which are characterised by their mass-to-charge ratio and relative abundance." []
+xref: http://purl.obolibrary.org/obo/CHMO_0000524
+is_a: FLUXO:0000190 ! mass spectrometry method
+
+[Term]
+id: FLUXO:0000192
+name: gas chromatography-mass spectrometry
+def: "A mass spectrometry method where a sample mixture is first separated by gas chromatography then ionised and characterised according to mass-to-charge ratio and relative abundance." []
+xref: http://purl.obolibrary.org/obo/CHMO_0000497
+is_a: FLUXO:0000190 ! mass spectrometry method
+
+[Term]
+id: FLUXO:0000193
+name: tandem mass spectrometry
+def: "A mass spectrometry method that is involving multiple mass-selection steps, with some form of fragmentation occurring between each stage." []
+xref: http://purl.obolibrary.org/obo/CHMO_0000575
+is_a: FLUXO:0000190 ! mass spectrometry method
+
+[Term]
+id: FLUXO:0000194
+name: isotope ratio mass spectrometry
+def: "A mass spectrometry method where the relative abundance of isotopes in a sample is determined." []
+xref: http://purl.obolibrary.org/obo/CHMO_0000506
+is_a: FLUXO:0000190 ! mass spectrometry method
+
+[Term]
+id: FLUXO:0000195
+name: nuclear magnetic resonance spectroscopy
+def: "A plan specification that is a method to measure the energy states of spin-active nuclei placed in a static magnetic field are interrogated by inducing transitions between the states via radio frequency irradiation." []
+xref: http://purl.obolibrary.org/obo/CHMO_0000591
+relationship: RO:0010001 FLUXO:0000187 ! generically depends on NMR instrument
+
+[Term]
+id: FLUXO:0000196
+name: isotope natural abundance correction
+def: "A data transformation which aims to take into account the contribution of natural random variation in isotopic composition in the environment and adjust for it during the calculation of mass isotopologue distribution in a tracer based metabolomics experiment." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000130
+relationship: OBI:0000293 FLUXO:0000268 ! has specified input natural abundance
+relationship: OBI:0000293 FLUXO:0000283 ! has specified input uncorrected isotopologue distribution
+relationship: OBI:0000299 FLUXO:0000275 ! has specified output corrected isotopologue distribution
+relationship: RO:0017010 FLUXO:0000092 ! specified by information correction matrix
+
+[Term]
+id: FLUXO:0000197
+name: concentration
+def: "A measurement datum that measures the amount of solute dissolved in a unit quantity of solvent or solution." []
+comment: It describes the strength or intensity of a solution in terms of its solute content. It is therefore a ratio in which the numerator is a measure of the solute and the denominator is a measure of the solvent.
+xref: http://purl.obolibrary.org/obo/STATO_0000704
+
+[Term]
+id: FLUXO:0000198
+name: systems biology representation
+def: "A representation that is an entity used in a systems biology knowledge reconstruction, such as a model, pathway, network." []
+xref: http://biomodels.net/SBO/SBO_0000000
+is_a: FLUXO:0000226 ! representation
+
+[Term]
+id: FLUXO:0000199
+name: chemical formula
+def: "A representation that is a specification of a chemical structure." []
+xref: http://edamontology.org/data_0846
+is_a: FLUXO:0000226 ! representation
+relationship: FLUXO:0000301 FLUXO:0000171 ! is model of molecular entity
+
+[Term]
+id: FLUXO:0000200
+name: molecular charge
+def: "A data item that represents the net charge of a molecule." []
+xref: http://edamontology.org/data_0845
+
+[Term]
+id: FLUXO:0000201
+name: demand reaction
+def: "A pseudo metabolic reaction that represents the reaction operating upon the internal metabolites." []
+comment: Metabolites that are consumed by these reactions are assumed to be used in intra-cellular processes that are not part of the model. Demand reactions, often represented 'R_DM_', can also deliver metabolites (from intra-cellular processes that are not considered in the model).
+xref: http://biomodels.net/SBO/SBO_0000628
+is_a: FLUXO:0000065 ! pseudo metabolic reaction
+
+[Term]
+id: FLUXO:0000202
+name: exchange reaction
+def: "A pseudo metabolic reaction that provides influx or efflux across a model boundary, for example replenishes a metabolic network with raw materials (eg carbon / energy sources)." []
+comment: Such reactions are conceptual, created solely for modeling purposes, and do not have a physical correspondence. Exchange reactions, often represented as 'R_EX_', can operate in the negative (uptake) direction or positive (secretion) direction. By convention, a negative flux through an exchange reaction represents uptake of the corresponding metabolite, and a positive flux represent discharge.
+xref: http://biomodels.net/SBO/SBO_0000627
+is_a: FLUXO:0000065 ! pseudo metabolic reaction
+
+[Term]
+id: FLUXO:0000203
+name: sink reaction
+def: "A pseudo metabolic reaction that is an unbalanced, typically reversible reaction used to add or remove intracellular metabolites from the system." []
+comment: It is typically a reversible reaction.
+xref: http://biomodels.net/SBO/SBO_0000632
+is_a: FLUXO:0000065 ! pseudo metabolic reaction
+
+[Term]
+id: FLUXO:0000204
+name: reaction stoichiometry
+def: "An information content entity that represents the relation between the amount of substances that take part in a reaction or form a compound (typically a ratio of whole integers)." []
+synonym: "stoichiometry" EXACT []
+xref: http://purl.obolibrary.org/obo/NCIT_C18110
+relationship: IAO:0000136 FLUXO:0000166 ! is about chemical reaction
+property_value: seeAlso "https://goldbook.iupac.org/terms/view/S06026" xsd:string
+
+[Term]
+id: FLUXO:0000205
+name: stoichiometric coefficient
+def: "An information content entity that describes the number of molecules is taking part in a reaction." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000060
+
+[Term]
+id: FLUXO:0000206
+name: flux bound
+def: "A flux inequality constraint that limits the upper or lower value that a flux may assume." []
+comment: This parameter may be determined experimentally, or may be the result of theoretical investigation.
+xref: http://biomodels.net/SBO/SBO_0000625
+is_a: FLUXO:0000153 ! flux inequality constraint
+
+[Term]
+id: FLUXO:0000207
+name: statistic
+def: "A data item to describe a dataset or a variable, and it is generated by a calculation on set of observed data." []
+xref: http://purl.obolibrary.org/obo/STATO_0000039
+
+[Term]
+id: FLUXO:0000208
+name: standard deviation
+def: "A statistic that is a measure of variation which correspond to the average distance from the mean of the data set to any given point of that dataset. It also corresponds to the square root of its variance." []
+comment: It can be for a random variable, statistical population, data set, or probability distribution.
+xref: http://purl.obolibrary.org/obo/STATO_0000237
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000209
+name: confidence interval
+def: "A statistic which defines an range of values in which a measurement or trial falls corresponding to a given probability." []
+xref: http://purl.obolibrary.org/obo/STATO_0000196
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000210
+name: fluxomics parameter
+def: "A data item that is required to run a fluxomics investigation." []
+
+[Term]
+id: FLUXO:0000211
+name: statistical hypothesis test
+def: "A data transformation that performs statistical inference to decide whether the data provide sufficient evidence to reject a particular hypothesis." []
+xref: http://purl.obolibrary.org/obo/OBI_0000673
+
+[Term]
+id: FLUXO:0000212
+name: goodness of fit statistical test
+def: "A statistical hypothesis test that aims to evaluate if a sample distribution can be considered equivalent to a theoretical distribution used as input." []
+xref: http://purl.obolibrary.org/obo/STATO_0000191
+is_a: FLUXO:0000211 ! statistical hypothesis test
+
+[Term]
+id: FLUXO:0000213
+name: chi-square test
+def: "A statistical hypothesis test that the sampling distribution of the test statistic is a chi-square distribution when the null hypothesis is true, or any in which this is asymptotically true." []
+xref: http://purl.obolibrary.org/obo/OBI_0200200
+is_a: FLUXO:0000211 ! statistical hypothesis test
+
+[Term]
+id: FLUXO:0000214
+name: model parameter estimation
+def: "The data transformation that finds parameter values (the model parameter estimates) most compatible with the data as judged by the model." []
+xref: http://purl.obolibrary.org/obo/STATO_0000119
+
+[Term]
+id: FLUXO:0000215
+name: sampling distribution estimation by bootstrapping
+def: "A data transformation that is estimating properties of an estimator (such as its variance) by measuring those properties when sampling from an approximating distribution." []
+xref: http://purl.obolibrary.org/obo/STATO_0000548
+
+[Term]
+id: FLUXO:0000216
+name: statistical model
+def: "An information content entity which is a formalization of relationships between variables in the form of mathematical equations. A statistical model describes how one or more random variables are related to one or more other variables. The model is statistical as the variables are not deterministically but stochastically related." []
+xref: http://purl.obolibrary.org/obo/STATO_0000107
+
+[Term]
+id: FLUXO:0000217
+name: matrix
+def: "An information content entity that is a rectangular array of numbers, which are called entries of the matrix." []
+xref: http://purl.obolibrary.org/obo/STATO_0000642
+
+[Term]
+id: FLUXO:0000218
+name: cultivation condition
+def: "An information content entity that represents a set of process conditions, grouping relevant process control variables and process measurement variables, describing the environmental and physicochemical conditions under which cells are cultivated." []
+synonym: "fermentation culture condition" EXACT []
+xref: http://edamontology.org/data_3724
+xref: http://purl.obolibrary.org/obo/PREFER_0000008
+
+[Term]
+id: FLUXO:0000219
+name: rate unit
+def: "A measurement unit label which represents a standard measurement occurrence of a process per unit time." []
+xref: http://purl.obolibrary.org/obo/UO_0000280
+
+[Term]
+id: FLUXO:0000220
+name: substance unit
+def: "A measurement unit label which is a standardised quantity of an element or compound with uniform composition." []
+xref: http://purl.obolibrary.org/obo/UO_0000006
+
+[Term]
+id: FLUXO:0000221
+name: time unit
+def: "A measurement unit label which is a standard measure of the dimension in which events occur in sequence." []
+xref: http://purl.obolibrary.org/obo/UO_0000003
+
+[Term]
+id: FLUXO:0000222
+name: concentration unit
+def: "A measurement unit label which represents a standard measurement of how much of a given substance there is mixed with another substance." []
+xref: http://purl.obolibrary.org/obo/UO_0000051
+
+[Term]
+id: FLUXO:0000223
+name: mathematical expression
+def: "An information content entity that is the formal representation of a calculus linking parameters and variables of a model." []
+xref: http://biomodels.net/SBO/SBO_0000064
+
+[Term]
+id: FLUXO:0000224
+name: atom transition variant
+def: "An atom transition that represents an alternative atom transition of the original reaction." []
+is_a: FLUXO:0000155 ! atom transition
+
+[Term]
+id: FLUXO:0000225
+name: bioreactor
+def: "A device that is designed to support the run of a biological and biochemical process by controlling regulated environmental and cultivation conditions." []
+xref: http://purl.obolibrary.org/obo/PREFER_0000014
+relationship: RO:0000056 FLUXO:0000038 ! participates in fluxomics assay
+property_value: IAO:0000116 "The bioreactor can typically control factors like temperature, agitation or nutrient injection at different scales, including lab-scale, pilot plant, and industrial-scale systems." xsd:string
+
+[Term]
+id: FLUXO:0000226
+name: representation
+def: "An information content entity that is in some way represents another entity (or attribute thereof)." []
+xref: http://semanticscience.org/resource/SIO_000612
+
+[Term]
+id: FLUXO:0000227
+name: data file
+def: "An information content entity that contains some data entity and is specified by file attributes." []
+xref: http://nmrML.org/nmrCV#NMR\:1400267
+relationship: RO:0000086 FLUXO:0000289 ! has quality data file quality
+relationship: RO:0017010 FLUXO:0000228 ! specified by information data file attribute
+
+[Term]
+id: FLUXO:0000228
+name: data file attribute
+def: "An information content entity that characterizes the data file." []
+xref: http://nmrML.org/nmrCV#NMR\:1000011
+relationship: RO:0017002 FLUXO:0000227 ! information specifies data file
+
+[Term]
+id: FLUXO:0000229
+name: data file format
+def: "A data file attribute that defines the format of the information is stored in and each is given a shorthand name." []
+xref: http://nmrML.org/nmrCV#NMR\:1001459
+is_a: FLUXO:0000228 ! data file attribute
+
+[Term]
+id: FLUXO:0000230
+name: CSV format
+def: "A data file format that is stored as tabular data through comma-separated values in a text file." []
+xref: http://edamontology.org/format_3752
+is_a: FLUXO:0000229 ! data file format
+
+[Term]
+id: FLUXO:0000231
+name: MAT format
+def: "A data file format that is the binary format defined by MATLAB software to store workspace variables." []
+xref: http://edamontology.org/format_3626
+is_a: FLUXO:0000229 ! data file format
+
+[Term]
+id: FLUXO:0000232
+name: TSV format
+def: "A data file format that is stored as tabular data through tab-separated values in a text file." []
+xref: http://edamontology.org/format_3475
+is_a: FLUXO:0000229 ! data file format
+
+[Term]
+id: FLUXO:0000233
+name: xlsx format
+def: "An XML format that is developed by Microsoft for MS Excel software, and it is composed of a set of XML documents stored in a ZIP-compressed file." []
+xref: http://edamontology.org/format_3620
+is_a: FLUXO:0000261 ! XML format
+
+[Term]
+id: FLUXO:0000234
+name: JSON format
+def: "A data file format that is a lightweight, text-based format to represent tree-structured data using key-value pairs, and is defined by JavaScript Object Notation specification." []
+xref: http://edamontology.org/format_3464
+is_a: FLUXO:0000229 ! data file format
+
+[Term]
+id: FLUXO:0000235
+name: SBML format
+def: "An XML format that is used for models of biological processes and is defined by the Systems Biology Markup Language (SBML) specification." []
+xref: http://edamontology.org/format_2585
+is_a: FLUXO:0000261 ! XML format
+relationship: RO:0017010 FLUXO:0000282 ! specified by information SBML specification
+
+[Term]
+id: FLUXO:0000236
+name: reaction rate
+def: "A data item which represents the speed of a chemical reaction turning reactive species into product species of event (i.e the number of such conversions) occuring over a time interval." []
+xref: http://purl.obolibrary.org/obo/STATO_0000071
+relationship: IAO:0000136 FLUXO:0000166 ! is about chemical reaction
+
+[Term]
+id: FLUXO:0000237
+name: residual mean square
+def: "A statistic which is obtained by dividing the sum of squared residuals (SSR) by the number of degrees of freedom" []
+xref: http://purl.obolibrary.org/obo/STATO_0000375
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000238
+name: compound identifier
+def: "An identifier of an entry from a database of chemicals." []
+xref: http://edamontology.org/data_1086
+
+[Term]
+id: FLUXO:0000239
+name: InChI identifier
+def: "The compound identifier that is based on the chemical structure specified in IUPAC International Chemical Identifier (InChI) line notation." []
+xref: http://edamontology.org/format_1197 {IAO:0000119="https://pmc.ncbi.nlm.nih.gov/articles/PMC4486400/"}
+is_a: FLUXO:0000238 ! compound identifier
+
+[Term]
+id: FLUXO:0000240
+name: SMILES identifier
+def: "A compound identifier that is the chemical structure specified in Simplified Molecular Input Line Entry System (SMILES) line notation." []
+xref: http://edamontology.org/format_1196
+is_a: FLUXO:0000238 ! compound identifier
+
+[Term]
+id: FLUXO:0000241
+name: metabolic flux unit
+def: "A rate unit that measures the substance amount by cell quantity and time." []
+comment: Several commonly used metabolic flux units are per volume: nmol ⋅ hr⁻¹ ⋅ μl⁻¹ of cells or mol ⋅ hr⁻¹ ⋅ cell⁻¹ and per biomass: mmol ⋅ gDW⁻¹ ⋅ hr⁻¹ (where gDW stands for grams of dry cell weight).
+is_a: FLUXO:0000219 ! rate unit
+
+[Term]
+id: FLUXO:0000242
+name: software property
+def: "A quality that shows a characteristic of software." []
+xref: http://nmrML.org/nmrCV#NMR\:1000353
+
+[Term]
+id: FLUXO:0000243
+name: version number
+def: "An information about software which is a sequence of characters borne by part of each of a class of manufactured products or its packaging and indicates its order within a set of other products having the same name." []
+xref: http://purl.obolibrary.org/obo/IAO_0000129
+is_a: FLUXO:0000242 ! software property
+
+[Term]
+id: FLUXO:0000244
+name: 13CFLUX2
+def: "A metabolic flux analysis software that is a high-performance software suite for steady-state 13C-MFA featuring efficient cumomer and EMU simulation algorithms, arbitrary measurement specifications, FluxML standardized file format, and bindings for optimization frameworks like IPOPT (Weitzel et al., Bioinformatics, 2013, DOI: 10.1093/bioinformatics/bts646)." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000042 {IAO:0000119="https://doi.org/10.1093/bioinformatics/bts646"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://www.13cflux.net/13cflux2/index.html" xsd:string
+
+[Term]
+id: FLUXO:0000245
+name: FiatFlux
+def: "A metabolic flux analysis software that is a user-friendly software package for 13C metabolic flux analysis that automatically calculates flux ratios from GC-MS-detected 13C patterns in protein-bound amino acids, and then estimates net fluxes from extracellular flux measurements and the determined ratios (Zamboni et al., BMC Bioinformatics, 2005, DOI: 10.1186/1471-2105-6-209)." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000044 {IAO:0000119="https://doi.org/10.1186/1471-2105-6-209"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://imsb.ethz.ch/research/zamboni/resources/fiatflux.html" xsd:string
+
+[Term]
+id: FLUXO:0000246
+name: SUMOFLUX
+def: "A metabolic flux analysis software that is a MATLAB-based toolbox for targeted 13C metabolic flux ratio analysis using surrogate modeling, generating random metabolic flux distributions and 13C labeling patterns, then training machine learning models to predict specific flux ratios from measured labeling data (Kogadeeva and Zamboni, PLOS Comput Biol, 2016, DOI: 10.1371/journal.pcbi.1005109)." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000057 {IAO:0000119="https://doi.org/10.1371/journal.pcbi.1005109"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/zamboni-lab/sumoflux" xsd:string
+
+[Term]
+id: FLUXO:0000247
+name: metran
+def: "A metabolic flux analysis software that is a MATLAB-based 13C-MFA software based on the Elementary Metabolite Unit (EMU) framework, supporting steady-state MFA, tracer experiment design, and statistical analysis (Antoniewicz et al., Metab Eng, 2007, DOI: 10.1016/j.ymben.2006.09.001)." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000051 {IAO:0000119="https://doi.org/10.1074/jbc.M706494200"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://tlo.mit.edu/industry-entrepreneurs/available-technologies/metran-software-13c-metabolic-flux-analysis" xsd:string
+
+[Term]
+id: FLUXO:0000248
+name: OpenFLUX
+def: "A metabolic flux analysis software that is an open-source MATLAB/Java-based modelling software for 13C metabolic flux analysis implementing the EMU technique, featuring a Java GUI for model generation and MATLAB-based flux analysis (Quek et al., Microb Cell Fact, 2009, DOI: 10.1186/1475-2859-8-25)." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000035 {IAO:0000119="https://doi.org/10.1186/1475-2859-8-25"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://openflux.sourceforge.net/" xsd:string
+
+[Term]
+id: FLUXO:0000249
+name: INCA
+def: "A metabolic flux analysis software based on MATLAB that was the first publicly available software to perform both steady-state and isotopically non-stationary 13C-MFA, using the EMU framework and supporting parallel labeling experiments, goodness-of-fit testing, and confidence interval estimation (Young, Bioinformatics, 2014, DOI: 10.1093/bioinformatics/btu015)." []
+synonym: "Isotopomer Network Compartmental Analysis" EXACT []
+xref: http://purl.obolibrary.org/obo/MSIO_0000047 {IAO:0000119="https://doi.org/10.1093/bioinformatics/btu015"}
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://mfa.vueinnovations.com/" xsd:string
+
+[Term]
+id: FLUXO:0000250
+name: iso2flux
+def: "A metabolic flux analysis software that is a Python-based flux analysis software that allows to perform 13C Metabolic Flux Analysis on a sub-network of a large scale model." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000048
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://github.com/cfoguet/iso2flux" xsd:string
+property_value: IAO:0000600 "Iso2flux uses constraint-based modelling to compute steady state fluxes across a large metabolic network and uses such flxues to predict 13C distribution across a subser of the newtork. Then, given a set of 13C data Iso2flux can iteratively find the steady state flux distributions that are most consistent with such fluxes." xsd:string
+
+[Term]
+id: FLUXO:0000251
+name: isodyn
+def: "A metabolic flux analysis software that is a C++-program that performs an analysis of stable isotope tracer data to assess metabolic flux profiles in living cells." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000049
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://bio.tools/Isodyn" xsd:string
+property_value: foaf:homepage "https://github.com/seliv55/isodyn" xsd:string
+property_value: IAO:0000600 "Isodyn simulates the dynamics of isotopic isomer (isotopomer) distribution in central metabolic pathways, and, by changing its parameters, which reflect the characteristics of corresponding biochemical reactions, fit the simulated dynamics of mass isotopomers to that observed experimentally. The simulated metabolic fluxes that correspond to the best fit are assumed to reproduce the real fluxes in the analyzed biological object and conditions. Isodyn contains tools that check the goodness of fit and perform a statistical analysis of obtained metabolic fluxes." xsd:string
+
+[Term]
+id: FLUXO:0000252
+name: IsoDesign
+def: "A metabolic flux analysis softwaresoftware that enables these parameters to be maximized by optimizing the isotopic composition of the label input." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000050
+is_a: FLUXO:0000103 ! metabolic flux analysis software
+property_value: foaf:homepage "https://isodesign.readthedocs.io/en/latest/" xsd:string
+property_value: IAO:0000600 "It can be applied to (13) C-MFA investigations using a broad panel of analytical tools (MS, MS/MS, (1) H NMR, (13) C NMR, etc.) individually or in combination. It includes a visualization module to intuitively select the optimal label input depending on the biological question to be addressed." xsd:string
+
+[Term]
+id: FLUXO:0000253
+name: person
+def: "A material entity that has certain capacities or attributes constituting personhood." []
+xref: http://xmlns.com/foaf/0.1/Person
+
+[Term]
+id: FLUXO:0000254
+name: person identifier
+def: "An identifier of a software end-user on a website or a database (typically a person or an entity)." []
+xref: http://edamontology.org/data_2118
+
+[Term]
+id: FLUXO:0000255
+name: person name
+def: "A person identifier that consists of the word or words that a person is known by." []
+xref: http://purl.obolibrary.org/obo/IAO_0020015
+is_a: FLUXO:0000254 ! person identifier
+
+[Term]
+id: FLUXO:0000256
+name: ORCID Identifier
+def: "A person identifier of a researcher registered with the ORCID database." []
+xref: http://purl.obolibrary.org/obo/IAO_0000708
+is_a: FLUXO:0000254 ! person identifier
+
+[Term]
+id: FLUXO:0000257
+name: Email address
+def: "A person identifier that is an address of an end-user." []
+xref: http://purl.obolibrary.org/obo/IAO_0000429
+is_a: FLUXO:0000254 ! person identifier
+
+[Term]
+id: FLUXO:0000258
+name: organization
+def: "A material entity that can bear roles, has members, and has a set of organization rules." []
+comment: Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members.
+xref: http://purl.obolibrary.org/obo/OBI_0000245
+
+[Term]
+id: FLUXO:0000259
+name: fluxomics
+def: "A planned process that is the study of metabolic fluxes of the reactions in a metabolic network." []
+synonym: "metabolic flux analysis" EXACT []
+relationship: BFO:0000051 FLUXO:0000188 ! has part metabolomics
+
+[Term]
+id: FLUXO:0000260
+name: 95% confidence interval
+def: "a confidence interval which covers 95% of the sampling distribution, meaning that there is a 5% risk of false positive (type I error)." []
+comment: If the number of observations made is large enough, the sampling distribution can be assumed to be normal, which entails that 95% of the sampling distributions falls within roughly2 (1.96) standard deviations from the mean.
+xref: http://purl.obolibrary.org/obo/STATO_0000231
+is_a: FLUXO:0000209 ! confidence interval
+
+[Term]
+id: FLUXO:0000261
+name: XML format
+def: "A data file format that is a flexible text format used to store and transport structured data, and is defined by Extensible Markup Language specification." []
+is_a: FLUXO:0000229 ! data file format
+
+[Term]
+id: FLUXO:0000262
+name: lower confidence limit
+xref: http://purl.obolibrary.org/obo/STATO_0000315
+is_a: FLUXO:0000209 ! confidence interval
+property_value: IAO:0000112 "a confidence interval which gives a lowest value bounding a confidence interval." xsd:string
+property_value: IAO:0000116 "This is not a class of confidence interval. It's a statistic about the confidence interval, so it should be moved up to be a subclass of \"statistic\"" xsd:string
+
+[Term]
+id: FLUXO:0000263
+name: upper confidence limit
+def: "a confidence interval which gives a largest value bounding a confidence interval." []
+xref: http://purl.obolibrary.org/obo/STATO_0000314
+is_a: FLUXO:0000209 ! confidence interval
+property_value: IAO:0000116 "This is not a class of confidence interval. It's a statistic about the confidence interval, so it should be moved up to be a subclass of \"statistic\"" xsd:string
+
+[Term]
+id: FLUXO:0000264
+name: sample
+def: "A material entity that is collected for potential use as an input upon which measurements or observations are performed." []
+synonym: "specimen" BROAD []
+xref: http://purl.obolibrary.org/obo/OBI_0100051
+relationship: RO:0000087 FLUXO:0000293 ! has role biological replicate
+relationship: RO:0000087 FLUXO:0000293 {minCardinality="1"} ! has role biological replicate
+relationship: RO:0017502 FLUXO:0000038 ! collected during fluxomics assay
+
+[Term]
+id: FLUXO:0000265
+name: Bayesian model
+def: "A statistical model where inference is based on using Bayes theorem to obtain a posterior distribution for a quantity (or quantities) of interest for some model (such as parameter values) based on some prior distribution for the relevant unknown parameters and the likelihood from the model." []
+xref: http://purl.obolibrary.org/obo/STATO_0000530
+is_a: FLUXO:0000216 ! statistical model
+
+[Term]
+id: FLUXO:0000267
+name: mass unit
+def: "A measurement unit label which is a standard measure of the amount of matter/energy of a physical object." []
+xref: http://purl.obolibrary.org/obo/UO_0000002
+
+[Term]
+id: FLUXO:0000268
+name: natural abundance
+def: "An isotopic information that describe the abundance of isotopes for a given element on a geographical space (e.g. Earth)." []
+is_a: FLUXO:0000141 ! isotopic information
+
+[Term]
+id: FLUXO:0000269
+name: mass
+def: "A measurement datum that quantifies some amount of matter." []
+xref: https://w3id.org/chemrof/mass
+property_value: IAO:0000116 "Change to molecular mass" xsd:string
+
+[Term]
+id: FLUXO:0000270
+name: molecule property
+def: "A quality that describes the physical (e.g. structural) or chemical properties of molecules, or parts of a molecule." []
+
+[Term]
+id: FLUXO:0000271
+name: nominal molecular mass
+def: "A mass that is the rounded exact mass of molecule to the nearest integer." []
+is_a: FLUXO:0000269 ! mass
+
+[Term]
+id: FLUXO:0000272
+name: exact molecular mass
+def: "A mass that is the calculated mass of a molecule based on the exact atomic masses of its constituent isotopes." []
+is_a: FLUXO:0000269 ! mass
+
+[Term]
+id: FLUXO:0000273
+name: monoisotopic molecular mass
+def: "A mass that is the theoretical mass of a molecule if it were composed 100% of the lightest, most abundant natural isotopes." []
+is_a: FLUXO:0000269 ! mass
+
+[Term]
+id: FLUXO:0000274
+name: nominal molecular mass shift
+def: "A data entity that categorizes isotopologues based on how many heavy isotopes (extra neutrons) they contain compared to the monoisotopic mass (M0)." []
+
+[Term]
+id: FLUXO:0000275
+name: corrected isotopologue distribution
+def: "A isotopologue distribution that reflects only the labeling introduced by your isotopic tracer without isotope natural abundance." []
+is_a: FLUXO:0000143 ! isotopologue distribution
+
+[Term]
+id: FLUXO:0000276
+name: signal intensity
+def: "A measurement datum that providing an estimate of the strength of a phenomena as it is recorded. For digital detector instrument, the signal intensity is usually a electric intensity or a field strength of the electromagnetic wave transmitting a signal." []
+xref: http://purl.obolibrary.org/obo/MSIO_0000074
+
+[Term]
+id: FLUXO:0000277
+name: metabolic model curation
+def: "A planned process in which an existing metabolic network model is validated and standardized to ensure semantic interoperability, mathematical consistency, and reproducibility." []
+relationship: BFO:0000050 FLUXO:0000162 ! part of fluxomics investigation
+relationship: OBI:0000293 FLUXO:0000125 ! has specified input metabolic model
+relationship: OBI:0000299 FLUXO:0000125 ! has specified output metabolic model
+
+[Term]
+id: FLUXO:0000278
+name: metabolic network
+def: "A biological process that consists of a set of interconnected pathways of metabolic reactions within a biological entity" []
+relationship: BFO:0000050 FLUXO:0000126 ! part of metabolism
+
+[Term]
+id: FLUXO:0000279
+name: metabolic model construction
+def: "A planned process that converts biological knowledge into a constrained mathematical model with explicit stoichiometric, structural, or atom-mapping representations." []
+relationship: BFO:0000050 FLUXO:0000162 ! part of fluxomics investigation
+relationship: BFO:0000063 FLUXO:0000277 ! precedes metabolic model curation
+relationship: OBI:0000299 FLUXO:0000125 ! has specified output metabolic model
+
+[Term]
+id: FLUXO:0000280
+name: curated metabolic network model
+def: "A metabolic network model that is the output of a model curation process, wherein its components and metadata are explicitly mapped to standardized persistent identifiers and its mathematical constraints have been verified for interoperability." []
+is_a: FLUXO:0000127 ! metabolic network model
+
+[Term]
+id: FLUXO:0000281
+name: draft metabolic network model
+def: "A metabolic network model that represents biochemical and mathematical relationships using local, tool-specific, or unstandardized identifiers, prior to formal validation or semantic grounding." []
+is_a: FLUXO:0000127 ! metabolic network model
+
+[Term]
+id: FLUXO:0000282
+name: SBML specification
+def: "A data format specification that is a standard XML format for models of biological processes, including metabolism, cell signaling, and gene regulation." []
+synonym: "Systems Biology Markup Language" EXACT []
+xref: http://edamontology.org/format_2585
+relationship: RO:0017002 FLUXO:0000235 ! information specifies SBML format
+
+[Term]
+id: FLUXO:0000283
+name: uncorrected isotopologue distribution
+def: "A isotopologue distribution that is calculated directly from the mass spectrometry measurement." []
+synonym: "mass fraction" EXACT []
+is_a: FLUXO:0000143 ! isotopologue distribution
+
+[Term]
+id: FLUXO:0000287
+name: number of degrees of freedom
+def: "The number degree of freedom is a count evaluating the number of values in a calculation that can vary. In statistics, the number of degrees of freedom ν is equal to N-1 in the case of the direct measurement of a quantity estimated by the arithmetic mean of N independent observations." []
+xref: http://purl.obolibrary.org/obo/STATO_0000069
+is_a: FLUXO:0000207 ! statistic
+
+[Term]
+id: FLUXO:0000288
+name: checksum
+def: "A data file attribute that is calculated on a data file by using a hash function for error detection or indexing." []
+is_a: FLUXO:0000228 ! data file attribute
+
+[Term]
+id: FLUXO:0000289
+name: data file quality
+def: "A quality that describes the usage of a data file, including, but not limited to management, handling, or manipulation." []
+
+[Term]
+id: FLUXO:0000290
+name: raw data file quality
+def: "The data file quality that describes the original information, collected from the primary source." []
+xref: http://purl.obolibrary.org/obo/NCIT_C142663
+is_a: FLUXO:0000289 ! data file quality
+
+[Term]
+id: FLUXO:0000291
+name: processed data file quality
+def: "A data file quality that describes the data file derived from other data." []
+xref: http://purl.obolibrary.org/obo/NCIT_C84340
+is_a: FLUXO:0000289 ! data file quality
+
+[Term]
+id: FLUXO:0000292
+name: technical replicate
+def: "A role of a measurement datum that is used to evaluate the variation from a measurement device or part of an assay within an sample." []
+xref: http://www.ebi.ac.uk/efo/EFO_0002090
+
+[Term]
+id: FLUXO:0000293
+name: biological replicate
+def: "A role of a sample that consists of independent biological replicates made from different individual biosamples." []
+xref: http://www.ebi.ac.uk/efo/EFO_0002091
+relationship: RO:0000081 FLUXO:0000264 ! role of sample
+
+[Term]
+id: FLUXO:0000294
+name: kinetic modeling fluxomics method
+def: "A fluxomics method that uses mathematically defined rate laws and ordinary differential equations (ODEs) to simulate reaction rates and metabolite concentrations as a function of enzyme parameters, substrate availability, and regulatory interactions." []
+is_a: FLUXO:0000021 ! fluxomics method
+
+[Term]
+id: FLUXO:0000295
+name: kinetic flux profiling method
+def: "An isotope-based metabolic flux analysis method that determines absolute intracellular reaction rates by measuring the transient, time-dependent incorporation or decay of an isotopic tracer into specific metabolite pools immediately following a step-change in labeling." []
+is_a: FLUXO:0000041 ! isotope-based metabolic flux analysis method
+
+[Term]
+id: FLUXO:0000296
+name: file name
+def: "A data file attribute that denotes a file in a file system, and it is a local identifier in the scope of the folder the file is located." []
+xref: http://purl.allotrope.org/ontologies/result#AFR_0001926
+is_a: FLUXO:0000228 ! data file attribute
+
+[Term]
+id: FLUXO:0000297
+name: file path
+def: "A data file attribute that identifies a data file in a file system or network." []
+xref: http://purl.allotrope.org/ontologies/result#AFR_0001927
+is_a: FLUXO:0000228 ! data file attribute
+
+[Term]
+id: FLUXO:0000298
+name: measurement device
+def: "A device that measures some aspect of reality." []
+xref: http://purl.obolibrary.org/obo/OBI_0000832
+
+[Term]
+id: FLUXO:0000299
+name: metabolic pathway
+def: "A biological process that consists of a chain of metabolic reactions within a biological entity to achieve a specific function." []
+relationship: BFO:0000050 FLUXO:0000278 ! part of metabolic network
+
+[Typedef]
+id: BFO:0000050
+name: part of
+def: "a core relation that holds between a part and its whole" []
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
+property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
+is_transitive: true
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "a core relation that holds between a whole and its part" []
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+is_transitive: true
+is_a: RO:0002180 ! has component
+
+[Typedef]
+id: BFO:0000063
+name: precedes
+def: "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
+property_value: IAO:0000111 "precedes" xsd:string
+holds_over_chain: BFO:0000050 BFO:0000063
+is_transitive: true
+
+[Typedef]
+id: FLUXO:0000266
+name: has specified data input
+inverse_of: FLUXO:0000285 ! is specified data input of
+
+[Typedef]
+id: FLUXO:0000284
+name: has specified data output
+inverse_of: FLUXO:0000286 ! is specified data output of
+
+[Typedef]
+id: FLUXO:0000285
+name: is specified data input of
+
+[Typedef]
+id: FLUXO:0000286
+name: is specified data output of
+
+[Typedef]
+id: FLUXO:0000300
+name: has measurement unit
+
+[Typedef]
+id: FLUXO:0000301
+name: is model of
+inverse_of: RO:0002615 ! has model
+
+[Typedef]
+id: IAO:0000136
+name: is about
+def: "A (currently) primitive relation that relates an information artifact to an entity." []
+property_value: IAO:0000112 "This document is about information artifacts and their representations" xsd:string
+property_value: IAO:0000116 "7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. \n\nWe will try to build it back up by elaborating the various subproperties that are more precisely defined.\n\nSome currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic." xsd:string
+property_value: IAO:0000117 "person:Alan Ruttenberg" xsd:string
+property_value: IAO:0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy" xsd:string
+
+[Typedef]
+id: OBI:0000293
+name: has specified input
+def: "The inverse property of is specified input of" []
+property_value: IAO:0000111 "has specified input" xsd:string
+property_value: IAO:0000112 "see is_input_of example_of_usage" xsd:string
+property_value: IAO:0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
+property_value: IAO:0000117 "PERSON: Larry Hunter" xsd:string
+property_value: IAO:0000117 "PERSON: Melanie Coutot" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+is_a: RO:0000057 ! has participant
+
+[Typedef]
+id: OBI:0000299
+name: has specified output
+def: "The inverse property of is specified output of" []
+property_value: IAO:0000111 "has specified output" xsd:string
+property_value: IAO:0000117 "PERSON: Alan Ruttenberg" xsd:string
+property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
+property_value: IAO:0000117 "PERSON: Larry Hunter" xsd:string
+property_value: IAO:0000117 "PERSON: Melanie Courtot" xsd:string
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/obi.owl
+is_a: RO:0000057 ! has participant
+
+[Typedef]
+id: RO:0000053
+name: has characteristic
+def: "Inverse of characteristic_of" []
+property_value: IAO:0000111 "bearer of" xsd:string
+property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
+property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
+property_value: IAO:0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "bearer_of" xsd:string
+property_value: IAO:0000118 "is bearer of" xsd:string
+is_inverse_functional: true
+
+[Typedef]
+id: RO:0000056
+name: participates in
+def: "a relation between a continuant and a process, in which the continuant is somehow involved in the process" []
+property_value: IAO:0000111 "participates in" xsd:string
+property_value: IAO:0000112 "this blood clot participates in this blood coagulation" xsd:string
+property_value: IAO:0000112 "this input material (or this output material) participates in this process" xsd:string
+property_value: IAO:0000112 "this investigator participates in this investigation" xsd:string
+property_value: IAO:0000118 "participates_in" xsd:string
+inverse_of: RO:0000057 ! has participant
+
+[Typedef]
+id: RO:0000057
+name: has participant
+def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
+property_value: IAO:0000111 "has participant" xsd:string
+property_value: IAO:0000112 "this blood coagulation has participant this blood clot" xsd:string
+property_value: IAO:0000112 "this investigation has participant this investigator" xsd:string
+property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
+property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
+property_value: IAO:0000118 "has_participant" xsd:string
+holds_over_chain: BFO:0000051 RO:0000057
+
+[Typedef]
+id: RO:0000058
+name: is concretized as
+def: "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes." []
+property_value: IAO:0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)." xsd:string
+property_value: IAO:0000112 "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)." xsd:string
+inverse_of: RO:0000059 ! concretizes
+
+[Typedef]
+id: RO:0000059
+name: concretizes
+def: "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant." []
+property_value: IAO:0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)." xsd:string
+property_value: IAO:0000112 "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)." xsd:string
+
+[Typedef]
+id: RO:0000080
+name: quality of
+def: "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this red color is a quality of this apple" xsd:string
+property_value: IAO:0000116 "A quality inheres in its bearer at all times for which the quality exists." xsd:string
+property_value: IAO:0000118 "is quality of" xsd:string
+property_value: IAO:0000118 "quality_of" xsd:string
+inverse_of: RO:0000086 ! has quality
+
+[Typedef]
+id: RO:0000081
+name: role of
+def: "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this investigator role is a role of this person" xsd:string
+property_value: IAO:0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists." xsd:string
+property_value: IAO:0000118 "is role of" xsd:string
+property_value: IAO:0000118 "role_of" xsd:string
+inverse_of: RO:0000087 ! has role
+
+[Typedef]
+id: RO:0000086
+name: has quality
+def: "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this apple has quality this red color" xsd:string
+property_value: IAO:0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "has_quality" xsd:string
+is_a: RO:0000053 ! has characteristic
+
+[Typedef]
+id: RO:0000087
+name: has role
+def: "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)" xsd:string
+property_value: IAO:0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists." xsd:string
+property_value: IAO:0000118 "has_role" xsd:string
+is_a: RO:0000053 ! has characteristic
+
+[Typedef]
+id: RO:0002180
+name: has component
+def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
+property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
+property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
+is_a: BFO:0000051 ! has part
+
+[Typedef]
+id: RO:0002333
+name: enabled by
+def: "inverse of enables" []
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: seeAlso "https://wiki.geneontology.org/Enabled_by" xsd:anyURI
+is_a: RO:0000057 ! has participant
+
+[Typedef]
+id: RO:0002434
+name: interacts with
+def: "A relationship that holds between two entities in which the processes executed by the two entities are causally connected." []
+synonym: "in pairwise interaction with" EXACT []
+property_value: IAO:0000116 "Considering relabeling as 'pairwise interacts with'" xsd:anyURI
+property_value: IAO:0000116 "This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact." xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: IAO:0000232 "Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules." xsd:string
+property_value: seeAlso "http://purl.obolibrary.org/obo/ro/docs/interaction-relations/" xsd:anyURI
+is_symmetric: true
+
+[Typedef]
+id: RO:0002615
+name: has model
+def: "Inverse of is-model-of" []
+inverse_of: RO:0003301 ! has role in modeling
+
+[Typedef]
+id: RO:0003301
+name: has role in modeling
+def: "A relation between a biological, experimental, or computational artifact and an entity it is used to study, in virtue of its replicating or approximating features of the studied entity." []
+property_value: IAO:0000117 https://orcid.org/0000-0002-1048-5019
+property_value: IAO:0000118 "is used to study" xsd:string
+is_asymmetric: true
+
+[Typedef]
+id: RO:0010001
+name: generically depends on
+def: "A generically dependent continuant *b* generically depends on an independent continuant *c* at time *t* means: there inheres in *c* a specifically deendent continuant which concretizes *b* at *t*." []
+synonym: "g-depends on" EXACT []
+property_value: IAO:0000112 "Genetic information generically depend on molecules of DNA." xsd:string
+property_value: IAO:0000112 "The novel *War and Peace* generically depends on this copy of the novel." xsd:string
+property_value: IAO:0000112 "The pattern shared by chess boards generically depends on any chess board." xsd:string
+property_value: IAO:0000112 "The score of a symphony g-depends on a copy of the score." xsd:string
+property_value: IAO:0000112 "This pdf file generically depends on this server." xsd:string
+property_value: IAO:0000119 "[072-ISO]" xsd:string
+
+[Typedef]
+id: RO:0017001
+name: device utilizes material
+def: "X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y." []
+synonym: "utilizes" BROAD []
+property_value: IAO:0000112 "A diagnostic testing device utilizes a specimen." xsd:string
+property_value: IAO:0000232 "A diagnostic testing device utilizes a specimen means that the diagnostic testing device is capable of an assay, and this assay a specimen as its input." xsd:string
+property_value: IAO:0000232 "See github ticket https://github.com/oborel/obo-relations/issues/497" xsd:string
+
+[Typedef]
+id: RO:0017002
+name: information specifies
+def: "A relation between information and an entity such that the information serves as a rule or guide if the entity is an occurrent, or the information serves as a model if the entity is a continuant." []
+synonym: "prescribes" EXACT []
+synonym: "specifies" EXACT []
+property_value: IAO:0000112 "The information in a blueprint specifies the dimensions of a building." xsd:string
+property_value: IAO:0000112 "The information in a recipe specifies what interredients to use and the steps needed to prepare a meal." xsd:string
+property_value: IAO:0000112 "The information in a software program specifies the order of computations." xsd:string
+inverse_of: RO:0017010 ! specified by information
+
+[Typedef]
+id: RO:0017010
+name: specified by information
+def: "Inverse of information specifies." []
+
+[Typedef]
+id: RO:0017502
+name: collected during
+def: "A relation between a material entity and an occurrent in which the material entity is collected during the existence of the occurrent." []
+property_value: IAO:0000112 "A thorax specimen was collected during the larval stage." xsd:string
+property_value: IAO:0000112 "An oyster was collected during low tide." xsd:string
+
